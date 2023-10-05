@@ -1,5 +1,5 @@
 {
-  "name": "next-js-blog",
+  "name": "myapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,8 +13,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.12",
     "next": "13.5.4",
-    "react": "^17.0.2",
-    "react-dom": "^18.2.0"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
