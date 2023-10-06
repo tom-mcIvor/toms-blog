@@ -73,7 +73,6 @@ body{
 }
 
 .container{
-
   padding-top: 100px;
   margin-left: 20px;
   display: flex;
@@ -88,6 +87,9 @@ img {
 }
 
 .center  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: darkgrey;
 }
 
@@ -387,6 +389,7 @@ footer {
 
 /* Animation property */
 body .container span button{
+  
   animation: wiggle 2s linear infinite;
 }
 
@@ -852,6 +855,9 @@ body .whitecon{
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -861,7 +867,18 @@ body .whitecon{
   transition: 1s ease-in-out;
 }
 
+.hello {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  margin-top: 3%;
+  color: white;
+  font-family: cursive;
+  align-items: center;
+}
+
 svg {
+  
   margin-top: -300px;
   margin-left: -7px;
   top: 10%;
@@ -879,10 +896,12 @@ svg {
 }
 
 .btn:hover svg {
+  
   stroke-dashoffset: -480;
 }
 
 .btn :before {
+  
   background: linear-gradient(
     120deg,
     transparent,
@@ -890,15 +909,6 @@ svg {
     transparent
   );
   transition: all 650ms;
-}
-
-.hello {
-  display: flex;
-  font-size: 30px;
-  justify-content: center;
-  margin-top: 3%;
-  color: white;
-  font-family: cursive;
 }
 
 #change-1 {
