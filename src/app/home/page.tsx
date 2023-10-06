@@ -11,7 +11,7 @@ function Home() {
             Our Yeah-Book app is a platform that allows users to create
             yearbooks and upload their profile and details to each yearbook.
             Similar to Facebook, Yeah-Book provides a social setting for users
-            to connect with others and share content. The app's unique feature
+            to connect with others and share content. The app&apos;s unique feature
             of customizable yearbooks makes it a great tool for preserving
             memories and staying connected with friends and classmates. With its
             user-friendly interface and innovative approach to social
@@ -24,7 +24,7 @@ function Home() {
         </div>
         <h3>BadgerMatch</h3>
         <p>
-          What is Badger Match? A companion finding application. We'll show you
+          What is Badger Match? A companion finding application. We&apos;ll show you
           different candidates to help you decide which animal is your ideal
           match.
         </p>
