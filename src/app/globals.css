@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font: cursive;
+  --color-text: #828394;
+}
+
+*{
+  font-family: var(font);
+}
+
 .navbar{
   display: flex;
   position: fixed;
@@ -16,96 +25,10 @@
   color: white;
 }
 
-.portfolio-container a {
-  color: rgb(206, 206, 237);
-  text-decoration: none;
-  background-color: rgba(47, 53, 109, 0.725);
-  
-}
-h1{ 
-  background-color: rgba(51, 51, 51, 0.7);
-
-}
-h3 {
-    color: skyblue;
-    background-color: rgba(51, 51, 51, 0.7);
-    padding: 5px 10px; 
-    border-radius: 5px; 
-  }
-p {
-    color: rgba(187, 187, 43, 0.791);
-  }
-.portfolio-container{
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .portfolio-left {
-    width: 45%;
-    padding: 20px;
-}
-
-.portfolio-right {
-  width: 45%;
-    padding: 20px;
-}
-.portfolio-titles {
-    display: flex;
-    flex-direction: row; /* Arrange elements horizontally */
-    justify-content: space-between; /* Space evenly between elements */
-    align-items: center; /* Center vertically */
-    height: 100vh;
-}
-.skill-icon{ 
-  height: 50px;
-  width: 50px;
-}
-
-.skills-container {
-display: flex;
-align-items: center; /* Vertically align the images */
-justify-content: space-between; /* Space the images evenly */
-}
-
-.react-container img,
-.typescript-container img {
-margin: 0 10px; /* Add margin to separate the images horizontally */
-height: 50px;
-}
-
-.project-left {
-width: 60%; /* Adjust the width as needed */
-}
-
-.project-right {
-width: 30%; /* Adjust the width as needed */
-text-align: right; /* Align the link to the right */
-}
-.project {
-flex-direction: column;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 20px; /* Add spacing between projects */
-}
-
-
-
-:root {
-  --font: cursive;
-  --color-text: #828394;
-}
-
-*{
-  font-family: var(font);
-}  
-
-
 body{
   margin: 0;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 1900px;
   background: url("https://wallpaperaccess.com/full/3205414.jpg");
@@ -114,7 +37,6 @@ body{
   font-family: cursive;
   text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
   color: rgba(202, 202, 0, 0.493);
-
 }
 
 .left-part {
@@ -158,8 +80,10 @@ body{
   flex-direction: column;
   
 }
+
 img {
   height: 30px;
+  width: 25px;
   border-radius: 50%;
 }
 
@@ -167,11 +91,10 @@ img {
   color: darkgrey;
 }
 
-
 .navbar{
   display: flex;
   position: fixed;
-  background-color: rgb(133, 32, 32);
+  background-color: #111111;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -314,7 +237,6 @@ img {
   margin: 15px;
 }
 
-
 .container3 {
   height: 2500px;
   background-image: center;
@@ -395,7 +317,6 @@ body .area {
   z-index: 10;
 }
 
-
 .container3 p{
   display: flex;
   align-items: center;
@@ -412,7 +333,6 @@ body .area {
 .container3 text{
   margin-top: 100px;
 }
-
 
 .container3 div {
   padding: 0px 20px 0px 20px;
@@ -445,8 +365,6 @@ body .area {
   }
 }
 
-
- 
 @media screen and (max-width: 1600px) and (min-width: 1100px) {
   .left-part {
     margin-left: -130px;
@@ -598,7 +516,6 @@ body .container3 #white {
     background-color: #3e8e41;
     color: black;
 }
-
 
 body .container .box{
   top: 40%;
@@ -873,13 +790,10 @@ body .whitecon{
   }
 
   body > div.navbar.active > ul > div.tech{
-
-
     display: flex;
     flex-direction: row;
     border: groove;
     border-radius: 5px;
-
     border-color: blueviolet;
     padding: 5px;
     word-wrap: normal;
@@ -887,8 +801,6 @@ body .whitecon{
     text-align: center;
     justify-content: center;
     align-items: center;
-
-
   }
 
   body > div.navbar.active > ul > div.core {
@@ -1233,3 +1145,4 @@ body > div.container-20 > div > ul:nth-child(2) > li:nth-child(3){
 body > div.container-20 > div > ul:nth-child(2) > li:nth-child(4){
   margin-left: 300px
 }
+

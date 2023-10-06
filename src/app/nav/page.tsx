@@ -1,16 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
-import profilePic from './tom.png'
+import profilePic from '../../../img/tom.png'
 
 function Nav() {
- 
-
-
-
   return (
       <>
       <div className="navbar active">
+      
       <div className="left-part">
       <Link href="https://github.com/tom-mcivor">
           <div className="small">Toms Blog</div>
@@ -19,14 +16,11 @@ function Nav() {
             alt="toms profile"
           />
       </Link>
-    </div>
-
-      
-        {/* <a className="change" href="../index.html">
+        <a className="change" href="/">
           <div className="container50">
             <div className="center">
               <button className="btn">
-                <div className=" hello">Home</div>
+                <div className="hello">Home</div>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" className="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
@@ -34,9 +28,8 @@ function Nav() {
               </button>
             </div>
           </div>
-        </a> */}
-      
-    
+        </a>
+        </div>
     <nav className="hello10">
       <ul>
         <li><a href="#"></a>
