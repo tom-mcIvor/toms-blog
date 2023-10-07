@@ -4,15 +4,27 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import profilePic from '../../../img/tom.png'
-// import {
-//   Menu,
-//   MenuHandler,
-//   MenuList,
-//   MenuItem,
-//   Button,
-// } from "@material-tailwind/react";
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 
 function Nav() {
+
+  const theme = {
+   
+      styles: {
+        base: {
+          menu: {
+            zIndex: "z-[999]",
+          },  
+      },
+    },
+  }
+  
   return (
       <>
       <div className="navbar active">
@@ -40,8 +52,11 @@ function Nav() {
         </a>
         </div>
 
-        {/* <div className="menu">
-          <Menu>
+        <div className="menu">
+          
+          <Menu
+                theme={theme}
+          >
                 <MenuHandler>
           <Button>Open Nested Menu</Button>
                 </MenuHandler>
@@ -61,7 +76,7 @@ function Nav() {
           <MenuItem>Menu Item 3</MenuItem>
                 </MenuList>
               </Menu>
-        </div> */}
+        </div>
 
     <nav className="hello10">
       <ul>

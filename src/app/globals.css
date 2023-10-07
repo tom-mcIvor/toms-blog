@@ -1138,7 +1138,14 @@ body > div.container-20 > div > ul:nth-child(2) > li:nth-child(3){
 body > div.container-20 > div > ul:nth-child(2) > li:nth-child(4){
   margin-left: 300px
 }
-
 .menu {
-  z-index: 10000000;
+  display: flex;
+  position: relative; 
+  z-index: 9999; /* Set a high z-index to bring the menu to the front */
+}
+
+.menu .menu-list {
+  position: relative;
+  display: flex;
+  z-index: 9999; /* Set the same z-index as the menu */
 }
