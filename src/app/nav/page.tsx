@@ -1,7 +1,16 @@
+'use client' 
+
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import profilePic from '../../../img/tom.png'
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 
 function Nav() {
   return (
@@ -18,9 +27,9 @@ function Nav() {
       </Link>
         <a className="change" href="/">
           <div className="container50">
-            <div className="center">
+            <div className="center1">
               <button className="btn">
-                <div className="hello">Home</div>
+                <div className="hello" >Home</div>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" className="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
@@ -30,6 +39,30 @@ function Nav() {
           </div>
         </a>
         </div>
+
+        <div className="menu">
+          <Menu>
+                <MenuHandler>
+          <Button>Open Nested Menu</Button>
+                </MenuHandler>
+                <MenuList>
+          <MenuItem>Menu Item 1</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+          <Menu placement="right-start" offset={15}>
+            <MenuHandler>
+              <MenuItem>Nested Item</MenuItem>
+            </MenuHandler>
+            <MenuList>
+              <MenuItem>Nested Item 1</MenuItem>
+              <MenuItem>Nested Item 2</MenuItem>
+              <MenuItem>Nested Item 3</MenuItem>
+            </MenuList>
+          </Menu>
+          <MenuItem>Menu Item 3</MenuItem>
+                </MenuList>
+              </Menu>
+        </div>
+
     <nav className="hello10">
       <ul>
         <li><a href="#"></a>

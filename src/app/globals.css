@@ -1,4 +1,3 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -9,26 +8,11 @@
 
 *{
   font-family: var(font);
-}
-
-.navbar{
-  display: flex;
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,.3);
-  transition: background-color 0.4s;
-  height: 80px;
-  z-index: 1000; 
-  color: white;
-}
+}  
 
 body{
   margin: 0;
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 1900px;
   background: url("https://wallpaperaccess.com/full/3205414.jpg");
@@ -37,6 +21,7 @@ body{
   font-family: cursive;
   text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
   color: rgba(202, 202, 0, 0.493);
+
 }
 
 .left-part {
@@ -77,7 +62,6 @@ body{
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  
 }
 
 img {
@@ -87,9 +71,6 @@ img {
 }
 
 .center  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: darkgrey;
 }
 
@@ -248,6 +229,7 @@ img {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
 .container4 { 
   background-image: center;
   width: 100vw;
@@ -319,6 +301,7 @@ body .area {
   z-index: 10;
 }
 
+
 .container3 p{
   display: flex;
   align-items: center;
@@ -335,6 +318,7 @@ body .area {
 .container3 text{
   margin-top: 100px;
 }
+
 
 .container3 div {
   padding: 0px 20px 0px 20px;
@@ -367,6 +351,8 @@ body .area {
   }
 }
 
+
+ 
 @media screen and (max-width: 1600px) and (min-width: 1100px) {
   .left-part {
     margin-left: -130px;
@@ -389,7 +375,6 @@ footer {
 
 /* Animation property */
 body .container span button{
-  
   animation: wiggle 2s linear infinite;
 }
 
@@ -520,6 +505,7 @@ body .container3 #white {
     color: black;
 }
 
+
 body .container .box{
   top: 40%;
     right: 20%;
@@ -635,7 +621,7 @@ body .whitecon{
     background-color: white;
     width: 70px;
     height: 70px;
-    z-index: -100;
+    z-index: 100;
     transform: translate(50%, 25%);
     opacity: .05;
     border-radius: 10%;
@@ -793,10 +779,13 @@ body .whitecon{
   }
 
   body > div.navbar.active > ul > div.tech{
+
+
     display: flex;
     flex-direction: row;
     border: groove;
     border-radius: 5px;
+
     border-color: blueviolet;
     padding: 5px;
     word-wrap: normal;
@@ -804,6 +793,8 @@ body .whitecon{
     text-align: center;
     justify-content: center;
     align-items: center;
+
+
   }
 
   body > div.navbar.active > ul > div.core {
@@ -855,9 +846,6 @@ body .whitecon{
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -867,18 +855,7 @@ body .whitecon{
   transition: 1s ease-in-out;
 }
 
-.hello {
-  display: flex;
-  font-size: 30px;
-  justify-content: center;
-  margin-top: 3%;
-  color: white;
-  font-family: cursive;
-  align-items: center;
-}
-
 svg {
-  
   margin-top: -300px;
   margin-left: -7px;
   top: 10%;
@@ -896,12 +873,10 @@ svg {
 }
 
 .btn:hover svg {
-  
   stroke-dashoffset: -480;
 }
 
 .btn :before {
-  
   background: linear-gradient(
     120deg,
     transparent,
@@ -909,6 +884,15 @@ svg {
     transparent
   );
   transition: all 650ms;
+}
+
+.hello {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  margin-top: 3%;
+  color: white;
+  font-family: cursive;
 }
 
 #change-1 {
@@ -1156,3 +1140,7 @@ body > div.container-20 > div > ul:nth-child(2) > li:nth-child(4){
   margin-left: 300px
 }
 
+.menu {
+  
+  z-index: 10000000;
+}
