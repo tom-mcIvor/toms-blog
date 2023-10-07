@@ -10,23 +10,23 @@ import {
   MenuList,
   MenuItem,
   Button,
+  ThemeProvider,
 } from "@material-tailwind/react";
 
 function Nav() {
-
-  // const theme = {
-   
-  //     styles: {
-  //       base: {
-  //         menu: {
-  //           zIndex: "z-[999]",
-  //         },  
-  //     },
-  //   },
-  // }
-  
+  const theme = {
+    menu: {
+      styles: {
+        base: { 
+          menu: {
+            zIndex: "z-[100]",
+          },
+        },
+      },
+    },
+  }
   return (
-      <>
+      <ThemeProvider value={theme}>
       <div className="navbar active">
       
       <div className="left-part">
@@ -111,7 +111,7 @@ function Nav() {
       </div>
     </ul>
   </div>
-      </>
+  </ThemeProvider>
   )
 }
 
