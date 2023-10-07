@@ -14,16 +14,16 @@ import {
 
 function Nav() {
 
-  const theme = {
+  // const theme = {
    
-      styles: {
-        base: {
-          menu: {
-            zIndex: "z-[999]",
-          },  
-      },
-    },
-  }
+  //     styles: {
+  //       base: {
+  //         menu: {
+  //           zIndex: "z-[999]",
+  //         },  
+  //     },
+  //   },
+  // }
   
   return (
       <>
@@ -54,9 +54,7 @@ function Nav() {
 
         <div className="menu">
           
-          <Menu
-                theme={theme}
-          >
+          <Menu>
                 <MenuHandler>
           <Button>Open Nested Menu</Button>
                 </MenuHandler>
