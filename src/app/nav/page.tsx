@@ -4,13 +4,13 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import profilePic from '../../../img/tom.png'
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Button,
-} from "@material-tailwind/react";
+// import {
+//   Menu,
+//   MenuHandler,
+//   MenuList,
+//   MenuItem,
+//   Button,
+// } from "@material-tailwind/react";
 
 function Nav() {
   return (
@@ -40,7 +40,7 @@ function Nav() {
         </a>
         </div>
 
-        <div className="menu">
+        {/* <div className="menu">
           <Menu>
                 <MenuHandler>
           <Button>Open Nested Menu</Button>
@@ -61,7 +61,7 @@ function Nav() {
           <MenuItem>Menu Item 3</MenuItem>
                 </MenuList>
               </Menu>
-        </div>
+        </div> */}
 
     <nav className="hello10">
       <ul>
