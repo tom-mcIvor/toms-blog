@@ -319,7 +319,6 @@ body .area {
   margin-top: 100px;
 }
 
-
 .container3 div {
   padding: 0px 20px 0px 20px;
   display: flex;
@@ -621,7 +620,7 @@ body .whitecon{
     background-color: white;
     width: 70px;
     height: 70px;
-    z-index: 100;
+    z-index: -100;
     transform: translate(50%, 25%);
     opacity: .05;
     border-radius: 10%;
@@ -1141,6 +1140,5 @@ body > div.container-20 > div > ul:nth-child(2) > li:nth-child(4){
 }
 
 .menu {
-  
   z-index: 10000000;
 }
