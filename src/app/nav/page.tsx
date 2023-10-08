@@ -4,7 +4,6 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import profilePic from '../../../img/tom.png'
-import { useState } from 'react';
 import {
   Menu,
   MenuHandler,
@@ -13,6 +12,7 @@ import {
   Button,
   Card,
   Typography,
+  ThemeProvider,
 } from "@material-tailwind/react";
 import { ChevronDownIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
 
@@ -38,9 +38,21 @@ const menuItems = [
 
 function Nav() {
 
+  const theme = {
+    menu: {
+      styles: {
+        base: { 
+          menu: {
+            zIndex: "z-[1000]",
+          },
+        },
+      },
+    },
+  }
   const [openMenu, setOpenMenu] = React.useState(false)
 
   return (
+    <ThemeProvider value={theme}>
       <div className="navbar active">
         <div className="left-part">
           <Link href="https://github.com/tom-mcivor">
@@ -191,6 +203,7 @@ function Nav() {
           </div>
         </ul>
       </div>
+      </ThemeProvider>
   )
 }
 
