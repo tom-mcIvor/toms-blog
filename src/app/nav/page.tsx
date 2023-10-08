@@ -90,45 +90,16 @@ function Nav() {
     },
   }
   return (
-  
     <ThemeProvider value={theme}>
-        <div className="navbar active">
-      <div className="flex items-center justify-between text-blue-gray-900">
-
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-        >
-         <Menu>
-            <MenuHandler>
-              <Button>Tech &or;</Button>
-            </MenuHandler>
-            <MenuList>
-            <MenuItem> <a href="html-css.html">CSS lessons</a></MenuItem>
-              <MenuItem><a href="javascript-dom.html">Javascript DOM</a></MenuItem>
-              <MenuItem> <a href="problem-solving.html">Problem Solving</a></MenuItem>
-            </MenuList>
-          </Menu>
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList />
-      </Collapse>
-    
-      
-        <div className="left-part">
+      <div className="navbar active">
+        <div className="flex items-center justify-between text-blue-gray-900">
           <Link href="https://github.com/tom-mcivor">
-            <div className="small">Toms Blog</div>
+            <div className="small">My Blog</div>
             <Image src={profilePic} alt="toms profile" />
           </Link>
-          <a className="change" href="/">
-            <div className="container50">
-              <div className="center1">
+          <a href="/">
+            <div>
+              <div>
                 <button className="btn">
                   <div className="hello">Home</div>
                   <svg
@@ -150,25 +121,64 @@ function Nav() {
               </div>
             </div>
           </a>
-        </div>
+
+         
         
+ <Collapse open={openNav}>
+          <NavList />
+        </Collapse>
+
+        <Menu>
+          <MenuHandler>
+            <Button>Tech &or;</Button>
+          </MenuHandler>
+          <MenuList>
+            <MenuItem>
+              {' '}
+              <a href="html-css.html">CSS lessons</a>
+            </MenuItem>
+            <MenuItem>
+              <a href="javascript-dom.html">Javascript DOM</a>
+            </MenuItem>
+            <MenuItem>
+              {' '}
+              <a href="problem-solving.html">Problem Solving</a>
+            </MenuItem>
+          </MenuList>
+        </Menu>
+
+        <Menu>
+          <MenuHandler>
+            <Button>core &or;</Button>
+          </MenuHandler>
+          <MenuList>
+            <MenuItem>
+              {' '}
+              <a href="neuroplasticity.html">Neuroplasticity ideas</a>
+            </MenuItem>
+            <MenuItem>
+              {' '}
+              <a href="emotional-intelligence.html">Emotional IQ</a>
+            </MenuItem>
+            <MenuItem>
+              {' '}
+              <a href="identity-values.html">Identity values</a>
+            </MenuItem>
+            <MenuItem>
+              {' '}
+              <a href="foundations-reflection.html">Foundations reflection</a>
+            </MenuItem>
+            <MenuItem>
+              {' '}
+              <a href="learning-plan.html">Learning plan</a>
+            </MenuItem>
+          </MenuList>
+        </Menu>
           
-  
-          <Menu>
-            <MenuHandler>
-              <Button>core &or;</Button>
-            </MenuHandler>
-            <MenuList>     
-                  <MenuItem> <a href="neuroplasticity.html">Neuroplasticity ideas</a></MenuItem>
-                  <MenuItem> <a href="emotional-intelligence.html">Emotional IQ</a></MenuItem>
-                  <MenuItem> <a href="identity-values.html">Identity values</a></MenuItem>
-                  <MenuItem> <a href="foundations-reflection.html">Foundations reflection</a></MenuItem>
-                  <MenuItem> <a href="learning-plan.html">Learning plan</a></MenuItem>
-                </MenuList>              
-          </Menu>
+        </div>
+       
       </div>
     </ThemeProvider>
-    
   )
 }
 
