@@ -5,6 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link'
 import profilePic from '../../../img/tom.png'
 import {
+  Navbar,
+  Collapse,
+  Typography,
+  IconButton,
   Menu,
   MenuHandler,
   MenuList,
@@ -12,8 +16,68 @@ import {
   Button,
   ThemeProvider,
 } from "@material-tailwind/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+ 
+function NavList() {
+  return (
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Pages
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Account
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Blocks
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Docs
+        </a>
+      </Typography>
+    </ul>
+  );
+}
 
 function Nav() {
+  const [openNav, setOpenNav] = React.useState(false);
+ 
+  const handleWindowResize = () =>
+    window.innerWidth >= 960 && setOpenNav(false);
+ 
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+ 
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
   const theme = {
     menu: {
       styles: {
@@ -26,8 +90,44 @@ function Nav() {
     },
   }
   return (
+  <div className="navbar active">
     <ThemeProvider value={theme}>
-      <div className="navbar active">
+        <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          variant="h6"
+          className="mr-4 cursor-pointer py-1.5"
+        >
+          Material Tailwind
+        </Typography>
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
+        <IconButton
+          variant="text"
+          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          ripple={false}
+          onClick={() => setOpenNav(!openNav)}
+        >
+         <Menu>
+            <MenuHandler>
+              <Button>Tech &or;</Button>
+            </MenuHandler>
+            <MenuList>
+            <MenuItem> <a href="html-css.html">CSS lessons</a></MenuItem>
+              <MenuItem><a href="javascript-dom.html">Javascript DOM</a></MenuItem>
+              <MenuItem> <a href="problem-solving.html">Problem Solving</a></MenuItem>
+            </MenuList>
+          </Menu>
+        </IconButton>
+      </div>
+      <Collapse open={openNav}>
+        <NavList />
+      </Collapse>
+    
+      
         <div className="left-part">
           <Link href="https://github.com/tom-mcivor">
             <div className="small">Toms Blog</div>
@@ -58,102 +158,24 @@ function Nav() {
             </div>
           </a>
         </div>
-        <div className="menu">
+        
+          
+  
           <Menu>
             <MenuHandler>
-              <Button>Tech &or;</Button>
+              <Button>core &or;</Button>
             </MenuHandler>
-            <MenuList>
-              <MenuItem>Menu Item 1</MenuItem>
-              <MenuItem>Menu Item 2</MenuItem>
-              <Menu placement="right-start" offset={15}>
-                <MenuHandler>
-                  <MenuItem>Nested Item</MenuItem>
-                </MenuHandler>
-                <MenuList>
-                  <MenuItem>Nested Item 1</MenuItem>
-                  <MenuItem>Nested Item 2</MenuItem>
-                  <MenuItem>Nested Item 3</MenuItem>
-                </MenuList>
-              </Menu>
-              <MenuItem>Menu Item 3</MenuItem>
-            </MenuList>
+            <MenuList>     
+                  <MenuItem> <a href="neuroplasticity.html">Neuroplasticity ideas</a></MenuItem>
+                  <MenuItem> <a href="emotional-intelligence.html">Emotional IQ</a></MenuItem>
+                  <MenuItem> <a href="identity-values.html">Identity values</a></MenuItem>
+                  <MenuItem> <a href="foundations-reflection.html">Foundations reflection</a></MenuItem>
+                  <MenuItem> <a href="learning-plan.html">Learning plan</a></MenuItem>
+                </MenuList>              
           </Menu>
-        </div>
-        <nav className="hello10">
-          <ul>
-            <li>
-              <a href="#"></a>
-              <ul>
-                <li>
-                  <a href="html-css.html">CSS lessons</a>
-                </li>
-                <li>
-                  <a href="javascript-dom.html">Javascript DOM</a>
-                </li>
-                <li>
-                  <a href="problem-solving.html">Problem Solving</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"></a>
-              <ul>
-                <li>
-                  <a href="neuroplasticity.html">Neuroplasticity ideas</a>
-                </li>
-                <li>
-                  <a href="emotional-intelligence.html">Emotional IQ</a>
-                </li>
-                <li>
-                  <a href="identity-values.html">Identity values</a>
-                </li>
-                <li>
-                  <a href="foundations-reflection.html">
-                    Foundations reflection
-                  </a>
-                </li>
-                <li>
-                  <a href="learning-plan.html">Learning plan</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <ul className="this-one">
-          <div className="tech">
-            <li>
-              <a href="html-css.html">CSS lessons</a>
-            </li>
-            <li>
-              <a href="javascript-dom.html">Javascript DOM</a>
-            </li>
-            <li>
-              <a href="problem-solving.html">Problem solving</a>
-            </li>
-          </div>
-          <div className="core">
-            <li>
-              <a href="neuroplasticity.html">Neuroplasticity ideas</a>
-            </li>
-            <li>
-              <a href="emotional-intelligence.html">Emotional IQ</a>
-            </li>
-            <li>
-              <a className="change-3" href="identity-values.html">
-                Identity values
-              </a>
-            </li>
-            <li>
-              <a href="foundations-reflection.html">Foundations reflection</a>
-            </li>
-            <li>
-              <a href="learning-plan.html">Learning plan</a>
-            </li>
-          </div>
-        </ul>
-      </div>
+      </Navbar>
     </ThemeProvider>
+    </div>
   )
 }
 

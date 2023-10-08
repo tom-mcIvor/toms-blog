@@ -21,7 +21,7 @@ body{
   font-family: cursive;
   text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
   color: rgba(202, 202, 0, 0.493);
-
+  flex-direction: column;
 }
 
 .left-part {
@@ -75,16 +75,16 @@ img {
 }
 
 .navbar{
-  display: flex;
-  position: fixed;
+  position: sticky;
   background-color: #111111;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,.3);
   transition: background-color 0.4s;
   height: 80px;
   z-index: 1000; 
+  top: 0;
+  flex-direction: row;
 }
 
 .navbar ul{
@@ -1137,15 +1137,4 @@ body > div.container-20 > div > ul:nth-child(2) > li:nth-child(3){
 
 body > div.container-20 > div > ul:nth-child(2) > li:nth-child(4){
   margin-left: 300px
-}
-.menu {
-  display: flex;
-  position: relative; 
-  z-index: 9999; /* Set a high z-index to bring the menu to the front */
-}
-
-.menu .menu-list {
-  position: relative;
-  display: flex;
-  z-index: 9999; /* Set the same z-index as the menu */
 }
