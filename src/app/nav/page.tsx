@@ -90,9 +90,9 @@ function Nav() {
     },
   }
   return (
-  <div className="navbar active">
+  
     <ThemeProvider value={theme}>
-        <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
+        <div className="navbar active">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -173,9 +173,9 @@ function Nav() {
                   <MenuItem> <a href="learning-plan.html">Learning plan</a></MenuItem>
                 </MenuList>              
           </Menu>
-      </Navbar>
+      </div>
     </ThemeProvider>
-    </div>
+    
   )
 }
 
