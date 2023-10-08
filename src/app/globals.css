@@ -44,14 +44,6 @@ body{
   font-family: cursive;
 }
 
-.change {
-  color: white;
-  font-family: cursive;
-  font-size: 17px;
-  display: flex;
-  text-decoration: none;
-  justify-content: right;
-}
 
 #change-1 {
   color: black; 
@@ -85,38 +77,6 @@ img {
   z-index: 1000; 
   top: 0;
   flex-direction: row;
-}
-
-.navbar ul{
-  display: flex;
-  list-style-type: none;
-}
-
-.navbar ul li a{
-  text-decoration: none;
-  margin: 0 10px;
-  color: black;
-  font-family: cursive;
-}
-
-.navbar a:hover{
-  color: black;
-}
-
-.navbar.active ul li a{
-  color: white;
-}
-
-.navbar.active ul li a:hover{
-  color: black;
-}
-
-.navbar.active ul li a:active{
-  font-size: 150%;
-}
-
-.left-part a:active{
-  font-size: 150%;
 }
 
 @media screen and (max-width: 700px) {
