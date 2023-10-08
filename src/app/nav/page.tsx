@@ -91,10 +91,10 @@ function Nav() {
   }
   return (
     <ThemeProvider value={theme}>
-      <div className="navbar active">
-        <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="navbar">
+        <div className="flex items-center justify-between text-blue-gray-900 w-full">
           <Link href="https://github.com/tom-mcivor">
-            <div className="small">My Blog</div>
+            <div className="small flex-grow">My Blog</div>
             <Image src={profilePic} alt="toms profile" />
           </Link>
           <a href="/">
@@ -147,33 +147,35 @@ function Nav() {
           </MenuList>
         </Menu>
 
-        <Menu>
-          <MenuHandler>
-            <Button>core &or;</Button>
-          </MenuHandler>
-          <MenuList>
-            <MenuItem>
-              {' '}
-              <a href="neuroplasticity.html">Neuroplasticity ideas</a>
-            </MenuItem>
-            <MenuItem>
-              {' '}
-              <a href="emotional-intelligence.html">Emotional IQ</a>
-            </MenuItem>
-            <MenuItem>
-              {' '}
-              <a href="identity-values.html">Identity values</a>
-            </MenuItem>
-            <MenuItem>
-              {' '}
-              <a href="foundations-reflection.html">Foundations reflection</a>
-            </MenuItem>
-            <MenuItem>
-              {' '}
-              <a href="learning-plan.html">Learning plan</a>
-            </MenuItem>
-          </MenuList>
-        </Menu>
+        <div className="flex-grow">
+          <Menu>
+            <MenuHandler>
+              <Button>core &or;</Button>
+            </MenuHandler>
+            <MenuList>
+              <MenuItem>
+                {' '}
+                <a href="neuroplasticity.html">Neuroplasticity ideas</a>
+              </MenuItem>
+              <MenuItem>
+                {' '}
+                <a href="emotional-intelligence.html">Emotional IQ</a>
+              </MenuItem>
+              <MenuItem>
+                {' '}
+                <a href="identity-values.html">Identity values</a>
+              </MenuItem>
+              <MenuItem>
+                {' '}
+                <a href="foundations-reflection.html">Foundations reflection</a>
+              </MenuItem>
+              <MenuItem>
+                {' '}
+                <a href="learning-plan.html">Learning plan</a>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </div>
           
         </div>
        
