@@ -16,11 +16,10 @@ import {
   Button,
   ThemeProvider,
 } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
  
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 lg:w-auto">
       <Typography
         as="li"
         variant="small"
@@ -91,8 +90,8 @@ function Nav() {
   }
   return (
     <ThemeProvider value={theme}>
-      <div className="navbar">
-        <div className="flex items-center justify-between text-blue-gray-900 w-full">
+
+        <div className="flex items-center justify-between text-blue-gray-900 w-full sticky top-0 bg-black   shadow-md transition duration-400 h-20 z-50">
           <Link href="https://github.com/tom-mcivor">
             <div className="small flex-grow">My Blog</div>
             <Image src={profilePic} alt="toms profile" />
@@ -120,66 +119,64 @@ function Nav() {
                 </button>
               </div>
             </div>
-          </a>
-
-         
-        
- <Collapse open={openNav}>
-          <NavList />
-        </Collapse>
-
-        <Menu>
-          <MenuHandler>
-            <Button>Tech &or;</Button>
-          </MenuHandler>
-          <MenuList>
-            <MenuItem>
-              {' '}
-              <a href="html-css.html">CSS lessons</a>
-            </MenuItem>
-            <MenuItem>
-              <a href="javascript-dom.html">Javascript DOM</a>
-            </MenuItem>
-            <MenuItem>
-              {' '}
-              <a href="problem-solving.html">Problem Solving</a>
-            </MenuItem>
-          </MenuList>
-        </Menu>
-
-        <div className="flex-grow">
-          <Menu>
-            <MenuHandler>
-              <Button>core &or;</Button>
-            </MenuHandler>
-            <MenuList>
-              <MenuItem>
-                {' '}
-                <a href="neuroplasticity.html">Neuroplasticity ideas</a>
-              </MenuItem>
-              <MenuItem>
-                {' '}
-                <a href="emotional-intelligence.html">Emotional IQ</a>
-              </MenuItem>
-              <MenuItem>
-                {' '}
-                <a href="identity-values.html">Identity values</a>
-              </MenuItem>
-              <MenuItem>
-                {' '}
-                <a href="foundations-reflection.html">Foundations reflection</a>
-              </MenuItem>
-              <MenuItem>
-                {' '}
-                <a href="learning-plan.html">Learning plan</a>
-              </MenuItem>
-            </MenuList>
-          </Menu>
+          </a>       
+  <div className="flex-grow">   
+     <Collapse open={openNav}>
+      <NavList />
+    </Collapse>
+  </div>
+        <div className="flex-grow flex flex-row" >
+          <div className="flex-grow flex">
+            <Menu>
+              <MenuHandler>
+                <Button>Tech &or;</Button>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem className=' hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="html-css.html">CSS lessons</a>
+                </MenuItem>
+                <MenuItem className=' hover:text-blue-500 transition-colors'>
+                  <a href="javascript-dom.html">Javascript DOM</a>
+                </MenuItem>
+                <MenuItem className=' hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="problem-solving.html">Problem Solving</a>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </div>
+          <div className="flex-grow">
+            <Menu>
+              <MenuHandler>
+                <Button className='hover:text-blue-500 transition-colors'>core &or;</Button>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem className='hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="neuroplasticity.html">Neuroplasticity ideas</a>
+                </MenuItem>
+                <MenuItem className='hover:text-blue-500 transition-colors'> 
+                  {' '}
+                  <a href="emotional-intelligence.html">Emotional IQ</a>
+                </MenuItem>
+                <MenuItem className='hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="identity-values.html">Identity values</a>
+                </MenuItem>
+                <MenuItem className='hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="foundations-reflection.html">Foundations reflection</a>
+                </MenuItem>
+                <MenuItem className='hover:text-blue-500 transition-colors'>
+                  {' '}
+                  <a href="learning-plan.html">Learning plan</a>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </div>
         </div>
-          
-        </div>
-       
-      </div>
+        </div>    
     </ThemeProvider>
   )
 }
