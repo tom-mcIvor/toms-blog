@@ -48,17 +48,7 @@ img {
   }
 }
 
-body > div.container > span > button {
-  height: 4em;
-  width: 7em;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-radius: 0 0 0.2em 0.2em;
-  color: rgb(255, 236, 131);
-  font-family: Helvetica, Arial, Sans-serif;
-  font-size: 1em;
-  transform-origin: 50% 5em;
-}
+
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;
@@ -94,15 +84,6 @@ a, a:hover, a:focus, a:active {
     opacity: .7;
 }
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 15%;
-}
 
 .dropdown-content {
     display: none;
@@ -199,15 +180,6 @@ svg {
   font-family: cursive;
 }
 
-#change-1 {
-  display: flex;
-  font-size: 30px ;
-  justify-content: center;
-  margin-top: 3%;
-    color: black ;
-    font-family: cursive;
-}
-
 body > div.navbar.active > nav{
   margin:0 auto;
   background-color: rgb(133, 32, 32);
@@ -216,55 +188,6 @@ body > div.navbar.active > nav{
   display: flex;
 }
 
-body > div.navbar.active > nav > ul {
-  margin:0;padding:0;
-  list-style-type: none;
-  float: left;
-  display: inline-block;
-}
-
-body > div.navbar.active > nav > ul  li {
-  position:relative;
-  margin:0 20px 0 0;
-  float: left;
-  display:inline-block;
-}
-
-body > div.navbar.active > nav > ul > li:nth-child(1)  a:after { content: 'Tech 🤔 »'; }
-
-body > div.navbar.active > nav > ul > li:nth-child(1)  a:only-child:after { content: ''; }
-
-body > div.navbar.active > nav > ul > li:nth-child(2)  a:after { content: 'Core ❤️ »'; }
-
-body > div.navbar.active > nav > ul > li:nth-child(2)  a:only-child:after { content: ''; }
-
-body > div.navbar.active > nav > ul li a {
-  padding:20px;
-  display:inline-block;
-  color:white;
-  text-decoration:none;
-}
-
-body > div.navbar.active > nav > ul li a:hover {
-  opacity:0.5;
-}
-
-body > div.navbar.active > nav > ul li ul {
-  display:none;
-  position:absolute;
-  left:0;
-  background: blueviolet;
-  float:left;
-}
-
-body > div.navbar.active > nav > ul li ul li {
-  width:100%;
-  border-bottom:1px solid rgba(255,255,255,.3);
-}
-
-body > div.navbar.active > nav > ul li:hover ul {
-  display:block;
-}
 
 body > div.navbar.active > nav > ul > li:nth-child(1){
   border-radius: 5px;
@@ -363,11 +286,6 @@ body > div.navbar.active > div > a.change > div > div > button{
     margin-left: 100px;
   }
 
-}
-
-@media screen and (max-width: 1800px) { 
-  body > div.navbar.active > nav > ul  li > a:after { content: ' »' !important;}
-  body > div.navbar.active > nav > ul  li > a:only-child:after { content: '' !important; }
 }
 
 @media screen and (max-width: 1610px) { 
