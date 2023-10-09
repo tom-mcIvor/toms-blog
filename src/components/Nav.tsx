@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
-import profilePic from '../../../img/tom.png'
+import profilePic from '../../img/tom.png'
 import {
   Navbar,
   Collapse,

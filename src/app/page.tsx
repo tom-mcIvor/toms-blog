@@ -1,6 +1,6 @@
 
-import Home from './home/page'
-import Nav from './nav/page'
+import Home from '../components/Home'
+import Nav from '../components/Nav'
 
 export default function app() {
   return (
