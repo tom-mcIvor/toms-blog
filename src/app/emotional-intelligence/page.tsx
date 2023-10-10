@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
+import Navbar from '../../components/Nav'
+
 
 function page() {
   return (
     <>
+    <Navbar/>
         <div className="container4">
         </div>
         <div className="move-me">
@@ -17,8 +21,8 @@ function page() {
         <p>
         <h3>It&apos;s important..</h3>
         </p>
-       <p>Without knowing how to regulate our emotions and to stretch our discomfort, we’re limited in our personal and
-          professional growth, relationships, and fulfillment in our lives. And when humans feel contained, we’ll also feel
+       <p>Without knowing how to regulate our emotions and to stretch our discomfort, we&apos;re limited in our personal and
+          professional growth, relationships, and fulfillment in our lives. And when humans feel contained, we&apos;ll also feel
           stuck, hopeless, complacent, lonely, even bitter, which plays a large part in many of our social issues today.</p>
          <p>
         <h3>My thoughts</h3>

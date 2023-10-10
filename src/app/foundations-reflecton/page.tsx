@@ -1,15 +1,18 @@
+'use client'
 import React from 'react'
+import Navbar from '../../components/Nav'
 
 function foundations() {
   return (
     <>
+    <Navbar/>
     <h1>Foundations reflections</h1>
     <h2>Weeks 1-5</h2>
     <h3>Week 1</h3>
     <p>
-      People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or
-      building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better.
-      GitHub Skills’ “Introduction to GitHub” course guides you through everything you need to start contributing in
+      People use GitHub to build some of the most advanced technologies in the world. Whether you&apos;re visualizing data or
+      building a new game, there&apos;s a whole community and set of tools on GitHub that can help you do it even better.
+      GitHub Skills&apos; “Introduction to GitHub” course guides you through everything you need to start contributing in
       less
       than an hour.
     </p>
@@ -49,7 +52,7 @@ function foundations() {
       <h3>What are three new things you have learnt about yourself and your ego due to the core learning?</h3>
       <ul>
         <p>
-          <em>I already know myself so &apos;learnt&apos; will mean &apos;become apparent again&apos;</em> I&apos;m;
+          <em>I already know myself so &apos;learnt&apos; will mean &ap&apos;os;become apparent again&apos;</em> I&apos;m;
           <li>Indipendent</li>
           <li>Spontanious / sabotage</li>
           <li>Can reset my by mind with offtasks surprisingly</li>
