@@ -1,5 +1,4 @@
 'use client' 
-
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
@@ -14,6 +13,7 @@ import {
   Button,
   ThemeProvider,
 } from "@material-tailwind/react";
+
  
 function NavList() {
   return (
@@ -118,11 +118,11 @@ function Nav() {
               </div>
             </div>
           </a>       
-  <div className="flex-grow">   
-     <Collapse open={openNav}>
-      <NavList />
-    </Collapse>
-  </div>
+          <div className="flex-grow">   
+              <Collapse open={openNav}>
+              <NavList />
+            </Collapse>
+          </div>
         <div className="flex-grow flex flex-row" >
           <div className="flex-grow flex">
             <Menu>
@@ -132,18 +132,19 @@ function Nav() {
               <MenuList>
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="html-css.html">CSS lessons</a>
+                  <Link href="html-css">CSS lessons</Link>
                 </MenuItem>
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
-                  <a href="javascript-dom.html">Javascript DOM</a>
+                  <Link href="javascript-dom">Javascript DOM</Link>
                 </MenuItem>
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="problem-solving.html">Problem Solving</a>
+                  <Link href="problem-solving">Problem Solving</Link>
                 </MenuItem>
               </MenuList>
             </Menu>
           </div>
+
           <div className="flex-grow">
             <Menu>
               <MenuHandler>
@@ -152,23 +153,23 @@ function Nav() {
               <MenuList>
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="neuroplasticity.html">Neuroplasticity ideas</a>
+                  <Link href="neuroplasticity">Neuroplasticity ideas</Link>
                 </MenuItem>
                 <MenuItem className='hover:text-blue-500 transition-colors'> 
                   {' '}
-                  <a href="emotional-intelligence.html">Emotional IQ</a>
+                  <Link href="emotional-intelligence">Emotional IQ</Link>
                 </MenuItem>
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="identity-values.html">Identity values</a>
+                  <Link href="identity-values">Identity values</Link>
                 </MenuItem>
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="foundations-reflection.html">Foundations reflection</a>
+                  <Link href="foundations-reflection">Foundations reflection</Link>
                 </MenuItem>
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <a href="learning-plan.html">Learning plan</a>
+                  <Link href="learning-plan">Learning plan</Link>
                 </MenuItem>
               </MenuList>
             </Menu>
