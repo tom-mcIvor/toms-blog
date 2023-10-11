@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 function page() {
   return (
     <>
-    <Navbar/>
     <div className="container-8">
       <p>
         Solving problems is the core of computer science. Programmers must first
@@ -19,7 +17,6 @@ function page() {
         First, developers need to find a problem they can solve with software.
         Then, they have to figure out how humans solve that problem. And then,
         they have to find a way to effectively translate both the problem and
-        the solution into code that a computer can use to solve the problem as
         well as (or better than) a person.
       </p>
       <div className="image3"></div>
