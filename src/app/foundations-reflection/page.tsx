@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 function foundations() {
   return (
     <>
-    <Navbar/>
     <h1>Foundations reflections</h1>
     <h2>Weeks 1-5</h2>
     <h3>Week 1</h3>

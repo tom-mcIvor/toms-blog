@@ -4,13 +4,11 @@ import Image from 'next/image'
 import cssSelector from '../../../img/css-selector.png'
 import cssSelectorComplex from '../../../img/css-selector.png'
 import cssSelectorEvenMoreComplex from '../../../img/css-selector.png'
-import Navbar from '../../components/Nav'
 
 
 function page() {
   return (
     <>
-    <Navbar/>
     <div className="container5">
     <a href="html-css-2.html">Whats the difference between padding border and margin?</a>
     <h1>CSS selectors </h1>

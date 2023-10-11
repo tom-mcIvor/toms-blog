@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 function page() {
   return (
     <>
-    <Navbar/>
     <p id="white"> Identity and personal stuff... </p>
     <span className="inside-container">
       <div className="question1">

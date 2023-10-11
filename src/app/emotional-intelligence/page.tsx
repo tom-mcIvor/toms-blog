@@ -1,12 +1,10 @@
 'use client'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 
 function page() {
   return (
     <>
-    <Navbar/>
         <div className="container4">
         </div>
         <div className="move-me">

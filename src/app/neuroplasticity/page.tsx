@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 function page() {
   return (
     <>
-    <Navbar/>
     <div className="container-11">
     <p>
       Neuroplasticity can be viewed as a general umbrella term that refers to the brain&apos;s ability to modify, change, and

@@ -1,13 +1,11 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
-import Navbar from '../../components/Nav'
 
 
 function htmlCss() {
   return (
     <>
-    <Navbar/>
       <Link href="html-css.html">back to selector lesson </Link>
       <h1>What is the difference between Margin, Border, and Padding?</h1>
       <p>In CSS, a margin is the space around an element&apos;s border, while padding is the space between an element&apos;s border
