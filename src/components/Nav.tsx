@@ -130,17 +130,23 @@ function Nav() {
                 <Button>Tech &or;</Button>
               </MenuHandler>
               <MenuList>
+              <Link href="html-css">
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="html-css">CSS lessons</Link>
+                  CSS lessons
                 </MenuItem>
+              </Link>
+                <Link href="javascript-dom">
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
-                  <Link href="javascript-dom">Javascript DOM</Link>
+                  Javascript DOM
                 </MenuItem>
+                </Link>
+                <Link href="problem-solving">
                 <MenuItem className=' hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="problem-solving">Problem Solving</Link>
+                  Problem Solving
                 </MenuItem>
+                </Link>
               </MenuList>
             </Menu>
           </div>
@@ -151,26 +157,36 @@ function Nav() {
                 <Button className='hover:text-blue-500 transition-colors'>core &or;</Button>
               </MenuHandler>
               <MenuList>
+                <Link href="neuroplasticity">
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="neuroplasticity">Neuroplasticity ideas</Link>
+                  Neuroplasticity ideas
                 </MenuItem>
+                </Link>
+                <Link href="emotional-intelligence">
                 <MenuItem className='hover:text-blue-500 transition-colors'> 
                   {' '}
-                  <Link href="emotional-intelligence">Emotional IQ</Link>
+                  Emotional IQ
                 </MenuItem>
+                </Link>
+                <Link href="identity-values">
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="identity-values">Identity values</Link>
+                  Identity values
                 </MenuItem>
+                </Link>
+                <Link href="foundations-reflection">
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="foundations-reflection">Foundations reflection</Link>
+                  Foundations reflection
                 </MenuItem>
+                </Link>
+                <Link href="learning-plan">
                 <MenuItem className='hover:text-blue-500 transition-colors'>
                   {' '}
-                  <Link href="learning-plan">Learning plan</Link>
+                  Learning plan
                 </MenuItem>
+                </Link>
               </MenuList>
             </Menu>
           </div>
