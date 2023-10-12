@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import cssSelector from '../../../img/css-selector.png'
-import cssSelectorComplex from '../../../img/css-selector.png'
-import cssSelectorEvenMoreComplex from '../../../img/css-selector.png'
+import cssSelector from '../../../public/css-selector.png'
+import cssSelectorComplex from '../../../public/css-selector.png'
+import cssSelectorEvenMoreComplex from '../../../public/css-selector.png'
 
 
 function page() {

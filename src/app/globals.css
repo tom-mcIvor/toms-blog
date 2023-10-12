@@ -1,3 +1,4 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -62,9 +63,8 @@ body{
 
 
 svg {
-  margin-top: -300px;
-  margin-left: -7px;
-  top: 10%;
+  margin-top: -70px;
+  top: -10%;
   fill: none;
   stroke: #fff;
   stroke-dasharray: 150 480;
@@ -72,7 +72,7 @@ svg {
   transition: 1s ease-in-out;
 }
 
-.btn {
+.mybutton {
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -81,17 +81,17 @@ svg {
   outline: none;
   transition: 1s ease-in-out;
 }
-.btn:hover {
+.mybutton:hover {
   transition: 1s ease-in-out;
   background: rgb(0, 92, 92);
   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
 }
 
-.btn:hover svg {
+.mybutton:hover svg {
   stroke-dashoffset: -480;
 }
 
-.btn :before {
+.mybutton :before {
   background: linear-gradient(
     120deg,
     transparent,
@@ -108,5 +108,12 @@ svg {
   margin-top: 3%;
   color: white;
   font-family: cursive;
+}
+
+@media screen and (max-width: 1800px) {
+  body > div.navbar.active{
+    font-size: smaller;
+   
+  }
 }
 

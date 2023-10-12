@@ -10,21 +10,21 @@ function Home() {
 
   return (
     <>
-     <Carousel className="rounded-xl">
-       <Image
-         src={badgerMatchHome}
-         alt="image 1"
-         className="h-full w-full object-cover"
-       />
+     <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+         <Image
+           src={badgerMatchHome}
+           alt="image 1"
+           className="w-[300px] h-[300px] object-cover"
+         />
        <Image
          src={badgerMatch}
          alt="image 2"
-         className="h-full w-full object-cover"
+         className="w-[300px] h-[300px] object-cover"
        />
        <Image
          src={badgerMachUploads}
          alt="image 3"
-         className="h-full w-full object-cover"
+         className="w-[300px] h-[300px] object-cover"
        />
      </Carousel>
  
