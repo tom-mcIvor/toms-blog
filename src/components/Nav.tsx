@@ -94,7 +94,6 @@ function Nav() {
           {/* <Image src={profilePic} alt="toms profile" /> */}
         </Link>
         <a href="/">
-          <div>
             <div>
               <button className="mybutton">
                 <div className="hello">Home</div>
@@ -104,7 +103,6 @@ function Nav() {
                 </svg>
               </button>
             </div>
-          </div>
         </a>
         <div className="flex-grow">
           <Collapse open={openNav}>

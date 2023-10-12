@@ -61,16 +61,15 @@ body{
     }
   }
 
-
-svg {
-  margin-top: -70px;
-  top: -10%;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-}
+  svg {
+    margin-top: -70px;
+    top: -10%;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
 
 .mybutton {
   width: 180px;

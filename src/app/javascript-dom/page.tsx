@@ -11,10 +11,11 @@ const CUSTOM_ANIMATION = {
   unmount: { scale: 0.9 },
 };
 
+
 function javaScriptDom() {
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = React.useState(0)
  
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+  const handleOpen = (value: number) => setOpen(open === value ? 0 : value)
   return (
     <>
     <br />
@@ -24,9 +25,9 @@ function javaScriptDom() {
     <br />
     <p>
     <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader onClick={() => handleOpen(1)} className="text-black">An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
+        <AccordionHeader onClick={() => handleOpen(1)}>An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
 
-      <AccordionBody className="text-black">
+      <AccordionBody>
       JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians (HTML and CSS)
       to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
       experiences.
