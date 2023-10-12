@@ -1,7 +1,20 @@
 'use client'
 import React from 'react'
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+const CUSTOM_ANIMATION = {
+  mount: { scale: 1 },
+  unmount: { scale: 0.9 },
+};
 
 function javaScriptDom() {
+  const [open, setOpen] = React.useState(0);
+ 
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
     <>
     <br />
@@ -10,17 +23,18 @@ function javaScriptDom() {
     <p></p>
     <br />
     <p>
-    <details>
-      <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
-        Question
-      </summary>
-      <h3>An analogy to describe JavaScript and its relationship to HTML and CSS.</h3>
-    </details>
+    <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
+        <AccordionHeader onClick={() => handleOpen(1)} className="text-black">An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
+
+      <AccordionBody className="text-black">
+      JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians (HTML and CSS)
+      to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
+      experiences.
+        </AccordionBody>
+        </Accordion>
     </p>
     <br />
-    <p>JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians (HTML and CSS)
-      to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
-      experiences.</p>
+    <p></p>
     <br />
     <p>
     <details>
