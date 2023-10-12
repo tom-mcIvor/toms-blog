@@ -1,9 +1,34 @@
 'use client'
 import React from 'react'
+import { Carousel } from "@material-tailwind/react";
+import Image from 'next/image'
+import badgerMatchHome from  "../../public/badger-match-home.png"
+import badgerMatch from "../../public/badger-match.png"
+import badgerMachUploads from "../../public/badger-match-uploads.png"
 
 function Home() {
+
   return (
     <>
+     <Carousel className="rounded-xl">
+       <Image
+         src={badgerMatchHome}
+         alt="image 1"
+         className="h-full w-full object-cover"
+       />
+       <Image
+         src={badgerMatch}
+         alt="image 2"
+         className="h-full w-full object-cover"
+       />
+       <Image
+         src={badgerMachUploads}
+         alt="image 3"
+         className="h-full w-full object-cover"
+       />
+     </Carousel>
+ 
+
       <div className="home-page">
         <div className="project">
           <h1>My Portfolio</h1>

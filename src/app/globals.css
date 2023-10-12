@@ -23,12 +23,6 @@ body{
   color: rgba(202, 202, 0, 0.493);
   flex-direction: column;
 }
-img {
-  height: 30px;
-  width: 25px;
-  border-radius: 50%;
-}
-
 
 @media screen and (max-width: 700px) {
   .navbar {
@@ -48,15 +42,6 @@ img {
   }
 }
 
-
-
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
-  color: inherit;
-  }
-
-
-
   @media screen and (max-width: 500px) {
     body .container3 span div p{
       margin: 10px;
@@ -75,61 +60,6 @@ a, a:hover, a:focus, a:active {
     }
   }
 
-.dropdown {
-  top: 70%;
-    position: absolute;
-    right: 20%;
-    transform: translate(50%, 50%);
-    border-radius: 5%;
-    opacity: .7;
-}
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-
-body .container .box{
-  top: 40%;
-    right: 20%;
-    position: absolute;
-    font-family: cursive !important;
-    transform: translate(50%, 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 15%;
-    opacity: .7;
-}
-
-body .container .box:hover {
-  background-color:#3e8e41;
-  color: black;
-}
-
-body .container img {
-  position: absolute;
-  top: 47%;
-  right: 16%;
-  transform: translate(50%, 50%);
-  opacity: .5;
-}
 
 svg {
   margin-top: -300px;
@@ -179,146 +109,4 @@ svg {
   color: white;
   font-family: cursive;
 }
-
-body > div.navbar.active > nav{
-  margin:0 auto;
-  background-color: rgb(133, 32, 32);
-  justify-content: center;
-  height:40px;
-  display: flex;
-}
-
-
-body > div.navbar.active > nav > ul > li:nth-child(1){
-  border-radius: 5px;
-  background-color:  blueviolet;
-  font-size: 13px;
-}
-
-body > div.navbar.active > nav > ul > li:nth-child(2){
-  background-color:  rgb(129, 66, 129);
-  font-size: 13px;
-  border-radius: 5px;
-}
-
-body > div.navbar.active > nav > ul > li:nth-child(2) > ul {
-  background-color:  rgb(129, 66, 129);
-  float: left;
-  text-align: left ;
-}
-
-body > div.navbar.active > div {
-  margin-left: 10px, auto;
-}
-
-body > div.navbar.active > nav {
-  display: flex ;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-body > div.navbar.active > nav > ul{
-  display: flex ;
-  flex-direction: row;
-}
-
-body > div.navbar.active > nav > ul > li:nth-child(2){
-  justify-content: left;
-}
-
-@media screen and (max-width: 1800px) {
-  body > div.navbar.active{
-    font-size: smaller;
-   
-  }
-}
-@media screen and (max-width: 1650px) {
-  body>div.navbar.active>div>a.change>div {
-      width: 100px;
-      height: 50px;
-  }
-
-  body > div.navbar.active > div > a.change > div > div{
-    width: 100px;
-    height: 50px;
-  }
-
-  body > div.navbar.active > div > a.change > div > div > button{
-    width: 100px;
-    height: 50px;
-  }
-
-    body>div.navbar.active>div>a.change>div>div>button>svg {
-      width: 100px;
-      height: 50px;
-    }
-
-  body > div.navbar.active > div > a.change > div > div{
-    margin-bottom: 10px;
-  }
-
-  body > div.navbar.active > div {
-    margin-left: 5px auto;
-  }
-}
-
-body > div.navbar.active > div > a.change > div > div{
- border-radius: 5%;
-}
-
-body > div.navbar.active > div > a.change > div{
-  border-radius: 5%;
-
-}
-body > div.navbar.active > div > a.change > div > div{
-  border-radius: 5%;
-
-}
-
-body > div.navbar.active > div > a.change > div > div > button{
-  border-radius: 5%;
-  background-color: #828394;
-}
-
-@media screen and (max-width: 1800px) { 
-
-  body > div.navbar.active > nav{
-    margin-left: 100px;
-  }
-
-}
-
-@media screen and (max-width: 1610px) { 
-  body > div.navbar.active > nav {
-    margin-left: 100px;
-  }
-  body > div.navbar.active > div{
-    margin-left: 100px !important;
-  }  
-}
-
-@media screen and (max-width: 1300px) { 
-  body > div.navbar.active > nav {
-    margin-left: 50px;
-  }
-  body > div.navbar.active > div{
-    margin-left: 3px !important;
-  }  
-}
-
-@media screen and (max-width: 700px) { 
-  body > div.navbar.active > ul {
-    width: 0px;
-  }
-  body > div.navbar.active > nav {
-    place-items: center;
-  }
-  body > div.navbar.active > nav > ul{
-    height: 30px;
-  }
-  body > div.navbar.active > nav > ul > li:nth-child(2) > a {
-    height: 30px;
-  }
-}
-
 
