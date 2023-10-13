@@ -12,7 +12,7 @@ const CUSTOM_ANIMATION = {
 };
 
 
-function javaScriptDom() {
+function JavaScriptDom() {
   const [open, setOpen] = React.useState(0)
  
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value)
@@ -131,4 +131,4 @@ function javaScriptDom() {
   )
 }
 
-export default javaScriptDom
+export default JavaScriptDom
