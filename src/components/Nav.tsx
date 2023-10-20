@@ -115,7 +115,7 @@ function Nav() {
         <div className="flex-grow flex flex-row">
             <Menu>
               <MenuHandler>
-                <Button>BOOTCAMP LEARNING</Button>
+                <Button className="normal-case">Bootcamp Progress</Button>
               </MenuHandler>
               <MenuList>
                 <Menu
