@@ -13,6 +13,7 @@ import {
   Button,
   ThemeProvider,
 } from "@material-tailwind/react";
+import {  ChevronUpIcon } from "@heroicons/react/24/solid";
 
  
 function NavList() {
@@ -63,7 +64,9 @@ function NavList() {
 }
 
 function Nav() {
+  const [openMenu, setOpenMenu] = React.useState(false);
   const [openNav, setOpenNav] = React.useState(false);
+  const [openMenuRight, setOpenMenuRight] = React.useState(false);
  
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
@@ -113,10 +116,29 @@ function Nav() {
           <div className="flex-grow flex">
             <Menu>
               <MenuHandler>
-                <Button>Tech &or;</Button>
+                <Button>BOOTCAMP LEARNING</Button>
               </MenuHandler>
               <MenuList>
-                <Link href="html-css">
+              <Menu
+          placement="right-start"
+          open={openMenu}
+          handler={setOpenMenu}
+          allowHover
+          offset={15}
+        >
+          <MenuHandler className="flex items-center justify-between">
+            <MenuItem>
+            TECH
+              <ChevronUpIcon
+                strokeWidth={2.5}
+                className={`h-3.5 w-3.5 transition-transform ${
+                  openMenu ? "rotate-90" : ""
+                }`}
+              />
+            </MenuItem>
+          </MenuHandler>
+          <MenuList>
+          <Link href="html-css">
                   <MenuItem className=" hover:text-blue-500 transition-colors">
                     {' '}
                     CSS lessons
@@ -133,18 +155,28 @@ function Nav() {
                     Problem Solving
                   </MenuItem>
                 </Link>
-              </MenuList>
-            </Menu>
-          </div>
-
-          <div className="flex-grow">
-            <Menu>
-              <MenuHandler>
-                <Button className="hover:text-blue-500 transition-colors">
-                  core &or;
-                </Button>
-              </MenuHandler>
-              <MenuList>
+          </MenuList>
+        </Menu>  
+              <Menu
+          placement="right-start"
+          open={openMenuRight}
+          handler={setOpenMenuRight}
+          allowHover
+          offset={15}
+        >
+          <MenuHandler className="flex items-center justify-between">
+            <MenuItem>
+            CORE
+              <ChevronUpIcon
+                strokeWidth={2.5}
+                className={`h-3.5 w-3.5 transition-transform ${
+                  openMenuRight ? "rotate-90" : ""
+                }`}
+              />
+            </MenuItem>
+          </MenuHandler>
+          <MenuList>
+          
                 <Link href="neuroplasticity">
                   <MenuItem className="hover:text-blue-500 transition-colors">
                     {' '}
@@ -174,9 +206,16 @@ function Nav() {
                     {' '}
                     Learning plan
                   </MenuItem>
-                </Link>
+                </Link> 
+          
+          </MenuList>
+        </Menu>  
               </MenuList>
             </Menu>
+          </div>
+
+          <div className="flex-grow">
+           
           </div>
         </div>
       </div>

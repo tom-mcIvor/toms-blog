@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Accordion,
   AccordionHeader,
@@ -13,31 +13,25 @@ const CUSTOM_ANIMATION = {
 
 
 function JavaScriptDom() {
-  const [open, setOpen] = React.useState(0)
+  const [open, setOpen] = useState(0)
  
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value)
   return (
     <>
-    <br />
-    <br />
-    <br />
-    <p></p>
-    <br />
-    <p>
+  
     <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
         <AccordionHeader onClick={() => handleOpen(1)}>An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
 
       <AccordionBody>
-      JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians (HTML and CSS)
-      to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
-      experiences.
+      <p>
+        JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians HTML and CSS
+        to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
+        experiences.
+      </p>
         </AccordionBody>
         </Accordion>
-    </p>
     <br />
-    <p></p>
     <br />
-    <p>
     <details>
       <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
         Question
@@ -45,7 +39,6 @@ function JavaScriptDom() {
       <h3>Explain control flow and loops using an example process from everyday life, for example, &apos;waking up&apos; or
       &apos;br /ushing your teeth&apos; (but not those).</h3>
     </details>
-    </p>
     <br />
     <p>
     <h4>Control Flow:</h4> Control flow is evident in the decision-making process throughout, including ingredient
@@ -55,9 +48,7 @@ function JavaScriptDom() {
     Loops are present in the mixing process and baking process, where certain actions are repeated until a specific
     condition is met (mixing until the dough is well combined, baking for a set amount of time).
     </p>
-   
     <br />
-    
     <details>
       <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
         Question
