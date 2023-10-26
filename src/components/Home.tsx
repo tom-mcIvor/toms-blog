@@ -5,12 +5,31 @@ import Image from 'next/image'
 import badgerMatchHome from  "../../public/badger-match-home.png"
 import badgerMatch from "../../public/badger-match.png"
 import badgerMachUploads from "../../public/badger-match-uploads.png"
+import ginewForeCode2 from "../../public/ginew-foce-code2.png"
+import genewForceCode from "../../public/ginew-force-code.png"
+import ginewForce from "../../public/ginew-force.png"
+import mintToBeAddHerb from "../../public/mint-to-be-add-herb.png"
+import mintToBeHome from "../../public/mint-to-be-home.png"
+import mintToBeUpdate from "../../public/mint-to-be-update-herb.png"
+
 
 function Home() {
 
   return (
     <>
-     <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+      <div className="home-page">
+        <div className="project">
+          <h1>My Portfolio</h1>
+         
+          <h3>BadgerMatch</h3>
+          <p>
+            What is Badger Match? A companion finding application. We&apos;ll show you
+            different candidates to help you decide which animal is your ideal
+            match.
+          </p>
+        </div>
+        <a href="https://github.com/tom-mcivor/BadgerMatch">BadgerMatch</a>
+        <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
          <Image
            src={badgerMatchHome}
            alt="image 1"
@@ -27,36 +46,6 @@ function Home() {
          className="w-[300px] h-[300px] object-cover"
        />
      </Carousel>
- 
-
-      <div className="home-page">
-        <div className="project">
-          <h1>My Portfolio</h1>
-          <h3>YearBook</h3>
-          <div className="project-left">
-            <p>
-              Our Yeah-Book app is a platform that allows users to create
-              yearbooks and upload their profile and details to each yearbook.
-              Similar to Facebook, Yeah-Book provides a social setting for users
-              to connect with others and share content. The app&apos;s unique feature
-              of customizable yearbooks makes it a great tool for preserving
-              memories and staying connected with friends and classmates. With its
-              user-friendly interface and innovative approach to social
-              networking, Yeah-Book is a valuable app that provides a unique
-              service to its users.
-            </p>
-          </div>
-          <div className="project-right">
-            <a href="https://github.com/tom-mcivor/Yeah-book">Yeah-book</a>
-          </div>
-          <h3>BadgerMatch</h3>
-          <p>
-            What is Badger Match? A companion finding application. We&apos;ll show you
-            different candidates to help you decide which animal is your ideal
-            match.
-          </p>
-        </div>
-        <a href="https://github.com/tom-mcivor/BadgerMatch">BadgerMatch</a>
         <h3>Mint to be</h3>
         <div className="project-right">
           <a href="https://github.com/tom-mcivor/Mint-to-be">Mint to be</a>
@@ -67,6 +56,23 @@ function Home() {
             details and each herb selected
           </p>
         </div>
+        <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+         <Image
+           src={mintToBeAddHerb}
+           alt="image 1"
+           className="w-[300px] h-[300px] object-cover"
+         />
+       <Image
+         src={mintToBeHome}
+         alt="image 2"
+         className="w-[300px] h-[300px] object-cover"
+       />
+       <Image
+         src={mintToBeUpdate}
+         alt="image 3"
+         className="w-[300px] h-[300px] object-cover"
+       />
+     </Carousel>
         <h3>Ginew force</h3>
         <div className="project-right">
           <div className="project-right">
@@ -79,30 +85,34 @@ function Home() {
             characters against each other with an ultimate winner
           </p>
         </div>
-        <h3>My-own-party</h3>
-        <div className="project-left">
-          <p>
-            My own party is a fun app that lets the user randomly receive an
-            excuss for a random activity
-          </p>
-        </div>
-        <div className="project-right">
-          <a href="https://github.com/tom-mcivor/My-own-party">My own party</a>
-        </div>
+        <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+         <Image
+           src={ginewForeCode2}
+           alt="image 1"
+           className="w-[300px] h-[300px] object-cover"
+         />
+       <Image
+         src={genewForceCode}
+         alt="image 2"
+         className="w-[300px] h-[300px] object-cover"
+       />
+       <Image
+         src={ginewForce}
+         alt="image 3"
+         className="w-[300px] h-[300px] object-cover"
+       />
+     </Carousel>
+       
         <h3>Nightmare on dev street</h3>
         <div className="project-right">
           <div className="project-right">
             <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street">
               Nightmare on dev street
             </a>
+
           </div>
         </div>
-        <div className="project-left">
-          <p>
-            Nightmare on dev street allows the users to rate there favorite horror
-            movie
-          </p>
-        </div>
+        
         <h3>Tennis dashboard</h3>
         <div className="project-right">
            <a href="https://github.com/tom-mcivor/Tennis-dashboard">
