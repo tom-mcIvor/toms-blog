@@ -2,9 +2,7 @@
 import React from 'react'
 import { Carousel } from "@material-tailwind/react";
 import Image from 'next/image'
-import badgerMatchHome from  "../../public/badger-match-home.png"
-import badgerMatch from "../../public/badger-match.png"
-import badgerMachUploads from "../../public/badger-match-uploads.png"
+
 import ginewForeCode2 from "../../public/ginew-foce-code2.png"
 import genewForceCode from "../../public/ginew-force-code.png"
 import ginewForce from "../../public/ginew-force.png"
@@ -17,35 +15,11 @@ function Home() {
 
   return (
     <>
-      <div className="home-page">
+      
         <div className="project">
           <h1>My Portfolio</h1>
          
-          <h3>BadgerMatch</h3>
-          <p>
-            What is Badger Match? A companion finding application. We&apos;ll show you
-            different candidates to help you decide which animal is your ideal
-            match.
-          </p>
-        </div>
-        <a href="https://github.com/tom-mcivor/BadgerMatch">BadgerMatch</a>
-        <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-         <Image
-           src={badgerMatchHome}
-           alt="image 1"
-           className="w-[300px] h-[300px] object-cover"
-         />
-       <Image
-         src={badgerMatch}
-         alt="image 2"
-         className="w-[300px] h-[300px] object-cover"
-       />
-       <Image
-         src={badgerMachUploads}
-         alt="image 3"
-         className="w-[300px] h-[300px] object-cover"
-       />
-     </Carousel>
+        
         <h3>Mint to be</h3>
         <div className="project-right">
           <a href="https://github.com/tom-mcivor/Mint-to-be">Mint to be</a>
