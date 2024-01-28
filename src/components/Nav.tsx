@@ -93,11 +93,11 @@ function Nav() {
     <ThemeProvider value={theme}>
       <div className="flex items-center justify-between text-blue-gray-900 w-full sticky top-0 bg-black   shadow-md transition duration-400 h-20 z-50">
         <Link href="https://github.com/tom-mcivor">
-          <div className="small flex-grow">My Blog</div>
+          <div className="small flex-grow pl-20">My Blog</div>
           {/* <Image src={profilePic} alt="toms profile" /> */}
         </Link>
         <a href="/">
-          <div>
+          <div className="pl-20">
             <button className="mybutton">
               <div className="hello">Home</div>
               <svg className="w-[180px] h-[60px] inline">
