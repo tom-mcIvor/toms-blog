@@ -21,7 +21,7 @@ function Home() {
     <>
    <Head>
  <Link rel="preconnect" href="https://fonts.googleapis.com"/>
- <Link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true}/>
+ <Link rel="preconnect" href="https://fonts.gstatic.com"/>
  <Link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
 </Head>
       <div className="home-page align-middle text-center justify-center items-center flex flex-col ">
@@ -34,7 +34,7 @@ function Home() {
             match.
           </p>
         </div>
-        <a className="text-blue-500" href="https://github.com/tom-mcivor/BadgerMatch">BadgerMatch</a>
+        <a className="text-blue-500 hover:text-blue-700" href="https://github.com/tom-mcivor/BadgerMatch">BadgerMatch</a>
         <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
          <Image
            src={badgerMatchHome}
@@ -54,7 +54,7 @@ function Home() {
      </Carousel>
         <h3>Mint to be</h3>
         <div className="project-right">
-          <a href="https://github.com/tom-mcivor/Mint-to-be">Mint to be</a>
+          <a className="text-blue-500 hover:text-blue-700" href="https://github.com/tom-mcivor/Mint-to-be">Mint to be</a>
         </div>
         <div className="project-left">
           <p>
@@ -82,7 +82,7 @@ function Home() {
         <h3 className="text-lg">Ginew force</h3>
         <div className="project-right">
           <div className="project-right">
-            <a href="https://github.com/tom-mcivor/Ginew-force">Ginew Force</a>
+            <a className="text-blue-500 hover:text-blue-700" href="https://github.com/tom-mcivor/Ginew-force">Ginew Force</a>
           </div>
         </div>
         <div className="project-left">
@@ -112,16 +112,16 @@ function Home() {
         <h3>Nightmare on dev street</h3>
         <div className="project-right">
           <div className="project-right">
-            <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street">
+            <a className="text-blue-500 hover:text-blue-700" href="https://github.com/tom-mcivor/Nightmare-on-dev-street">
               Nightmare on dev street
             </a>
 
           </div>
         </div>
         
-        <h3>Tennis dashboard</h3>
+        <h3 >Tennis dashboard</h3>
         <div className="project-right">
-           <a href="https://github.com/tom-mcivor/Tennis-dashboard">
+           <a className="text-blue-500 hover:text-blue-700" href="https://github.com/tom-mcivor/Tennis-dashboard">
             Tennis Dashboard
           </a>
         </div>
