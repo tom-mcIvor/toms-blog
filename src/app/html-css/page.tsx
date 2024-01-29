@@ -4,12 +4,13 @@ import Image from 'next/image'
 import cssSelector from '../../../public/css-selector.png'
 import cssSelectorComplex from '../../../public/css-selector.png'
 import cssSelectorEvenMoreComplex from '../../../public/css-selector.png'
+import { CLIENT_STATIC_FILES_RUNTIME } from 'next/dist/shared/lib/constants'
 
 
 function page() {
   return (
     <>
-    <div className="container5">
+    <div className="ml-20 mt-20">
     <a href="html-css-2.html">Whats the difference between padding border and margin?</a>
     <h1>CSS selectors </h1>
     <p>in this guide we will learn how to use complex css selctors </p>
