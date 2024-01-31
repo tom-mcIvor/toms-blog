@@ -97,7 +97,7 @@ function Nav() {
           {/* <Image src={profilePic} alt="toms profile" /> */}
         </Link>
         <a href="/">
-          <div className="pl-20">
+          <div className="pl-20 m-5">
             <button className="mybutton">
               <div className="hello">Home</div>
               <svg className="w-[180px] h-[60px] inline">

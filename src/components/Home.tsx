@@ -16,6 +16,10 @@ import mintToBeUpdate from "../../public/mint-to-be-update-herb.png"
 import yeakbookHome from "../../public/yeah-book.png"
 import yeakBookProfile from "../../public/yeah-book-profile.png"
 import yeakBookProfile2 from "../../public/yeah-book-profile-2.png"
+import nightmareComments from "../../public/nightmare-on-dev-comments.png"
+import nightmareDev from "../../public/nightmare-on-dev-select.png"
+import nightmare from "../../public/nightmare.png"
+
 
 function Home() {
   return (
@@ -28,7 +32,7 @@ function Home() {
           rel="stylesheet"
         />
       </Head>
-      <div className="home-page align-middle text-center justify-center items-center flex flex-col ">
+      <div className="home-page align-middle text-center justify-center items-center flex flex-col mb-20">
         <div className="project pt-10">
           <h1
             className="pb-20 text-lg text-white"
@@ -91,7 +95,7 @@ function Home() {
           href="https://github.com/tom-mcivor/BadgerMatch"
         >
           BadgerMatch
-        </a>
+        </a>=
         <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
           <Image
             src={badgerMatchHome}
@@ -189,27 +193,23 @@ function Home() {
             </a>
           </div>
         </div>
-
-        <h3>Tennis dashboard</h3>
-        <div className="project-right">
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            href="https://github.com/tom-mcivor/Tennis-dashboard"
-          >
-            Tennis Dashboard
-          </a>
-        </div>
-        <div className="project-left">
-          <p>
-            I developed the Tennis-Dashboard app using React and Redux, which
-            allows users to search for ATP and WTA tennis players through an
-            external API. The app also includes a feature that randomly selects
-            players for users to view, making it a valuable resource for tennis
-            fans looking to see who is ranked in the top 100. This app
-            demonstrates my technical skills in React and Redux, as well as my
-            ability to work with external APIs and create user-friendly features
-          </p>
-        </div>
+        <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+          <Image
+            src={nightmareComments}
+            alt="image 1"
+            className="w-[300px] h-[300px] object-cover"
+          />
+          <Image
+            src={nightmareDev}
+            alt="image 2"
+            className="w-[300px] h-[300px] object-cover"
+          />
+          <Image
+            src={nightmare}
+            alt="image 3"
+            className="w-[300px] h-[300px] object-cover"
+          />
+        </Carousel>
       </div>
     </>
   )
