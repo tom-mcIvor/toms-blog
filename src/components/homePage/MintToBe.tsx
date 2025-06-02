@@ -1,8 +1,33 @@
 import React from 'react'
+import { Carousel } from '@material-tailwind/react'
+import Image from 'next/image'
 
 function MintToBe() {
   return (
-    <div>MintToBe</div>
+    <div>
+      <h3>MintToBe</h3>
+      <Carousel
+        className="rounded-xl w-[300px] h-[300px] overflow-hidden"
+        prevArrow={({ handlePrev }) => (
+          <button
+            onClick={handlePrev}
+            className="carousel-arrow-left"
+            aria-label="Previous"
+            type="button"
+          />
+        )}
+        nextArrow={({ handleNext }) => (
+          <button
+            onClick={handleNext}
+            className="carousel-arrow-right"
+            aria-label="Next"
+            type="button"
+          />
+        )}
+      >
+        {/* Add your images here */}
+      </Carousel>
+    </div>
   )
 }
 

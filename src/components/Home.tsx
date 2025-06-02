@@ -1,25 +1,25 @@
 'use client'
 import React from 'react'
-import { Carousel } from "@material-tailwind/react";
+import { Carousel } from '@material-tailwind/react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link';
-import badgerMatchHome from  "../../public/badger-match-home.png"
-import badgerMatch from "../../public/badger-match.png"
-import badgerMachUploads from "../../public/badger-match-uploads.png"
-import ginewForeCode2 from "../../public/ginew-foce-code2.png"
-import genewForceCode from "../../public/ginew-force-code.png"
-import ginewForce from "../../public/ginew-force.png"
-import mintToBeAddHerb from "../../public/mint-to-be-add-herb.png"
-import mintToBeHome from "../../public/mint-to-be-home.png"
-import mintToBeUpdate from "../../public/mint-to-be-update-herb.png"
-import yeakbookHome from "../../public/yeah-book.png"
-import yeakBookProfile from "../../public/yeah-book-profile.png"
-import yeakBookProfile2 from "../../public/yeah-book-profile-2.png"
-import nightmareComments from "../../public/nightmare-on-dev-comments.png"
-import nightmareDev from "../../public/nightmare-on-dev-select.png"
-import nightmare from "../../public/nightmare.png"
-
+import Link from 'next/link'
+import badgerMatchHome from '../../public/badger-match-home.png'
+import badgerMatch from '../../public/badger-match.png'
+import badgerMachUploads from '../../public/badger-match-uploads.png'
+import ginewForeCode2 from '../../public/ginew-foce-code2.png'
+import genewForceCode from '../../public/ginew-force-code.png'
+import ginewForce from '../../public/ginew-force.png'
+import mintToBeAddHerb from '../../public/mint-to-be-add-herb.png'
+import mintToBeHome from '../../public/mint-to-be-home.png'
+import mintToBeUpdate from '../../public/mint-to-be-update-herb.png'
+import yeakbookHome from '../../public/yeah-book.png'
+import yeakBookProfile from '../../public/yeah-book-profile.png'
+import yeakBookProfile2 from '../../public/yeah-book-profile-2.png'
+import nightmareComments from '../../public/nightmare-on-dev-comments.png'
+import nightmareDev from '../../public/nightmare-on-dev-select.png'
+import nightmare from '../../public/nightmare.png'
+import AboutMeAndSkills from './homePage/AboutMeAndSkills'
 
 function Home() {
   return (
@@ -32,6 +32,7 @@ function Home() {
           rel="stylesheet"
         />
       </Head>
+      <AboutMeAndSkills />
       <div className="home-page align-middle text-center justify-center items-center flex flex-col mb-20">
         <div className="project pt-10">
           <h1
@@ -95,7 +96,8 @@ function Home() {
           href="https://github.com/tom-mcivor/BadgerMatch"
         >
           BadgerMatch
-        </a>=
+        </a>
+        =
         <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
           <Image
             src={badgerMatchHome}
@@ -113,7 +115,6 @@ function Home() {
             className="w-[300px] h-[300px] object-cover"
           />
         </Carousel>
-
         <h3>Mint to be</h3>
         <div className="project-right">
           <a
@@ -146,7 +147,6 @@ function Home() {
             className="w-[300px] h-[300px] object-cover"
           />
         </Carousel>
-
         <h3 className="text-lg">Ginew force</h3>
         <div className="project-right">
           <div className="project-right">
@@ -181,7 +181,6 @@ function Home() {
             className="w-[300px] h-[300px] object-cover"
           />
         </Carousel>
-
         <h3>Nightmare on dev street</h3>
         <div className="project-right">
           <div className="project-right">
