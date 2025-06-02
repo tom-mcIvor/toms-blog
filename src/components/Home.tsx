@@ -1,25 +1,27 @@
 'use client'
 import React from 'react'
-import { Carousel } from '@material-tailwind/react'
+import { Carousel } from "@material-tailwind/react";
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import badgerMatchHome from '../../public/badger-match-home.png'
-import badgerMatch from '../../public/badger-match.png'
-import badgerMachUploads from '../../public/badger-match-uploads.png'
-import ginewForeCode2 from '../../public/ginew-foce-code2.png'
-import genewForceCode from '../../public/ginew-force-code.png'
-import ginewForce from '../../public/ginew-force.png'
-import mintToBeAddHerb from '../../public/mint-to-be-add-herb.png'
-import mintToBeHome from '../../public/mint-to-be-home.png'
-import mintToBeUpdate from '../../public/mint-to-be-update-herb.png'
-import yeakbookHome from '../../public/yeah-book.png'
-import yeakBookProfile from '../../public/yeah-book-profile.png'
-import yeakBookProfile2 from '../../public/yeah-book-profile-2.png'
-import nightmareComments from '../../public/nightmare-on-dev-comments.png'
-import nightmareDev from '../../public/nightmare-on-dev-select.png'
-import nightmare from '../../public/nightmare.png'
+import Link from 'next/link';
+import badgerMatchHome from  "../../public/badger-match-home.png"
+import badgerMatch from "../../public/badger-match.png"
+import badgerMachUploads from "../../public/badger-match-uploads.png"
+import ginewForeCode2 from "../../public/ginew-foce-code2.png"
+import genewForceCode from "../../public/ginew-force-code.png"
+import ginewForce from "../../public/ginew-force.png"
+import mintToBeAddHerb from "../../public/mint-to-be-add-herb.png"
+import mintToBeHome from "../../public/mint-to-be-home.png"
+import mintToBeUpdate from "../../public/mint-to-be-update-herb.png"
+import yeakbookHome from "../../public/yeah-book.png"
+import yeakBookProfile from "../../public/yeah-book-profile.png"
+import yeakBookProfile2 from "../../public/yeah-book-profile-2.png"
+import nightmareComments from "../../public/nightmare-on-dev-comments.png"
+import nightmareDev from "../../public/nightmare-on-dev-select.png"
+import nightmare from "../../public/nightmare.png"
 import AboutMeAndSkills from './homePage/AboutMeAndSkills'
+
+import { FaReact } from 'react-icons/fa'
 
 function Home() {
   return (
@@ -41,7 +43,11 @@ function Home() {
           >
             My Portfolio
           </h1>
-          <h3 className="text-lg">YeahBook</h3>
+          <div className="flex justify-center py-4">
+            <span className="text-5xl text-cyan-400">
+              <FaReact />
+            </spanv>
+        e="text-lg">YeahBook</h3>
           <p>
             Our Yeah-Book app is a platform that allows users to create
             yearbooks and upload their profile and details to each yearbook.
@@ -84,9 +90,13 @@ function Home() {
           >
             My Portfolio
           </h1>
-          <h3 className="text-lg">BadgerMatch</h3>
-          <p>
-            What is Badger Match? A companion finding application. We&apos;ll
+          <div className="flex justify-center py-4">
+            <span className="text-5xl text-cyan-400">
+              <FaReact />
+            </span>
+          </div>
+          <h3 className="text</h3>
+            What is Badger Match? A companion finding applicationll
             show you different candidates to help you decide which animal is
             your ideal match.
           </p>
@@ -103,7 +113,8 @@ function Home() {
             src={badgerMatchHome}
             alt="image 1"
             className="w-[300px] h-[300px] object-cover"
-          />
+     
+     />
           <Image
             src={badgerMatch}
             alt="image 2"
@@ -135,7 +146,8 @@ function Home() {
             src={mintToBeAddHerb}
             alt="image 1"
             className="w-[300px] h-[300px] object-cover"
-          />
+   
+       />
           <Image
             src={mintToBeHome}
             alt="image 2"
@@ -169,7 +181,8 @@ function Home() {
             src={ginewForeCode2}
             alt="image 1"
             className="w-[300px] h-[300px] object-cover"
-          />
+ 
+         />
           <Image
             src={genewForceCode}
             alt="image 2"
@@ -199,7 +212,7 @@ function Home() {
             className="w-[300px] h-[300px] object-cover"
           />
           <Image
-            src={nightmareDev}
+            src={nigmareDev}
             alt="image 2"
             className="w-[300px] h-[300px] object-cover"
           />

@@ -1,14 +1,50 @@
 import { Carousel } from '@material-tailwind/react'
 import Image from 'next/image'
 import React from 'react'
-import yeahBookProfile2 from '../../public/yeah-book-profile-2.png'
-import yeahBookProfile from '../../public/yeah-book-profile.png'
-import yeahBook from '../../public/yeah-book.png'
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaBootstrap,
+} from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiRedux,
+  SiNextdotjs,
+  SiJest,
+  SiVite,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+} from 'react-icons/si'
 
 function YeahBook() {
+  const techStack = [
+    { name: 'JavaScript', icon: <FaJs /> },
+    { name: 'TypeScript', icon: <SiTypescript /> },
+    { name: 'React', icon: <FaReact /> },
+    { name: 'Redux', icon: <SiRedux /> },
+    { name: 'Next.js', icon: <SiNextdotjs /> },
+    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Express', icon: <SiExpress /> },
+    { name: 'MongoDB', icon: <SiMongodb /> },
+    { name: 'HTML5', icon: <FaHtml5 /> },
+    { name: 'CSS3', icon: <FaCss3Alt /> },
+    { name: 'TailwindCSS', icon: <SiTailwindcss /> },
+    { name: 'Bootstrap', icon: <FaBootstrap /> },
+    { name: 'Git', icon: <FaGitAlt /> },
+    { name: 'Jest', icon: <SiJest /> },
+    { name: 'Vite', icon: <SiVite /> },
+  ]
+
   return (
     <div>
-      <h3>YearBook</h3>
+      <h3 className="text-lg flex items-center gap-2">
+        YeahBook <span className="text-2xl text-cyan-400">TEST</span>
+      </h3>
       <div className="project-left">
         <p>
           Our Yeah-Book app is a platform that allows users to create yearbooks
@@ -44,21 +80,38 @@ function YeahBook() {
           )}
         >
           <Image
-            src={yeahBookProfile2}
+            src="/yeah-book-profile-2.png"
             alt="image 1"
+            width={300}
+            height={300}
             className="w-[300px] h-[300px] object-cover"
           />
           <Image
-            src={yeahBookProfile}
+            src="/yeah-book-profile.png"
             alt="image 2"
+            width={300}
+            height={300}
             className="w-[300px] h-[300px] object-cover"
           />
           <Image
-            src={yeahBook}
+            src="/yeah-book.png"
             alt="image 3"
+            width={300}
+            height={300}
             className="w-[300px] h-[300px] object-cover"
           />
         </Carousel>
+      </div>
+      <div className="flex flex-wrap gap-3 justify-center py-4">
+        {techStack.map((tech) => (
+          <div
+            key={tech.name}
+            className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded shadow text-base text-gray-700"
+          >
+            <span className="text-xl">{tech.icon}</span>
+            {tech.name}
+          </div>
+        ))}
       </div>
     </div>
   )

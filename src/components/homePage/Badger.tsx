@@ -4,8 +4,43 @@ import React from 'react'
 import badgerMatchHome from '../../../public/badger-match-home.png'
 import badgerMatch from '../../../public/badger-match.png'
 import badgerMachUploads from '../../../public/badger-match-uploads.png'
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+} from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiRedux,
+  SiNextdotjs,
+  SiJest,
+  SiVite,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+} from 'react-icons/si'
 
 function Badger() {
+  const techStack = [
+    { name: 'TypeScript', icon: <SiTypescript /> },
+    { name: 'React', icon: <FaReact /> },
+    { name: 'Redux', icon: <SiRedux /> },
+    { name: 'Next.js', icon: <SiNextdotjs /> },
+    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Express', icon: <SiExpress /> },
+    { name: 'MongoDB', icon: <SiMongodb /> },
+    { name: 'HTML5', icon: <FaHtml5 /> },
+    { name: 'CSS3', icon: <FaCss3Alt /> },
+    { name: 'TailwindCSS', icon: <SiTailwindcss /> },
+    { name: 'Bootstrap', icon: <FaBootstrap /> },
+    { name: 'Git', icon: <FaGitAlt /> },
+    { name: 'Jest', icon: <SiJest /> },
+    { name: 'Vite', icon: <SiVite /> },
+  ]
+
   return (
     <>
       <h3>BadgerMatch</h3>
@@ -50,6 +85,17 @@ function Badger() {
           className="w-[300px] h-[300px] object-cover"
         />
       </Carousel>
+      <div className="flex flex-wrap gap-3 justify-center py-4">
+        {techStack.map((tech) => (
+          <div
+            key={tech.name}
+            className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded shadow text-base text-gray-700"
+          >
+            <span className="text-xl">{tech.icon}</span>
+            {tech.name}
+          </div>
+        ))}
+      </div>
     </>
   )
 }
