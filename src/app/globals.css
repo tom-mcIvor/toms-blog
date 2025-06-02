@@ -158,3 +158,187 @@ body > div.m-20 > div > div:nth-child(3) > button.\!absolute.top-2\/4.right-4.-t
   align-self: end;
   margin-bottom: 6px;
 }
+
+body > div.m-20 > div > div:nth-child(6) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(6) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(6) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(6) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(10) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(10) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(10) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(10) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(14) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(14) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(14) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(14) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
+
+body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 6px;
+  margin-top: 4px;
+  align-self: end;
+  margin-bottom: 6px;
+}
