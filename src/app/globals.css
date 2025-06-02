@@ -407,3 +407,9 @@ body > div.flex.items-center.justify-between.text-blue-gray-900.w-full.sticky.to
   align-items: center;
   height: 100%;
 }
+
+
+body > div.m-20 > div > div {
+  background: transparent !important;
+  color: #fff !important;
+}
