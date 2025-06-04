@@ -20,6 +20,7 @@ import nightmareComments from '../../public/nightmare-on-dev-comments.png'
 import nightmareDev from '../../public/nightmare-on-dev-select.png'
 import nightmare from '../../public/nightmare.png'
 import AboutMeAndSkills from './homePage/AboutMeAndSkills'
+import { SiGithub as GitHubIcon, SiLinkedin as LinkedInIcon } from 'react-icons/si'
 
 function Home() {
   return (
@@ -36,14 +37,9 @@ function Home() {
 
       {/* Full-width background for portfolio section */}
       <div
-        className="w-screen relative left-1/2 right-1/2 -mx-[50vw] py-10"
+        className="w-screen relative left-1/2 right-1/2 -mx-[50vw] py-10 portfolio-bg"
         style={{
           minHeight: '400px', // adjust as needed
-          backgroundImage:
-            'url(\'data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="%23111a22"/><circle cx="2" cy="2" r="2" fill="%23222b33"/><circle cx="12" cy="12" r="2" fill="%23222b33"/><circle cx="22" cy="22" r="2" fill="%23222b33"/></svg>\')',
-          backgroundSize: '24px 24px',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
         }}
       >
         <div
@@ -58,17 +54,14 @@ function Home() {
           {/* YeahBook Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
-              <h3 className="text-lg mb-2">YeahBook</h3>
+              <h3 className="text-lg mb-2 project-title-link">
+                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer">
+                  YeahBook
+                </a>
+              </h3>
               <p className="mb-4">
                 Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content. The app&apos;s unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates. With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users.
               </p>
-              <a
-                className="text-blue-500 hover:text-blue-700"
-                href="https://github.com/tom-mcivor/BadgerMatch"
-                target="_blank" rel="noopener noreferrer"
-              >
-                YeahBook
-              </a>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
@@ -94,17 +87,14 @@ function Home() {
           {/* BadgerMatch Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
-              <h3 className="text-lg mb-2">BadgerMatch</h3>
+              <h3 className="text-lg mb-2 project-title-link">
+                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer">
+                  BadgerMatch
+                </a>
+              </h3>
               <p className="mb-4">
                 What is Badger Match? A companion finding application. We&apos;ll show you different candidates to help you decide which animal is your ideal match.
               </p>
-              <a
-                className="text-blue-500 hover:text-blue-700"
-                href="https://github.com/tom-mcivor/BadgerMatch"
-                target="_blank" rel="noopener noreferrer"
-              >
-                BadgerMatch
-              </a>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
@@ -130,17 +120,14 @@ function Home() {
           {/* Mint to be Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
-              <h3 className="text-lg mb-2">Mint to be</h3>
+              <h3 className="text-lg mb-2 project-title-link">
+                <a href="https://github.com/tom-mcivor/Mint-to-be" target="_blank" rel="noopener noreferrer">
+                  Mint to be
+                </a>
+              </h3>
               <p className="mb-4">
                 Mint to be lets the user select from a range of garden herbs and gives details and each herb selected
               </p>
-              <a
-                className="text-blue-500 hover:text-blue-700"
-                href="https://github.com/tom-mcivor/Mint-to-be"
-                target="_blank" rel="noopener noreferrer"
-              >
-                Mint to be
-              </a>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
@@ -166,17 +153,14 @@ function Home() {
           {/* Ginew force Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
-              <h3 className="text-lg mb-2">Ginew force</h3>
+              <h3 className="text-lg mb-2 project-title-link">
+                <a href="https://github.com/tom-mcivor/Ginew-force" target="_blank" rel="noopener noreferrer">
+                  Ginew force
+                </a>
+              </h3>
               <p className="mb-4">
                 Ginew force lets the user fight selectable dragon-ball super characters against each other with an ultimate winner
               </p>
-              <a
-                className="text-blue-500 hover:text-blue-700"
-                href="https://github.com/tom-mcivor/Ginew-force"
-                target="_blank" rel="noopener noreferrer"
-              >
-                Ginew Force
-              </a>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
@@ -202,14 +186,11 @@ function Home() {
           {/* Nightmare on dev street Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
-              <h3 className="text-lg mb-2">Nightmare on dev street</h3>
-              <a
-                className="text-blue-500 hover:text-blue-700"
-                href="https://github.com/tom-mcivor/Nightmare-on-dev-street"
-                target="_blank" rel="noopener noreferrer"
-              >
-                Nightmare on dev street
-              </a>
+              <h3 className="text-lg mb-2 project-title-link">
+                <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street" target="_blank" rel="noopener noreferrer">
+                  Nightmare on dev street
+                </a>
+              </h3>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
@@ -231,6 +212,24 @@ function Home() {
               </Carousel>
             </div>
           </div>
+        </div>
+        {/* Social Icons Bar - absolutely positioned at bottom center */}
+        <div
+          className="social-icons-bar flex justify-center gap-8"
+          style={{
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            bottom: 32,
+            zIndex: 1000,
+          }}
+        >
+          <a href="https://github.com/tom-mcIvor" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <GitHubIcon className="icon hover:text-black transition-colors duration-300" size={40} />
+          </a>
+          <a href="https://www.linkedin.com/in/tom-mcivor-5b280488/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <LinkedInIcon className="icon hover:text-blue-700 transition-colors duration-300" size={40} />
+          </a>
         </div>
       </div>
     </>
