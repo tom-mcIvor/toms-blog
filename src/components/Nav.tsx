@@ -92,12 +92,8 @@ function Nav() {
   return (
     <ThemeProvider value={theme}>
       <div className="flex items-center justify-between text-blue-gray-900 w-full sticky top-0 bg-black   shadow-md transition duration-400 h-20 z-50">
-        <Link href="https://github.com/tom-mcivor">
-          <div className="small flex-grow pl-20">My Blog</div>
-          {/* <Image src={profilePic} alt="toms profile" /> */}
-        </Link>
         <a href="/">
-          <div className="pl-20 m-5">
+          <div className="pl-20 m-5 flex items-center h-full">
             <button className="mybutton">
               <div className="hello">Home</div>
               <svg className="w-[180px] h-[60px] inline">
@@ -113,7 +109,7 @@ function Nav() {
           </Collapse>
         </div>
         <div className="flex-grow flex flex-row">
-            <Menu>
+            <Menu allowHover>
               <MenuHandler>
                 <Button className="normal-case">Bootcamp</Button>
               </MenuHandler>

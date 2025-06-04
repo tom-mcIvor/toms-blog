@@ -54,181 +54,183 @@ function Home() {
             padding: '2rem',
           }}
         >
-          <div className="project pt-10">
-            <h1
-              className="pb-20 text-lg text-white"
-              style={{ fontFamily: 'Profile Font', fontSize: '2em' }}
-            >
-              My Portfolio
-            </h1>
-            <h3 className="text-lg">YeahBook</h3>
-            <p>
-              Our Yeah-Book app is a platform that allows users to create
-              yearbooks and upload their profile and details to each yearbook.
-              Similar to Facebook, Yeah-Book provides a social setting for users
-              to connect with others and share content. The app&apos;s unique
-              feature of customizable yearbooks makes it a great tool for
-              preserving memories and staying connected with friends and
-              classmates. With its user-friendly interface and innovative
-              approach to social networking, Yeah-Book is a valuable app that
-              provides a unique service to its users.
-            </p>
+          <h1 className="text-5xl font-black mb-10">My Portfolio</h1>
+          {/* YeahBook Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-lg mb-2">YeahBook</h3>
+              <p className="mb-4">
+                Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content. The app&apos;s unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates. With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users.
+              </p>
+              <a
+                className="text-blue-500 hover:text-blue-700"
+                href="https://github.com/tom-mcivor/BadgerMatch"
+                target="_blank" rel="noopener noreferrer"
+              >
+                YeahBook
+              </a>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+                <Image
+                  src={yeakbookHome}
+                  alt="image 1"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={yeakBookProfile}
+                  alt="image 2"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={yeakBookProfile2}
+                  alt="image 3"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+              </Carousel>
+            </div>
           </div>
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            href="https://github.com/tom-mcivor/BadgerMatch"
-          >
-            YeahBook
-          </a>
-          <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-            <Image
-              src={yeakbookHome}
-              alt="image 1"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={yeakBookProfile}
-              alt="image 2"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={yeakBookProfile2}
-              alt="image 3"
-              className="w-[300px] h-[300px] object-cover"
-            />
-          </Carousel>
-          <div className="project pt-10">
-            <h1
-              className="pb-20 text-lg text-white"
-              style={{ fontFamily: 'Profile Font', fontSize: '2em' }}
-            >
-              My Portfolio
-            </h1>
-            <h3 className="text-lg">BadgerMatch</h3>
-            <p>
-              What is Badger Match? A companion finding application. We&apos;ll
-              show you different candidates to help you decide which animal is
-              your ideal match.
-            </p>
+
+          {/* BadgerMatch Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-lg mb-2">BadgerMatch</h3>
+              <p className="mb-4">
+                What is Badger Match? A companion finding application. We&apos;ll show you different candidates to help you decide which animal is your ideal match.
+              </p>
+              <a
+                className="text-blue-500 hover:text-blue-700"
+                href="https://github.com/tom-mcivor/BadgerMatch"
+                target="_blank" rel="noopener noreferrer"
+              >
+                BadgerMatch
+              </a>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+                <Image
+                  src={badgerMatchHome}
+                  alt="image 1"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={badgerMatch}
+                  alt="image 2"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={badgerMachUploads}
+                  alt="image 3"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+              </Carousel>
+            </div>
           </div>
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            href="https://github.com/tom-mcivor/BadgerMatch"
-          >
-            BadgerMatch
-          </a>
-          =
-          <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-            <Image
-              src={badgerMatchHome}
-              alt="image 1"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={badgerMatch}
-              alt="image 2"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={badgerMachUploads}
-              alt="image 3"
-              className="w-[300px] h-[300px] object-cover"
-            />
-          </Carousel>
-          <h3>Mint to be</h3>
-          <div className="project-right">
-            <a
-              className="text-blue-500 hover:text-blue-700"
-              href="https://github.com/tom-mcivor/Mint-to-be"
-            >
-              Mint to be
-            </a>
+
+          {/* Mint to be Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-lg mb-2">Mint to be</h3>
+              <p className="mb-4">
+                Mint to be lets the user select from a range of garden herbs and gives details and each herb selected
+              </p>
+              <a
+                className="text-blue-500 hover:text-blue-700"
+                href="https://github.com/tom-mcivor/Mint-to-be"
+                target="_blank" rel="noopener noreferrer"
+              >
+                Mint to be
+              </a>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+                <Image
+                  src={mintToBeAddHerb}
+                  alt="image 1"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={mintToBeHome}
+                  alt="image 2"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={mintToBeUpdate}
+                  alt="image 3"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+              </Carousel>
+            </div>
           </div>
-          <div className="project-left">
-            <p>
-              Mint to be lets the user select from a range of garden herbs and
-              gives details and each herb selected
-            </p>
-          </div>
-          <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-            <Image
-              src={mintToBeAddHerb}
-              alt="image 1"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={mintToBeHome}
-              alt="image 2"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={mintToBeUpdate}
-              alt="image 3"
-              className="w-[300px] h-[300px] object-cover"
-            />
-          </Carousel>
-          <h3 className="text-lg">Ginew force</h3>
-          <div className="project-right">
-            <div className="project-right">
+
+          {/* Ginew force Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-lg mb-2">Ginew force</h3>
+              <p className="mb-4">
+                Ginew force lets the user fight selectable dragon-ball super characters against each other with an ultimate winner
+              </p>
               <a
                 className="text-blue-500 hover:text-blue-700"
                 href="https://github.com/tom-mcivor/Ginew-force"
+                target="_blank" rel="noopener noreferrer"
               >
                 Ginew Force
               </a>
             </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+                <Image
+                  src={ginewForeCode2}
+                  alt="image 1"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={genewForceCode}
+                  alt="image 2"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={ginewForce}
+                  alt="image 3"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+              </Carousel>
+            </div>
           </div>
-          <div className="project-left">
-            <p>
-              Ginew force lets the user fight selectable dragon-ball super
-              characters against each other with an ultimate winner
-            </p>
-          </div>
-          <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-            <Image
-              src={ginewForeCode2}
-              alt="image 1"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={genewForceCode}
-              alt="image 2"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={ginewForce}
-              alt="image 3"
-              className="w-[300px] h-[300px] object-cover"
-            />
-          </Carousel>
-          <h3>Nightmare on dev street</h3>
-          <div className="project-right">
-            <div className="project-right">
+
+          {/* Nightmare on dev street Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-lg mb-2">Nightmare on dev street</h3>
               <a
                 className="text-blue-500 hover:text-blue-700"
                 href="https://github.com/tom-mcivor/Nightmare-on-dev-street"
+                target="_blank" rel="noopener noreferrer"
               >
                 Nightmare on dev street
               </a>
             </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+                <Image
+                  src={nightmareComments}
+                  alt="image 1"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={nightmareDev}
+                  alt="image 2"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+                <Image
+                  src={nightmare}
+                  alt="image 3"
+                  className="w-[300px] h-[300px] object-cover"
+                />
+              </Carousel>
+            </div>
           </div>
-          <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
-            <Image
-              src={nightmareComments}
-              alt="image 1"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={nightmareDev}
-              alt="image 2"
-              className="w-[300px] h-[300px] object-cover"
-            />
-            <Image
-              src={nightmare}
-              alt="image 3"
-              className="w-[300px] h-[300px] object-cover"
-            />
-          </Carousel>
         </div>
       </div>
     </>
