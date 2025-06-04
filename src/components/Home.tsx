@@ -55,7 +55,7 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/YeahBook" target="_blank" rel="noopener noreferrer">
                   YeahBook
                 </a>
               </h3>
