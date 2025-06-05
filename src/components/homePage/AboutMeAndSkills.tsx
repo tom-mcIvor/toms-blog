@@ -45,7 +45,7 @@ export default function AboutMeAndSkills() {
       <div className="md:w-1/2">
         <h1 className="text-5xl font-black mb-6">About Me</h1>
         <p className="mb-4 text-lg text-gray-800">
-          Hi, I'm Thomas, a passionate developer with a keen interest in web
+          Hi, I&apos;m Thomas, a passionate developer with a keen interest in web
           development.
           <br />
           <br />
@@ -58,7 +58,7 @@ export default function AboutMeAndSkills() {
           opportunities and am committed to delivering high-quality work.
           <br />
           <br />
-          I'm continuously learning and improving my skills. I love
+          I&apos;m continuously learning and improving my skills. I love
           experimenting with new technologies and implementing innovative
           solutions. Explore my projects, including a production ready custom
           node.js project: YeahBook, a tennis dashboard, two profile pages and
