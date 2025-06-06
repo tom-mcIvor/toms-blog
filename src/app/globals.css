@@ -132,7 +132,7 @@ body{
   }
 }
 
-body > div.m-20 > div > div:nth-child(3) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+/* body > div.m-20 > div > div:nth-child(3) > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
   background: rgba(255,255,255,0.85);
   color: #222;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -362,7 +362,7 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
   margin-top: 4px;
   align-self: end;
   margin-bottom: 6px;
-}
+} */
 
 
 /* Override or comment out global svg styles that may interfere */
@@ -377,7 +377,7 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
 } */
 
 /* YeahBook Carousel Arrows (first carousel in portfolio section) */
-.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-left,
+/* .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-left,
 .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-right {
   background: rgba(255,255,255,0.85);
   color: #222;
@@ -419,10 +419,10 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
   transform: rotate(45deg);
   margin-right: 6px;
   margin-top: 4px;
-}
+} */
 
 /* Fix for Material Tailwind Carousel default arrows in YeahBook carousel (first project) */
-.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"],
+/* .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"],
 .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Next"] {
   background: rgba(255,255,255,0.85);
   color: #222;
@@ -435,14 +435,14 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
   height: 48px;
   border-radius: 9999px;
   border: none;
-}
+} */
 
-.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"] svg,
+/* .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"] svg,
 .portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Next"] svg {
   color: #222;
   width: 28px;
   height: 28px;
-}
+} */
 
 
 body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {

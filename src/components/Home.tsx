@@ -55,7 +55,7 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/YeahBook" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/YeahBook" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   YeahBook
                 </a>
               </h3>
@@ -88,12 +88,12 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   BadgerMatch
                 </a>
               </h3>
               <p className="mb-4">
-                What is Badger Match? A companion finding application. We&apos;ll show you different candidates to help you decide which animal is your ideal match.
+                BadgerMatch is a playful and engaging companion-finding application designed to help users discover their ideal animal match. The app presents a variety of animal candidates, each with unique traits and personalities, and guides users through a fun selection process to determine which animal best fits their preferences and lifestyle. With interactive quizzes, detailed animal profiles, and vibrant images, BadgerMatch offers a delightful way to learn more about different species while finding your perfect match. Whether you&apos;re curious about your spirit animal or just looking for a bit of entertainment, BadgerMatch makes the journey both informative and enjoyable.
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -121,12 +121,12 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/Mint-to-be" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/Mint-to-be" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Mint to be
                 </a>
               </h3>
               <p className="mb-4">
-                Mint to be lets the user select from a range of garden herbs and gives details and each herb selected
+                Mint to be is a user-friendly app that allows gardening enthusiasts to explore a wide range of garden herbs and learn about their unique properties. Users can select from an extensive list of herbs, view detailed descriptions, and discover tips for growing and using each plant. The app features high-quality images, care instructions, and fun facts to help users make the most of their gardening experience. Whether you&apos;re a seasoned gardener or just starting out, Mint to be provides valuable information and inspiration for cultivating your own herb garden and enjoying the benefits of fresh, homegrown herbs.
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -154,12 +154,12 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/Ginew-force" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/Ginew-force" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Ginew force
                 </a>
               </h3>
               <p className="mb-4">
-                Ginew force lets the user fight selectable dragon-ball super characters against each other with an ultimate winner
+                Ginew force is an interactive app that lets users pit their favorite Dragon Ball Super characters against each other in epic battles. Users can select from a roster of iconic heroes and villains, customize their teams, and simulate exciting matchups to determine the ultimate winner. The app features detailed character stats, special moves, and dynamic battle animations that bring the Dragon Ball universe to life. Whether you&apos;re strategizing for victory or just having fun with friends, Ginew force offers a unique and entertaining way to explore the world of Dragon Ball. Challenge yourself, discover new character combinations, and see who will emerge as the champion in this action-packed fan experience.
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -187,10 +187,13 @@ function Home() {
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left">
               <h3 className="text-lg mb-2 project-title-link">
-                <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Nightmare on dev street
                 </a>
               </h3>
+              <p className="mb-4">
+                Nightmare on dev street is a fun and interactive app that allows users to rate their favorite horror movies. Users can browse through a curated selection of classic and modern horror films, view details and images, and submit their own ratings. The app provides a social platform for horror movie enthusiasts to share opinions, discover new films, and engage in discussions about what makes a movie truly terrifying. Whether you&apos;re a fan of psychological thrillers or slasher flicks, Nightmare on dev street offers a unique way to connect with other fans and celebrate the best (and worst) of the horror genre.
+              </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
