@@ -20,7 +20,6 @@ import nightmareComments from '../../public/nightmare-on-dev-comments.png'
 import nightmareDev from '../../public/nightmare-on-dev-select.png'
 import nightmare from '../../public/nightmare.png'
 import AboutMeAndSkills from './homePage/AboutMeAndSkills'
-import { SiGithub as GitHubIcon, SiLinkedin as LinkedInIcon } from 'react-icons/si'
 
 function Home() {
   return (
@@ -225,10 +224,10 @@ function Home() {
           }}
         >
           <a href="https://github.com/tom-mcIvor" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <GitHubIcon className="icon hover:text-black transition-colors duration-300" size={40} />
+            {/* <GitHubIcon className="icon hover:text-black transition-colors duration-300" size={40} /> */}
           </a>
           <a href="https://www.linkedin.com/in/tom-mcivor-5b280488/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <LinkedInIcon className="icon hover:text-blue-700 transition-colors duration-300" size={40} />
+            {/* <LinkedInIcon className="icon hover:text-blue-700 transition-colors duration-300" size={40} /> */}
           </a>
         </div>
       </div>
