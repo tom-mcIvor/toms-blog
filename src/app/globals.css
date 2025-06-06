@@ -364,132 +364,6 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
   margin-bottom: 6px;
 }
 
-/* Carousel Arrow Buttons Refactor */
-.carousel-arrow-left {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  display: grid;
-  place-items: center;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-}
-.carousel-arrow-left::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-left: 3px solid currentColor;
-  transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: 4px;
-  align-self: end;
-  margin-bottom: 6px;
-}
-
-.carousel-arrow-right {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  display: grid;
-  place-items: center;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-}
-.carousel-arrow-right::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
-  transform: rotate(45deg);
-  margin-right: 6px;
-  margin-top: 4px;
-  align-self: end;
-  margin-bottom: 6px;
-}
-
-body > div.flex.items-center.justify-between.text-blue-gray-900.w-full.sticky.top-0.bg-black.shadow-md.transition.duration-400.h-20.z-50 > a:nth-child(2) > div {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-
-body > div.m-20 > div > div {
-  background: transparent !important;
-  color: #fff !important;
-}
-
-.project-title-link a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.project-title-link a:hover {
-  color: #2563eb; /* Tailwind's blue-600 */
-}
-
-.social-icons-bar {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  bottom: 32px !important;
-  z-index: 9999 !important;
-  min-height: 48px;
-}
-
-.icon {
-  color: #222;
-  transition: color 0.3s, transform 0.3s;
-  cursor: pointer;
-  display: block;
-  background: #fff8 !important;
-  border: 2px solid red !important;
-  border-radius: 50%;
-}
-
-.icon svg {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: currentColor !important;
-  stroke: none !important;
-  margin: 0 !important;
-}
-
-.icon:hover {
-  transform: scale(1.15) rotate(-6deg);
-}
-
-@media (max-width: 600px) {
-  .social-icons-bar {
-    gap: 1rem;
-    min-height: 32px;
-  }
-  .icon svg {
-    width: 32px;
-    height: 32px;
-  }
-}
 
 /* Override or comment out global svg styles that may interfere */
 /* svg {
@@ -501,3 +375,97 @@ body > div.m-20 > div > div {
   stroke-dashoffset: unset !important;
   transition: unset !important;
 } */
+
+/* YeahBook Carousel Arrows (first carousel in portfolio section) */
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-left,
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-right {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-left {
+  left: 4px;
+}
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-right {
+  right: 4px;
+}
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-left::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+}
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button.carousel-arrow-right::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 6px;
+  margin-top: 4px;
+}
+
+/* Fix for Material Tailwind Carousel default arrows in YeahBook carousel (first project) */
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"],
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Next"] {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+  opacity: 1 !important;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: none;
+}
+
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Previous"] svg,
+.portfolio-bg .home-page .project:first-of-type .md\:w-1\/2.flex.justify-center .rounded-xl button[aria-label="Next"] svg {
+  color: #222;
+  width: 28px;
+  height: 28px;
+}
+
+body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: none;
+}
+
+body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+content: '';
+opacity: 1 !important;
+display: block;
+width: 16px;
+height: 16px;
+border-top: 3px solid currentColor;
+border-left: 3px solid currentColor;
+transform: rotate(-45deg);
+margin-left: 6px;
+margin-top: 4px;
+}

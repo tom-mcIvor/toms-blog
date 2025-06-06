@@ -44,9 +44,10 @@ function Home() {
         <div
           className="home-page align-middle text-center justify-center items-center flex flex-col mb-20"
           style={{
-            background: 'rgba(255,255,255,0.7)',
+            background: 'rgba(255,255,255,0.0)',
             borderRadius: '1rem',
             padding: '2rem',
+            color: '#fff',
           }}
         >
           <h1 className="text-5xl font-black mb-10">My Portfolio</h1>
