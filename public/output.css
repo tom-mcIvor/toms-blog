@@ -3891,7 +3891,8 @@ body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.it
   border-left: 3px solid currentColor;
   transform: rotate(-45deg);
   margin-left: 6px;
-  margin-top: 4px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .before\:pointer-events-none::before {
