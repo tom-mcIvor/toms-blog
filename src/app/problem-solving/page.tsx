@@ -74,8 +74,7 @@ function page() {
                 </li>
                 <li>
                   {' '}
-                  I felt very happy using .map to solve the superfizzbuzz
-                  question this solution was <em>very satisfying</em>
+                  I used `.map` to solve the superfizzbuzz question, which allowed me to efficiently process the array and apply the required logic to each element. This approach made the code concise and easy to understand, and it worked well for the problem.
                 </li>
               </ul>
             </p>
