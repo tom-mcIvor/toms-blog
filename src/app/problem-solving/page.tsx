@@ -27,56 +27,52 @@ function page() {
           <h3>What was the problem?</h3>
           <ul>
             <p>
-              I didnt know how to add a key value to an object
-              <dl>(ie: let obj = {} ; obj.value = 5)</dl>
+              I was trying to add a new key-value pair to a JavaScript object, but I wasn&apos;t sure about the correct syntax. For example, I had an empty object (let obj = {}) and wanted to add a property called value with the number 5 as its value.
             </p>
           </ul>
           <h3>What problem-solving techniques did you use?</h3>
           <ul>
-            <p>Trial and error and researching</p>
+            <p>
+              I experimented with different ways of adding properties to objects, such as using dot notation and bracket notation. When my attempts didn&apos;t work, I searched online for examples and explanations, and read through documentation and forum posts to understand the correct approach.
+            </p>
           </ul>
           <h3>How did you feel throughout the process?</h3>
           <ul>
-            <p>Annoyed , angry, exhausted then happy 😤 😠 😩 😊</p>
+            <p>
+              At first, I felt frustrated and a bit embarrassed that I was stuck on something so basic. As I kept trying and researching, I became more determined to figure it out. When I finally got it working, I felt relieved and a bit more confident in my ability to solve problems, even if they seem simple.
+            </p>
           </ul>
           <h3>What did you learn?</h3>
           <ul>
-            <p>How to add a key value to an object</p>
+            <p>
+              I learned the correct way to add a key-value pair to an object in JavaScript, and I also realized that it&apos;s normal to get stuck sometimes, even on basic things. The process reminded me that persistence and resourcefulness are important skills for a developer.
+            </p>
           </ul>
         </ul>
         <h2>2. Elegantly solved a problem.</h2>
         <ul>
           <h3>What was the problem?</h3>
           <ul>
-            <p>fizzbuzz</p>
+            <p>
+              I needed to solve the classic &quot;fizzbuzz&quot; problem, and then a more advanced version called &quot;superfizzbuzz.&quot; The challenge was to write code that would process a list of numbers and output specific words depending on divisibility rules.
+            </p>
           </ul>
           <h3>What problem-solving techniques did you use?</h3>
           <ul>
             <p>
-              Trial and error and console logging. The fizz buzz question only
-              took me 10 minutes to get this felt elegant as the suggested time
-              is 4 hours (for both fizzbuzz and superfizzbuzz)
+              I broke the problem down into smaller steps and used trial and error to test my logic. I made use of console.log statements to check the output at each stage. For the superfizzbuzz problem, I realized that using the .map method on arrays would allow me to apply the logic to each number efficiently and concisely.
             </p>
           </ul>
           <h3>How did you feel throughout the process?</h3>
           <ul>
-            <p>Determined, angry, drained then happy 🤔 😠 😩 😊</p>
+            <p>
+              Initially, I felt a bit of pressure because I knew these are common interview questions. As I worked through the logic and saw my solution coming together, I felt more focused and motivated. When my code worked as intended, I felt a sense of accomplishment.
+            </p>
           </ul>
           <h3>What did you learn?</h3>
           <ul>
             <p>
-              <ul>
-                <li>
-                  {' '}
-                  How to become more affective with my <em>
-                    if
-                  </em> statments{' '}
-                </li>
-                <li>
-                  {' '}
-                  I used `.map` to solve the superfizzbuzz question, which allowed me to efficiently process the array and apply the required logic to each element. This approach made the code concise and easy to understand, and it worked well for the problem.
-                </li>
-              </ul>
+              I learned how to write more effective conditional statements and how to use array methods like .map to process data in a clean and readable way. This experience also reinforced the value of breaking problems into smaller parts and testing as I go.
             </p>
           </ul>
         </ul>
