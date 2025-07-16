@@ -70,21 +70,21 @@ function Home() {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={yeakbookHome}
                   alt="image 1"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={yeakBookProfile}
                   alt="image 2"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={yeakBookProfile2}
                   alt="image 3"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
               </Carousel>
             </div>
@@ -109,21 +109,21 @@ function Home() {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={badgerMatchHome}
                   alt="image 1"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={badgerMatch}
                   alt="image 2"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={badgerMachUploads}
                   alt="image 3"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
               </Carousel>
             </div>
@@ -148,21 +148,21 @@ function Home() {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={mintToBeAddHerb}
                   alt="image 1"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={mintToBeHome}
                   alt="image 2"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={mintToBeUpdate}
                   alt="image 3"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
               </Carousel>
             </div>
@@ -187,21 +187,21 @@ function Home() {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={ginewForeCode2}
                   alt="image 1"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={genewForceCode}
                   alt="image 2"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={ginewForce}
                   alt="image 3"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
               </Carousel>
             </div>
@@ -226,21 +226,21 @@ function Home() {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[300px] h-[300px] overflow-hidden">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={nightmareComments}
                   alt="image 1"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={nightmareDev}
                   alt="image 2"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
                 <Image
                   src={nightmare}
                   alt="image 3"
-                  className="w-[300px] h-[300px] object-cover"
+                  className="w-[400px] h-[400px] object-cover"
                 />
               </Carousel>
             </div>
