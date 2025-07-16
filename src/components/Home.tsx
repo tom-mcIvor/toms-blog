@@ -129,6 +129,65 @@ function Home() {
             </div>
           </div>
 
+          {/* Steno Briefs Project - two-column layout */}
+          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+            <div className="md:w-1/2 text-left pl-12">
+              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
+                <a href="https://github.com/tom-mcivor/steno-briefs" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
+                  Steno Briefs
+                </a>
+              </h3>
+              <p className="mb-5">
+                Steno Briefs is a comprehensive stenography learning platform designed to help users master shorthand writing techniques. The application provides an interactive environment where users can practice stenographic briefs, create custom theories, and track their progress.
+              </p>
+              <p className="mb-5">
+                With features like word addition, theory creation, and a comprehensive dashboard, Steno Briefs makes learning stenography accessible and engaging.
+              </p>
+              <p className="mb-5">
+                The platform supports both beginners and advanced users with its intuitive interface and structured learning approach, making it an ideal tool for anyone looking to develop their stenographic skills.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
+                <Image
+                  src="/Steno-briefs-home.PNG"
+                  alt="Steno Briefs Home"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Steno-briefs-dashboard.PNG"
+                  alt="Steno Briefs Dashboard"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Steno-briefs-add-word.PNG"
+                  alt="Steno Briefs Add Word"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Steno-briefs-create-Theory.PNG"
+                  alt="Steno Briefs Create Theory"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Support-steno-briefs.PNG"
+                  alt="Support Steno Briefs"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+              </Carousel>
+            </div>
+          </div>
+
           {/* Mint to be Project - two-column layout */}
           <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
             <div className="md:w-1/2 text-left pl-12">
@@ -245,6 +304,7 @@ function Home() {
               </Carousel>
             </div>
           </div>
+
         </div>
         {/* Social Icons Bar - absolutely positioned at bottom center */}
         <div

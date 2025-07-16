@@ -111,7 +111,7 @@ function Nav() {
         <div className="flex-grow flex flex-row">
             <Menu allowHover>
               <MenuHandler>
-                <Button className="normal-case">Bootcamp</Button>
+                <Button className="normal-case">My Dev Journey</Button>
               </MenuHandler>
               <MenuList>
                 <Menu
@@ -123,7 +123,7 @@ function Nav() {
                 >
                   <MenuHandler className="flex items-center justify-between">
                     <MenuItem>
-                      TECH
+                      Bootcamp
                       <ChevronUpIcon
                         strokeWidth={2.5}
                         className={`h-3.5 w-3.5 transition-transform ${
@@ -133,76 +133,87 @@ function Nav() {
                     </MenuItem>
                   </MenuHandler>
                   <MenuList>
-                    <Link href="html-css">
-                      <MenuItem className=" hover:text-blue-500 transition-colors">
-                        {' '}
-                        CSS lessons
-                      </MenuItem>
-                    </Link>
-                    <Link href="javascript-dom">
-                      <MenuItem className=" hover:text-blue-500 transition-colors">
-                        Javascript DOM
-                      </MenuItem>
-                    </Link>
-                    <Link href="problem-solving">
-                      <MenuItem className=" hover:text-blue-500 transition-colors">
-                        {' '}
-                        Problem Solving
-                      </MenuItem>
-                    </Link>
+                    <Menu
+                      placement="right-start"
+                      allowHover
+                      offset={15}
+                    >
+                      <MenuHandler className="flex items-center justify-between">
+                        <MenuItem>
+                          TECH
+                          <ChevronUpIcon
+                            strokeWidth={2.5}
+                            className="h-3.5 w-3.5 transition-transform"
+                          />
+                        </MenuItem>
+                      </MenuHandler>
+                      <MenuList>
+                        <Link href="html-css">
+                          <MenuItem className=" hover:text-blue-500 transition-colors">
+                            CSS lessons
+                          </MenuItem>
+                        </Link>
+                        <Link href="javascript-dom">
+                          <MenuItem className=" hover:text-blue-500 transition-colors">
+                            Javascript DOM
+                          </MenuItem>
+                        </Link>
+                        <Link href="problem-solving">
+                          <MenuItem className=" hover:text-blue-500 transition-colors">
+                            Problem Solving
+                          </MenuItem>
+                        </Link>
+                      </MenuList>
+                    </Menu>
+                    <Menu
+                      placement="right-start"
+                      allowHover
+                      offset={15}
+                    >
+                      <MenuHandler className="flex items-center justify-between">
+                        <MenuItem>
+                          CORE
+                          <ChevronUpIcon
+                            strokeWidth={2.5}
+                            className="h-3.5 w-3.5 transition-transform"
+                          />
+                        </MenuItem>
+                      </MenuHandler>
+                      <MenuList>
+                        <Link href="neuroplasticity">
+                          <MenuItem className="hover:text-blue-500 transition-colors">
+                            Neuroplasticity ideas
+                          </MenuItem>
+                        </Link>
+                        <Link href="emotional-intelligence">
+                          <MenuItem className="hover:text-blue-500 transition-colors">
+                            Emotional IQ
+                          </MenuItem>
+                        </Link>
+                        <Link href="identity-values">
+                          <MenuItem className="hover:text-blue-500 transition-colors">
+                            Identity values
+                          </MenuItem>
+                        </Link>
+                        <Link href="foundations-reflection">
+                          <MenuItem className="hover:text-blue-500 transition-colors">
+                            Foundations reflection
+                          </MenuItem>
+                        </Link>
+                        <Link href="learning-plan">
+                          <MenuItem className="hover:text-blue-500 transition-colors">
+                            Learning plan
+                          </MenuItem>
+                        </Link>
+                      </MenuList>
+                    </Menu>
                   </MenuList>
                 </Menu>
-                <Menu
-                  placement="right-start"
-                  open={openMenuRight}
-                  handler={setOpenMenuRight}
-                  allowHover
-                  offset={15}
-                >
-                  <MenuHandler className="flex items-center justify-between">
-                    <MenuItem>
-                      CORE
-                      <ChevronUpIcon
-                        strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-transform ${
-                          openMenuRight ? 'rotate-90' : ''
-                        }`}
-                      />
-                    </MenuItem>
-                  </MenuHandler>
-                  <MenuList>
-                    <Link href="neuroplasticity">
-                      <MenuItem className="hover:text-blue-500 transition-colors">
-                        {' '}
-                        Neuroplasticity ideas
-                      </MenuItem>
-                    </Link>
-                    <Link href="emotional-intelligence">
-                      <MenuItem className="hover:text-blue-500 transition-colors">
-                        {' '}
-                        Emotional IQ
-                      </MenuItem>
-                    </Link>
-                    <Link href="identity-values">
-                      <MenuItem className="hover:text-blue-500 transition-colors">
-                        {' '}
-                        Identity values
-                      </MenuItem>
-                    </Link>
-                    <Link href="foundations-reflection">
-                      <MenuItem className="hover:text-blue-500 transition-colors">
-                        {' '}
-                        Foundations reflection
-                      </MenuItem>
-                    </Link>
-                    <Link href="learning-plan">
-                      <MenuItem className="hover:text-blue-500 transition-colors">
-                        {' '}
-                        Learning plan
-                      </MenuItem>
-                    </Link>
-                  </MenuList>
-                </Menu>
+                <Link href="ai-essentials">
+                  <MenuItem className="hover:text-blue-500 transition-colors">
+                    AI Essentials
+                  </MenuItem>
+                </Link>
               </MenuList>
             </Menu>
         </div>

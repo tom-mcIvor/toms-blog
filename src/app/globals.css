@@ -119,10 +119,12 @@ body{
 .hello {
   display: flex;
   font-size: 30px;
+  font-weight: 900;
   justify-content: center;
+  align-items: center;
   margin-top: 3%;
   color: white;
-  font-family: cursive;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @media screen and (max-width: 1800px) {

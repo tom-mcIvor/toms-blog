@@ -1,42 +1,29 @@
 import React from 'react'
-import {
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaBootstrap,
-} from 'react-icons/fa'
-import {
-  SiTypescript,
-  SiRedux,
-  SiNextdotjs,
-  SiJest,
-  SiVite,
-  SiExpress,
-  SiMongodb,
-  SiVercel,
-  SiTailwindcss,
-} from 'react-icons/si'
+import Image from 'next/image'
 
 const skills = [
-  { name: 'JavaScript', icon: <FaJs /> },
-  { name: 'TypeScript', icon: <SiTypescript /> },
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Redux', icon: <SiRedux /> },
-  { name: 'Next.js', icon: <SiNextdotjs /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'Express', icon: <SiExpress /> },
-  { name: 'MongoDB', icon: <SiMongodb /> },
-  { name: 'HTML5', icon: <FaHtml5 /> },
-  { name: 'CSS3', icon: <FaCss3Alt /> },
-  { name: 'TailwindCSS', icon: <SiTailwindcss /> },
-  { name: 'Bootstrap', icon: <FaBootstrap /> },
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'Jest', icon: <SiJest /> },
-  { name: 'Vite', icon: <SiVite /> },
-  { name: 'Vercel', icon: <SiVercel /> },
+  { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'Redux', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg' },
+  { name: 'TypeScript', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'Express', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+  { name: 'MongoDB', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { name: 'NodeJS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'JavaScript', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'CSS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+  { name: 'SASS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg' },
+  { name: 'HTML', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  { name: 'Git', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'NPM', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' },
+  { name: 'Jest', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg' },
+  { name: 'Webpack', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg' },
+  { name: 'Babel', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg' },
+  { name: 'ESLint', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg' },
+  { name: 'Firebase', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+  { name: 'VIM', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg' },
+  { name: 'VSCode', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+  { name: 'TailwindCSS', image: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
+  { name: 'Bootstrap', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+  { name: 'Plover', image: '/Plover-Icon.PNG' },
 ]
 
 export default function AboutMeAndSkills() {
@@ -71,9 +58,15 @@ export default function AboutMeAndSkills() {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700"
+              className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2"
             >
-              <span className="text-2xl">{skill.icon}</span>
+              <Image
+                src={skill.image}
+                alt={skill.name}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
               {skill.name}
             </div>
           ))}
