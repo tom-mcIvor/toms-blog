@@ -20,6 +20,7 @@ import nightmareComments from '../../public/nightmare-on-dev-comments.png'
 import nightmareDev from '../../public/nightmare-on-dev-select.png'
 import nightmare from '../../public/nightmare.png'
 import AboutMeAndSkills from './homePage/AboutMeAndSkills'
+import AnimatedProject from './AnimatedProject'
 
 function Home() {
   return (
@@ -35,163 +36,66 @@ function Home() {
       <AboutMeAndSkills />
 
       {/* Full-width background for portfolio section */}
-      <div
-        className="w-screen relative left-1/2 right-1/2 -mx-[50vw] py-10 portfolio-bg"
-        style={{
-          minHeight: '400px', // adjust as needed
-        }}
-      >
-        <div
-          className="home-page align-middle text-center justify-center items-center flex flex-col mb-20"
-          style={{
-            background: 'rgba(255,255,255,0.0)',
-            borderRadius: '1rem',
-            padding: '2rem',
-            color: '#fff',
-          }}
-        >
-          <h1 className="text-5xl font-black mb-10">My Portfolio</h1>
-          {/* YeahBook Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
-                <a href="https://github.com/tom-mcivor/YeahBook" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  YeahBook
-                </a>
-              </h3>
-              <p className="mb-5">
-                Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content.
-              </p>
-              <p className="mb-5">
-                The app&apos;s unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates.
-              </p>
-              <p className="mb-5">
-                With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src={yeakbookHome}
-                  alt="image 1"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={yeakBookProfile}
-                  alt="image 2"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={yeakBookProfile2}
-                  alt="image 3"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+      <div className="portfolio-section portfolio-bg">
+        <div className="home-page portfolio-content">
+          <h1 className="portfolio-title">My Portfolio</h1>
+          <AnimatedProject
+            title="YeahBook"
+            githubUrl="https://github.com/tom-mcIvor/Yeah-book"
+            description={[
+              "Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content.",
+              "The app's unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates.",
+              "With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users."
+            ]}
+            images={[
+              { src: yeakbookHome, alt: "YeahBook Home" },
+              { src: yeakBookProfile, alt: "YeahBook Profile" },
+              { src: yeakBookProfile2, alt: "YeahBook Profile 2" }
+            ]}
+            animationDirection="left"
+            delay={0}
+          />
 
-          {/* BadgerMatch Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
-                <a href="https://github.com/tom-mcivor/BadgerMatch" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  BadgerMatch
-                </a>
-              </h3>
-              <p className="mb-5">
-                BadgerMatch is a playful and engaging companion-finding application designed to help users discover their ideal animal match. The app presents a variety of animal candidates, each with unique traits and personalities, and guides users through a fun selection process to determine which animal best fits their preferences and lifestyle.
-              </p>
-              <p className="mb-5">
-                With interactive quizzes, detailed animal profiles, and vibrant images, BadgerMatch offers a delightful way to learn more about different species while finding your perfect match.
-              </p>
-              <p className="mb-5">
-                Whether you&apos;re curious about your spirit animal or just looking for a bit of entertainment, BadgerMatch makes the journey both informative and enjoyable.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src={badgerMatchHome}
-                  alt="image 1"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={badgerMatch}
-                  alt="image 2"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={badgerMachUploads}
-                  alt="image 3"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="BadgerMatch"
+            githubUrl="https://github.com/tom-mcivor/BadgerMatch"
+            description={[
+              "BadgerMatch is a playful and engaging companion-finding application designed to help users discover their ideal animal match. The app presents a variety of animal candidates, each with unique traits and personalities, and guides users through a fun selection process to determine which animal best fits their preferences and lifestyle.",
+              "With interactive quizzes, detailed animal profiles, and vibrant images, BadgerMatch offers a delightful way to learn more about different species while finding your perfect match.",
+              "Whether you're curious about your spirit animal or just looking for a bit of entertainment, BadgerMatch makes the journey both informative and enjoyable."
+            ]}
+            images={[
+              { src: badgerMatchHome, alt: "BadgerMatch Home" },
+              { src: badgerMatch, alt: "BadgerMatch Game" },
+              { src: badgerMachUploads, alt: "BadgerMatch Uploads" }
+            ]}
+            animationDirection="right"
+            delay={200}
+          />
 
-          {/* Steno Briefs Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
-                <a href="https://github.com/tom-mcivor/steno-briefs" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  Steno Briefs
-                </a>
-              </h3>
-              <p className="mb-5">
-                Steno Briefs is a comprehensive stenography learning platform designed to help users master shorthand writing techniques. The application provides an interactive environment where users can practice stenographic briefs, create custom theories, and track their progress.
-              </p>
-              <p className="mb-5">
-                With features like word addition, theory creation, and a comprehensive dashboard, Steno Briefs makes learning stenography accessible and engaging.
-              </p>
-              <p className="mb-5">
-                The platform supports both beginners and advanced users with its intuitive interface and structured learning approach, making it an ideal tool for anyone looking to develop their stenographic skills.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src="/Steno-briefs-home.PNG"
-                  alt="Steno Briefs Home"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Steno-briefs-dashboard.PNG"
-                  alt="Steno Briefs Dashboard"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Steno-briefs-add-word.PNG"
-                  alt="Steno Briefs Add Word"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Steno-briefs-create-Theory.PNG"
-                  alt="Steno Briefs Create Theory"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Support-steno-briefs.PNG"
-                  alt="Support Steno Briefs"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="Steno Briefs"
+            githubUrl="https://github.com/tom-mcivor/steno-briefs"
+            description={[
+              "Steno Briefs is a comprehensive stenography learning platform designed to help users master shorthand writing techniques. The application provides an interactive environment where users can practice stenographic briefs, create custom theories, and track their progress.",
+              "With features like word addition, theory creation, and a comprehensive dashboard, Steno Briefs makes learning stenography accessible and engaging.",
+              "The platform supports both beginners and advanced users with its intuitive interface and structured learning approach, making it an ideal tool for anyone looking to develop their stenographic skills."
+            ]}
+            images={[
+              { src: "/Steno-briefs-home.PNG", alt: "Steno Briefs Home", width: 400, height: 400 },
+              { src: "/Steno-briefs-dashboard.PNG", alt: "Steno Briefs Dashboard", width: 400, height: 400 },
+              { src: "/Steno-briefs-add-word.PNG", alt: "Steno Briefs Add Word", width: 400, height: 400 },
+              { src: "/Steno-briefs-create-Theory.PNG", alt: "Steno Briefs Create Theory", width: 400, height: 400 },
+              { src: "/Support-steno-briefs.PNG", alt: "Support Steno Briefs", width: 400, height: 400 }
+            ]}
+            animationDirection="left"
+            delay={400}
+          />
 
           {/* Mint to be Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
+          <div className="project">
+            <div className="project-content">
+              <h3 className="project-title">
                 <a href="https://github.com/tom-mcivor/Mint-to-be" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Mint to be
                 </a>
@@ -206,7 +110,7 @@ function Home() {
                 Whether you&apos;re a seasoned gardener or just starting out, Mint to be provides valuable information and inspiration for cultivating your own herb garden and enjoying the benefits of fresh, homegrown herbs.
               </p>
             </div>
-            <div className="md:w-1/2 flex justify-center">
+            <div className="project-carousel-container">
               <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={mintToBeAddHerb}
@@ -228,9 +132,9 @@ function Home() {
           </div>
 
           {/* Ginew force Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
+          <div className="project">
+            <div className="project-content">
+              <h3 className="project-title">
                 <a href="https://github.com/tom-mcivor/Ginew-force" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Ginew force
                 </a>
@@ -245,7 +149,7 @@ function Home() {
                 Whether you&apos;re strategizing for victory or just having fun with friends, Ginew force offers a unique and entertaining way to explore the world of Dragon Ball. Challenge yourself, discover new character combinations, and see who will emerge as the champion in this action-packed fan experience.
               </p>
             </div>
-            <div className="md:w-1/2 flex justify-center">
+            <div className="project-carousel-container">
               <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={ginewForeCode2}
@@ -267,9 +171,9 @@ function Home() {
           </div>
 
           {/* Nightmare on dev street Project - two-column layout */}
-          <div className="project pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
-            <div className="md:w-1/2 text-left pl-12">
-              <h3 className="text-3xl font-bold mb-2 project-title-link" style={{ color: '#4FD1C5' }}>
+          <div className="project">
+            <div className="project-content">
+              <h3 className="project-title">
                 <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
                   Nightmare on dev street
                 </a>
@@ -284,7 +188,7 @@ function Home() {
                 Whether you&apos;re a fan of psychological thrillers or slasher flicks, Nightmare on dev street offers a unique way to connect with other fans and celebrate the best (and worst) of the horror genre.
               </p>
             </div>
-            <div className="md:w-1/2 flex justify-center">
+            <div className="project-carousel-container">
               <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
                 <Image
                   src={nightmareComments}
@@ -305,24 +209,58 @@ function Home() {
             </div>
           </div>
 
-        </div>
-        {/* Social Icons Bar - absolutely positioned at bottom center */}
-        <div
-          className="social-icons-bar flex justify-center gap-8"
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            bottom: 32,
-            zIndex: 1000,
-          }}
-        >
-          <a href="https://github.com/tom-mcIvor" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            {/* <GitHubIcon className="icon hover:text-black transition-colors duration-300" size={40} /> */}
-          </a>
-          <a href="https://www.linkedin.com/in/tom-mcivor-5b280488/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            {/* <LinkedInIcon className="icon hover:text-blue-700 transition-colors duration-300" size={40} /> */}
-          </a>
+          {/* Property Manager Project - two-column layout */}
+          <div className="project">
+            <div className="project-content">
+              <h3 className="project-title">
+                <a href="https://github.com/tom-mcivor/property-manager" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
+                  Property Manager
+                </a>
+              </h3>
+              <p className="mb-5">
+                Property Manager is a comprehensive property management application designed to streamline the management of rental properties. The app provides landlords and property managers with tools to track tenancies, monitor rent arrears, manage property details, and view comprehensive dashboards.
+              </p>
+              <p className="mb-5">
+                With features for tenant management, financial tracking, and property oversight, this application simplifies the complex task of property management.
+              </p>
+              <p className="mb-5">
+                The user-friendly interface allows for efficient navigation between different aspects of property management, making it an essential tool for anyone managing rental properties.
+              </p>
+            </div>
+            <div className="project-carousel-container">
+              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
+                <Image
+                  src="/Property-Manager-Dashboard.PNG"
+                  alt="Property Manager Dashboard"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Property-Manager-Properties.PNG"
+                  alt="Property Manager Properties"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Property-Manager-Arrears.PNG"
+                  alt="Property Manager Arrears"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+                <Image
+                  src="/Property-ManagerTenancy.PNG"
+                  alt="Property Manager Tenancy"
+                  width={400}
+                  height={400}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+              </Carousel>
+            </div>
+          </div>
+
         </div>
       </div>
     </>

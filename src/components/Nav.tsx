@@ -95,7 +95,7 @@ function Nav() {
         <a href="/">
           <div className="pl-20 m-5 flex items-center h-full">
             <button className="mybutton">
-              <div className="hello">Home</div>
+              <div className="hello">Tom&apos;s Blog</div>
               <svg className="w-[180px] h-[60px] inline">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
@@ -111,7 +111,7 @@ function Nav() {
         <div className="flex-grow flex flex-row">
             <Menu allowHover>
               <MenuHandler>
-                <Button className="normal-case">My Dev Journey</Button>
+                <Button className="normal-case" style={{fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontSize: '16px', fontWeight: '500'}}>My Dev Journey</Button>
               </MenuHandler>
               <MenuList>
                 <Menu

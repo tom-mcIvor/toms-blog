@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Animation for About Me section */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+  opacity: 0;
+}
+
+/* Project animations */
+.project {
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out;
+}
+
 :root {
   --font: cursive;
   --color-text: #828394;
@@ -27,6 +83,7 @@ body{
   position: relative;
   overflow-x: hidden;
 }
+
 
 .portfolio-bg::before {
   content: '';
@@ -91,10 +148,11 @@ body{
   width: 180px;
   height: 60px;
   cursor: pointer;
-  background: transparent;
-  border: 1px groove #91C9FF;
+  background: #0f0f0f;
+  border: none;
   outline: none;
   transition: 1s ease-in-out;
+  border-radius: 0.5rem;
 }
 .mybutton:hover {
   transition: 1s ease-in-out;
@@ -447,258 +505,114 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
 } */
 
 
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+/* Refactored Carousel Arrows - Clean and Maintainable */
+.portfolio-bg .home-page .project .carousel button[aria-label="Previous"],
+.portfolio-bg .home-page .project .carousel button[aria-label="Next"],
+.home-page .project .rounded-xl button.\!absolute {
+  background: rgba(255,255,255,0.85) !important;
+  color: #222 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  z-index: 10 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  opacity: 1 !important;
 }
 
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
+/* Refactored Carousel Arrow Icons - Clean and Maintainable */
+.portfolio-bg .home-page .project .carousel button[aria-label="Previous"]::before,
+.portfolio-bg .home-page .project .carousel button[aria-label="Next"]::before,
+.home-page .project .rounded-xl button.\!absolute::before {
   content: '';
   opacity: 1 !important;
   display: block;
   width: 16px;
   height: 16px;
   border-top: 3px solid currentColor;
-  border-left: 3px solid currentColor;
-  transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
-}
-
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(2) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
-  transform: rotate(45deg);
-  margin-right: 6px;
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(3) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
-}
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(3) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
+.portfolio-bg .home-page .project .carousel button[aria-label="Previous"]::before,
+.home-page .project .rounded-xl button.\!absolute.left-4::before {
   border-left: 3px solid currentColor;
   transform: rotate(-45deg);
   margin-left: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(3) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
-}
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(3) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
+
+.portfolio-bg .home-page .project .carousel button[aria-label="Next"]::before,
+.home-page .project .rounded-xl button.\!absolute.right-4::before {
   border-right: 3px solid currentColor;
   transform: rotate(45deg);
   margin-right: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(4) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+/* Project Layout Styles - Clean and Maintainable */
+.project {
+  @apply pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(4) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-left: 3px solid currentColor;
-  transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+.project-content {
+  @apply md:w-1/2 text-left pl-12;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(4) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+.project-title {
+  @apply text-3xl font-bold mb-2;
+  color: #4FD1C5;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(4) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
-  transform: rotate(45deg);
-  margin-right: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+.project-title a {
+  @apply hover:text-blue-500 transition-colors;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(5) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+.project-description {
+  @apply mb-5 text-white;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(5) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-left: 3px solid currentColor;
-  transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+.project-carousel-container {
+  @apply md:w-1/2 flex justify-center;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(5) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+.project-carousel {
+  @apply rounded-xl w-[400px] h-[400px] overflow-hidden;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(5) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
-  transform: rotate(45deg);
-  margin-right: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+.project-image {
+  @apply w-[400px] h-[400px] object-cover;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(6) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+/* Portfolio Section Styles */
+.portfolio-section {
+  @apply w-screen relative py-10;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 400px;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(6) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.left-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-left: 3px solid currentColor;
-  transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+.portfolio-content {
+  @apply text-center justify-center items-center flex flex-col mb-20;
+  background: rgba(255,255,255,0.0);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #fff;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(6) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center {
-  background: rgba(255,255,255,0.85);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  border: none;
+
+.portfolio-title {
+  @apply text-5xl font-black mb-10;
 }
-body > div.m-20 > div > div.home-page.align-middle.text-center.justify-center.items-center.flex.flex-col.mb-20 > div:nth-child(6) > div.md\:w-1\/2.flex.justify-center > div > button.\!absolute.top-2\/4.right-4.-translate-y-2\/4.rounded-full.select-none.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-12.max-w-\[48px\].h-12.max-h-\[48px\].text-white.hover\:bg-white\/10.active\:bg-white\/30.grid.place-items-center::before {
-  content: '';
-  opacity: 1 !important;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid currentColor;
-  border-right: 3px solid currentColor;
-  transform: rotate(45deg);
-  margin-right: 6px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+
+/* Social Icons Bar */
+.social-icons-bar {
+  @apply flex justify-center gap-8;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 32px;
+  z-index: 1000;
 }
 
