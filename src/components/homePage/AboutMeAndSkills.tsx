@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import AnimatedText from '../AnimatedText'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const skills = [
   { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -27,12 +28,23 @@ const skills = [
 ]
 
 export default function AboutMeAndSkills() {
+  const { ref: aboutRef, isVisible: aboutVisible } = useScrollAnimation(0.2)
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation(0.3)
+
   return (
     <section className="w-full flex flex-col justify-between items-start gap-10 py-12 px-4 md:px-16 lg:flex-row">
-      <div className="lg:w-1/2">
-        <h1 className="text-5xl font-black mb-6 animate-fade-in-up" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>About Me</h1>
+      <div ref={aboutRef} className="lg:w-1/2">
+        <h1 className={`text-5xl font-black mb-6 transition-all duration-1000 ${
+          aboutVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
+        }`}>About Me</h1>
         
-        <div className="animate-fade-in-up" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
+        <div className={`transition-all duration-1000 delay-300 ${
+          aboutVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
+        }`}>
           <p className="mb-4 text-lg text-gray-800">
             Hi, I&apos;m Thomas, a passionate developer with a keen interest in web
             development.
@@ -56,7 +68,11 @@ export default function AboutMeAndSkills() {
         </div>
         
         {/* Social Icons */}
-        <div className="flex gap-6 mt-6 justify-center animate-fade-in-up" style={{ animationDelay: '2s', animationFillMode: 'both' }}>
+        <div className={`flex gap-6 mt-6 justify-center transition-all duration-1000 delay-700 ${
+          aboutVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
+        }`}>
           <a href="https://github.com/tom-mcIvor" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
             <Image
               src="/Github-image.PNG"
@@ -76,13 +92,32 @@ export default function AboutMeAndSkills() {
           </a>
         </div>
       </div>
-      <div className="lg:w-1/2">
-        <h2 className="text-5xl font-black mb-6">My Skills</h2>
-        <div className="flex flex-wrap gap-3">
-          {skills.map((skill) => (
+      <div ref={skillsRef} className="lg:w-1/2">
+        <h2 className={`text-5xl font-black mb-6 transition-all duration-1000 ${
+          skillsVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
+        }`}>My Skills</h2>
+        
+        <div className={`flex flex-wrap gap-3 transition-all duration-1000 delay-300 ${
+          skillsVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
+        }`}>
+          {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2"
+              className={`flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:bg-gray-800 hover:text-white ${
+                skillsVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-5'
+              }`}
+              style={{
+                transitionDelay: skillsVisible ? `${500 + index * 50}ms` : '0ms',
+                transition: skillsVisible
+                  ? 'opacity 1000ms, transform 1000ms, background-color 300ms, color 300ms, box-shadow 300ms'
+                  : 'opacity 1000ms, transform 1000ms'
+              }}
             >
               <Image
                 src={skill.image}

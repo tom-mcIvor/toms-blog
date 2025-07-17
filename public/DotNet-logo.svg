@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 456">
+  <defs>
+    <linearGradient id="a" x1="81%" x2="19%" y1="19%" y2="81%">
+      <stop offset="0%" stop-color="#32d4f2"/>
+      <stop offset="100%" stop-color="#239cdb"/>
+    </linearGradient>
+    <linearGradient id="b" x1="81%" x2="19%" y1="19%" y2="81%">
+      <stop offset="0%" stop-color="#68217a"/>
+      <stop offset="100%" stop-color="#9a4993"/>
+    </linearGradient>
+  </defs>
+  <circle cx="228" cy="228" r="228" fill="url(#a)"/>
+  <circle cx="228" cy="228" r="165" fill="url(#b)"/>
+  <ellipse cx="228" cy="228" fill="#fff" rx="97" ry="50"/>
+  <text x="228" y="248" fill="#512bd4" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle">.NET</text>
+</svg>

@@ -4,6 +4,13 @@ import { Carousel } from '@material-tailwind/react'
 import Image, { StaticImageData } from 'next/image'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
+interface TechStackIcon {
+  name: string
+  color?: string
+  icon?: React.ReactNode
+  imageSrc?: string
+}
+
 interface AnimatedProjectProps {
   title: string
   githubUrl: string
@@ -16,6 +23,7 @@ interface AnimatedProjectProps {
   }>
   animationDirection?: 'left' | 'right'
   delay?: number
+  techStack?: TechStackIcon[]
 }
 
 export default function AnimatedProject({
@@ -24,7 +32,8 @@ export default function AnimatedProject({
   description,
   images,
   animationDirection = 'left',
-  delay = 0
+  delay = 0,
+  techStack
 }: AnimatedProjectProps) {
   const { ref, isVisible } = useScrollAnimation(0.1)
 
@@ -51,8 +60,44 @@ export default function AnimatedProject({
             {title}
           </a>
         </h3>
+        
+        {/* Tech Stack Icons */}
+        {techStack && (
+          <div
+            className={`flex justify-start items-center gap-3 mb-6 py-4 transition-all duration-700 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+            style={{
+              transitionDelay: isVisible ? `${delay + 100}ms` : '0ms'
+            }}
+          >
+            {techStack.map((tech, index) => (
+              <div
+                key={index}
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 ${
+                  tech.imageSrc ? 'bg-white p-1' : ''
+                }`}
+                style={{ backgroundColor: tech.imageSrc ? 'white' : tech.color }}
+                title={tech.name}
+              >
+                {tech.imageSrc ? (
+                  <Image
+                    src={tech.imageSrc}
+                    alt={tech.name}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                ) : (
+                  tech.icon
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        
         {description.map((paragraph, index) => (
-          <p
+          <div
             key={index}
             className={`mb-5 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -61,8 +106,21 @@ export default function AnimatedProject({
               transitionDelay: isVisible ? `${delay + 200 + index * 100}ms` : '0ms'
             }}
           >
-            {paragraph}
-          </p>
+            {paragraph.startsWith('•') ? (
+              <div className="flex items-start gap-3">
+                <Image
+                  src="/bullet-point.svg"
+                  alt="bullet point"
+                  width={16}
+                  height={16}
+                  className="w-4 h-4 mt-1 flex-shrink-0"
+                />
+                <p className="flex-1">{paragraph.substring(2)}</p>
+              </div>
+            ) : (
+              <p>{paragraph}</p>
+            )}
+          </div>
         ))}
       </div>
       
@@ -74,15 +132,15 @@ export default function AnimatedProject({
           transitionDelay: isVisible ? `${delay + 500}ms` : '0ms'
         }}
       >
-        <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
+        <Carousel className="rounded-xl w-[500px] h-[500px] overflow-hidden">
           {images.map((image, index) => (
             <Image
               key={index}
               src={image.src}
               alt={image.alt}
-              width={image.width || 400}
-              height={image.height || 400}
-              className="w-[400px] h-[400px] object-cover"
+              width={image.width || 500}
+              height={image.height || 500}
+              className="w-[500px] h-[500px] object-cover"
             />
           ))}
         </Carousel>

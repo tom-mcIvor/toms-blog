@@ -44,8 +44,10 @@ function Home() {
             githubUrl="https://github.com/tom-mcIvor/Yeah-book"
             description={[
               "Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content.",
-              "The app's unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates.",
-              "With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users."
+              "• View & Edit Books: Each book contains profiles with images, names, and quotes, with full editing capabilities including cover customization",
+              "• Profiles: Users can view and manage detailed member profiles within each yearbook",
+              "• Authentication: Secure user authentication ensures only authorized users can modify content and post comments",
+              "With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users while demonstrating modern web development practices."
             ]}
             images={[
               { src: yeakbookHome, alt: "YeahBook Home" },
@@ -54,6 +56,40 @@ function Home() {
             ]}
             animationDirection="left"
             delay={0}
+            techStack={[
+              {
+                name: "React",
+                imageSrc: "/React.PNG"
+              },
+              {
+                name: "Redux",
+                imageSrc: "/Redux-Icon.PNG"
+              },
+              {
+                name: "Node.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "Express",
+                imageSrc: "/Express-Icon.PNG"
+              },
+              {
+                name: "SCSS",
+                imageSrc: "/SCSS-icon.PNG"
+              },
+              {
+                name: "Mantine",
+                imageSrc: "/Mantine-logo.PNG"
+              },
+              {
+                name: "Knex.js",
+                imageSrc: "/Knex-logo.PNG"
+              },
+              {
+                name: "SQLite",
+                imageSrc: "/SQL-Lite-Logo.PNG"
+              }
+            ]}
           />
 
           <AnimatedProject
@@ -71,15 +107,51 @@ function Home() {
             ]}
             animationDirection="right"
             delay={200}
+            techStack={[
+              {
+                name: "React",
+                imageSrc: "/React.PNG"
+              },
+              {
+                name: "Redux",
+                imageSrc: "/Redux-Icon.PNG"
+              },
+              {
+                name: "Node.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "Express",
+                imageSrc: "/Express-Icon.PNG"
+              },
+              {
+                name: "SCSS",
+                imageSrc: "/SCSS-icon.PNG"
+              },
+              {
+                name: "Auth0",
+                imageSrc: "/Auth0.PNG"
+              },
+              {
+                name: "Knex.js",
+                imageSrc: "/Knex-logo.PNG"
+              },
+              {
+                name: "SQLite",
+                imageSrc: "/SQL-Lite-Logo.PNG"
+              }
+            ]}
           />
 
           <AnimatedProject
             title="Steno Briefs"
             githubUrl="https://github.com/tom-mcivor/steno-briefs"
             description={[
-              "Steno Briefs is a comprehensive stenography learning platform designed to help users master shorthand writing techniques. The application provides an interactive environment where users can practice stenographic briefs, create custom theories, and track their progress.",
-              "With features like word addition, theory creation, and a comprehensive dashboard, Steno Briefs makes learning stenography accessible and engaging.",
-              "The platform supports both beginners and advanced users with its intuitive interface and structured learning approach, making it an ideal tool for anyone looking to develop their stenographic skills."
+              "StenoBriefs is a modern, web-based platform for the stenography community to collaborate on and vote for the best stenography briefs. The app helps stenographers discover, share, and improve stenographic briefs across different theories like Phoenix, Plover, StenEd, and Magnum Steno.",
+              "• Browse & Search: Users can browse a database of English words and view various community-contributed briefs",
+              "• Vote & Discuss: Each word can have multiple briefs, and users can vote for the most efficient ones and participate in discussions",
+              "• Theory Support: Briefs are categorized by stenography theory, with user accounts enabling voting, submissions, and community interaction",
+              "Built with React/Next.js, TypeScript, Tailwind CSS, and features Stripe integration for donations, making it a comprehensive tool for the stenography community."
             ]}
             images={[
               { src: "/Steno-briefs-home.PNG", alt: "Steno Briefs Home", width: 400, height: 400 },
@@ -90,176 +162,206 @@ function Home() {
             ]}
             animationDirection="left"
             delay={400}
+            techStack={[
+              {
+                name: "React",
+                imageSrc: "/React.PNG"
+              },
+              {
+                name: "Next.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "TypeScript",
+                imageSrc: "/TypeScript.png"
+              },
+              {
+                name: "Tailwind CSS",
+                imageSrc: "/SCSS-icon.PNG"
+              },
+              {
+                name: "Knex.js",
+                imageSrc: "/Knex-logo.PNG"
+              },
+              {
+                name: "SQLite",
+                imageSrc: "/SQL-Lite-Logo.PNG"
+              }
+            ]}
           />
 
-          {/* Mint to be Project - two-column layout */}
-          <div className="project">
-            <div className="project-content">
-              <h3 className="project-title">
-                <a href="https://github.com/tom-mcivor/Mint-to-be" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  Mint to be
-                </a>
-              </h3>
-              <p className="mb-5">
-                Mint to be is a user-friendly app that allows gardening enthusiasts to explore a wide range of garden herbs and learn about their unique properties. Users can select from an extensive list of herbs, view detailed descriptions, and discover tips for growing and using each plant.
-              </p>
-              <p className="mb-5">
-                The app features high-quality images, care instructions, and fun facts to help users make the most of their gardening experience.
-              </p>
-              <p className="mb-5">
-                Whether you&apos;re a seasoned gardener or just starting out, Mint to be provides valuable information and inspiration for cultivating your own herb garden and enjoying the benefits of fresh, homegrown herbs.
-              </p>
-            </div>
-            <div className="project-carousel-container">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src={mintToBeAddHerb}
-                  alt="image 1"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={mintToBeHome}
-                  alt="image 2"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={mintToBeUpdate}
-                  alt="image 3"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="Mint to Be"
+            githubUrl="https://github.com/tom-mcivor/Mint-to-be"
+            description={[
+              "Mint to be is a user-friendly app that allows gardening enthusiasts to explore a wide range of garden herbs and learn about their unique properties. Users can select from an extensive list of herbs, view detailed descriptions, and discover tips for growing and using each plant.",
+              "The app features high-quality images, care instructions, and fun facts to help users make the most of their gardening experience.",
+              "Whether you're a seasoned gardener or just starting out, Mint to be provides valuable information and inspiration for cultivating your own herb garden and enjoying the benefits of fresh, homegrown herbs."
+            ]}
+            images={[
+              { src: mintToBeAddHerb, alt: "Mint to Be Add Herb", width: 400, height: 400 },
+              { src: mintToBeHome, alt: "Mint to Be Home", width: 400, height: 400 },
+              { src: mintToBeUpdate, alt: "Mint to Be Update", width: 400, height: 400 }
+            ]}
+            animationDirection="right"
+            delay={300}
+            techStack={[
+              {
+                name: "React",
+                imageSrc: "/React.PNG"
+              },
+              {
+                name: "Node.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "Express",
+                imageSrc: "/Express-Icon.PNG"
+              },
+              {
+                name: "HTML5",
+                imageSrc: "/HTML5.png"
+              },
+              {
+                name: "CSS3",
+                imageSrc: "/SCSS-icon.PNG"
+              },
+              {
+                name: "JavaScript",
+                imageSrc: "/JavaScript.png"
+              }
+            ]}
+          />
 
-          {/* Ginew force Project - two-column layout */}
-          <div className="project">
-            <div className="project-content">
-              <h3 className="project-title">
-                <a href="https://github.com/tom-mcivor/Ginew-force" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  Ginew force
-                </a>
-              </h3>
-              <p className="mb-5">
-                Ginew force is an interactive app that lets users pit their favorite Dragon Ball Super characters against each other in epic battles. Users can select from a roster of iconic heroes and villains, customize their teams, and simulate exciting matchups to determine the ultimate winner.
-              </p>
-              <p className="mb-5">
-                The app features detailed character stats, special moves, and dynamic battle animations that bring the Dragon Ball universe to life.
-              </p>
-              <p className="mb-5">
-                Whether you&apos;re strategizing for victory or just having fun with friends, Ginew force offers a unique and entertaining way to explore the world of Dragon Ball. Challenge yourself, discover new character combinations, and see who will emerge as the champion in this action-packed fan experience.
-              </p>
-            </div>
-            <div className="project-carousel-container">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src={ginewForeCode2}
-                  alt="image 1"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={genewForceCode}
-                  alt="image 2"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={ginewForce}
-                  alt="image 3"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="Ginew Force"
+            githubUrl="https://github.com/tom-mcivor/Ginew-force"
+            description={[
+              "The Ginew-force app is a web-based battle simulator themed around the Dragon Ball Super universe, specifically featuring the Ginyu Force characters. The app allows users to select characters from the Dragon Ball Super series, fetched from an external API.",
+              "Users can simulate battles between selected characters by comparing their randomly assigned strengths, view the winner of a match, or see a draw if both characters have equal strength. The interactive interface is built with React, Redux, and Mantine components.",
+              "The app is structured as a fullstack JavaScript project, with a React/Redux frontend, Node.js backend, and uses Webpack/Babel for bundling. It is designed for fun and demonstrates concepts like state management, API integration, and modern React development."
+            ]}
+            images={[
+              { src: ginewForeCode2, alt: "Ginew Force Code", width: 400, height: 400 },
+              { src: genewForceCode, alt: "Ginew Force Development", width: 400, height: 400 },
+              { src: ginewForce, alt: "Ginew Force Game", width: 400, height: 400 }
+            ]}
+            animationDirection="right"
+            delay={350}
+            techStack={[
+              {
+                name: "React",
+                imageSrc: "/React.PNG"
+              },
+              {
+                name: "Redux",
+                imageSrc: "/Redux-Icon.PNG"
+              },
+              {
+                name: "Node.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "Mantine",
+                imageSrc: "/Mantine-logo.PNG"
+              },
+              {
+                name: "HTML5",
+                imageSrc: "/HTML5.png"
+              },
+              {
+                name: "CSS3",
+                imageSrc: "/SCSS-icon.PNG"
+              }
+            ]}
+          />
 
-          {/* Nightmare on dev street Project - two-column layout */}
-          <div className="project">
-            <div className="project-content">
-              <h3 className="project-title">
-                <a href="https://github.com/tom-mcivor/Nightmare-on-dev-street" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  Nightmare on dev street
-                </a>
-              </h3>
-              <p className="mb-5">
-                Nightmare on dev street is a fun and interactive app that allows users to rate their favorite horror movies. Users can browse through a curated selection of classic and modern horror films, view details and images, and submit their own ratings.
-              </p>
-              <p className="mb-5">
-                The app provides a social platform for horror movie enthusiasts to share opinions, discover new films, and engage in discussions about what makes a movie truly terrifying.
-              </p>
-              <p className="mb-5">
-                Whether you&apos;re a fan of psychological thrillers or slasher flicks, Nightmare on dev street offers a unique way to connect with other fans and celebrate the best (and worst) of the horror genre.
-              </p>
-            </div>
-            <div className="project-carousel-container">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src={nightmareComments}
-                  alt="image 1"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={nightmareDev}
-                  alt="image 2"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src={nightmare}
-                  alt="image 3"
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="Nightmare on Dev Street"
+            githubUrl="https://github.com/tom-mcivor/Nightmare-on-dev-street"
+            description={[
+              "Nightmare on dev street is a fun and interactive app that allows users to rate their favorite horror movies. Users can browse through a curated selection of classic and modern horror films, view details and images, and submit their own ratings.",
+              "The app provides a social platform for horror movie enthusiasts to share opinions, discover new films, and engage in discussions about what makes a movie truly terrifying.",
+              "Whether you're a fan of psychological thrillers or slasher flicks, Nightmare on dev street offers a unique way to connect with other fans and celebrate the best (and worst) of the horror genre."
+            ]}
+            images={[
+              { src: nightmareComments, alt: "Nightmare Comments", width: 400, height: 400 },
+              { src: nightmareDev, alt: "Nightmare Dev Select", width: 400, height: 400 },
+              { src: nightmare, alt: "Nightmare Home", width: 400, height: 400 }
+            ]}
+            animationDirection="left"
+            delay={500}
+            techStack={[
+              {
+                name: "Node.js",
+                imageSrc: "/Node-Image.PNG"
+              },
+              {
+                name: "Express",
+                imageSrc: "/Express-Icon.PNG"
+              },
+              {
+                name: "Handlebars",
+                imageSrc: "/HTML5.png"
+              },
+              {
+                name: "HTML5",
+                imageSrc: "/HTML5.png"
+              },
+              {
+                name: "CSS3",
+                imageSrc: "/SCSS-icon.PNG"
+              },
+              {
+                name: "JavaScript",
+                imageSrc: "/JavaScript.png"
+              }
+            ]}
+          />
 
-          {/* Property Manager Project - two-column layout */}
-          <div className="project">
-            <div className="project-content">
-              <h3 className="project-title">
-                <a href="https://github.com/tom-mcivor/property-manager" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-                  Property Manager
-                </a>
-              </h3>
-              <p className="mb-5">
-                Property Manager is a comprehensive property management application designed to streamline the management of rental properties. The app provides landlords and property managers with tools to track tenancies, monitor rent arrears, manage property details, and view comprehensive dashboards.
-              </p>
-              <p className="mb-5">
-                With features for tenant management, financial tracking, and property oversight, this application simplifies the complex task of property management.
-              </p>
-              <p className="mb-5">
-                The user-friendly interface allows for efficient navigation between different aspects of property management, making it an essential tool for anyone managing rental properties.
-              </p>
-            </div>
-            <div className="project-carousel-container">
-              <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
-                <Image
-                  src="/Property-Manager-Dashboard.PNG"
-                  alt="Property Manager Dashboard"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Property-Manager-Properties.PNG"
-                  alt="Property Manager Properties"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Property-Manager-Arrears.PNG"
-                  alt="Property Manager Arrears"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <Image
-                  src="/Property-ManagerTenancy.PNG"
-                  alt="Property Manager Tenancy"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-              </Carousel>
-            </div>
-          </div>
+          <AnimatedProject
+            title="Property Manager"
+            githubUrl="https://github.com/tom-mcivor/property-manager"
+            description={[
+              "Property Manager is a comprehensive property management application designed to streamline the management of rental properties. The app provides landlords and property managers with tools to track tenancies, monitor rent arrears, manage property details, and view comprehensive dashboards.",
+              "With features for tenant management, financial tracking, and property oversight, this application simplifies the complex task of property management.",
+              "The user-friendly interface allows for efficient navigation between different aspects of property management, making it an essential tool for anyone managing rental properties."
+            ]}
+            images={[
+              { src: "/Property-Manager-Dashboard.PNG", alt: "Property Manager Dashboard", width: 400, height: 400 },
+              { src: "/Property-Manager-Properties.PNG", alt: "Property Manager Properties", width: 400, height: 400 },
+              { src: "/Property-Manager-Arrears.PNG", alt: "Property Manager Arrears", width: 400, height: 400 },
+              { src: "/Property-ManagerTenancy.PNG", alt: "Property Manager Tenancy", width: 400, height: 400 }
+            ]}
+            animationDirection="right"
+            delay={600}
+            techStack={[
+              {
+                name: "Vue.js",
+                imageSrc: "/Vue-logo.svg"
+              },
+              {
+                name: ".NET Core",
+                imageSrc: "/DotNet-logo.svg"
+              },
+              {
+                name: "TypeScript",
+                imageSrc: "/TypeScript.png"
+              },
+              {
+                name: "JavaScript",
+                imageSrc: "/JavaScript.png"
+              },
+              {
+                name: "HTML5",
+                imageSrc: "/HTML5.png"
+              },
+              {
+                name: "SCSS",
+                imageSrc: "/SCSS-icon.PNG"
+              }
+            ]}
+          />
 
         </div>
       </div>
