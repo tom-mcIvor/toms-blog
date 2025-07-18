@@ -75,11 +75,9 @@ export default function AnimatedProject({
               <div
                 key={index}
                 className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 ${
-                  tech.name.toLowerCase().includes('handlebars') ? 'handlebars-contrast' : ''
-                } ${
-                  tech.name.toLowerCase().includes('express') ? 'express-contrast' : ''
+                  tech.imageSrc ? 'bg-white p-1' : ''
                 }`}
-                style={{ backgroundColor: tech.color }}
+                style={{ backgroundColor: tech.imageSrc ? 'white' : tech.color }}
                 title={tech.name}
               >
                 {tech.imageSrc ? (
@@ -99,7 +97,7 @@ export default function AnimatedProject({
         )}
         
         {description.map((paragraph, index) => (
-          <div
+          <p
             key={index}
             className={`mb-5 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -108,21 +106,8 @@ export default function AnimatedProject({
               transitionDelay: isVisible ? `${delay + 200 + index * 100}ms` : '0ms'
             }}
           >
-            {paragraph.startsWith('•') ? (
-              <div className="flex items-start gap-3">
-                <Image
-                  src="/bullet-point.svg"
-                  alt="bullet point"
-                  width={16}
-                  height={16}
-                  className="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <p className="flex-1">{paragraph.substring(2)}</p>
-              </div>
-            ) : (
-              <p>{paragraph}</p>
-            )}
-          </div>
+            {paragraph}
+          </p>
         ))}
       </div>
       
@@ -134,15 +119,15 @@ export default function AnimatedProject({
           transitionDelay: isVisible ? `${delay + 500}ms` : '0ms'
         }}
       >
-        <Carousel className="rounded-xl w-[500px] h-[500px] overflow-hidden">
+        <Carousel className="rounded-xl w-[400px] h-[400px] overflow-hidden">
           {images.map((image, index) => (
             <Image
               key={index}
               src={image.src}
               alt={image.alt}
-              width={image.width || 500}
-              height={image.height || 500}
-              className="w-[500px] h-[500px] object-cover"
+              width={image.width || 400}
+              height={image.height || 400}
+              className="w-[400px] h-[400px] object-cover"
             />
           ))}
         </Carousel>

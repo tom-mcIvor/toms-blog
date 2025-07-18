@@ -44,10 +44,8 @@ function Home() {
             githubUrl="https://github.com/tom-mcIvor/Yeah-book"
             description={[
               "Our Yeah-Book app is a platform that allows users to create yearbooks and upload their profile and details to each yearbook. Similar to Facebook, Yeah-Book provides a social setting for users to connect with others and share content.",
-              "• View & Edit Books: Each book contains profiles with images, names, and quotes, with full editing capabilities including cover customization",
-              "• Profiles: Users can view and manage detailed member profiles within each yearbook",
-              "• Authentication: Secure user authentication ensures only authorized users can modify content and post comments",
-              "With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users while demonstrating modern web development practices."
+              "The app's unique feature of customizable yearbooks makes it a great tool for preserving memories and staying connected with friends and classmates.",
+              "With its user-friendly interface and innovative approach to social networking, Yeah-Book is a valuable app that provides a unique service to its users."
             ]}
             images={[
               { src: yeakbookHome, alt: "YeahBook Home" },
@@ -59,23 +57,23 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                imageSrc: "/React.PNG"
               },
               {
                 name: "Redux",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                imageSrc: "/Redux-Icon.PNG"
               },
               {
                 name: "Node.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "Express",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                imageSrc: "/Express-Icon.PNG"
               },
               {
                 name: "SCSS",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               },
               {
                 name: "Mantine",
@@ -87,7 +85,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                imageSrc: "/SQL-Lite-Logo.PNG"
               }
             ]}
           />
@@ -110,23 +108,23 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                imageSrc: "/React.PNG"
               },
               {
                 name: "Redux",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                imageSrc: "/Redux-Icon.PNG"
               },
               {
                 name: "Node.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "Express",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                imageSrc: "/Express-Icon.PNG"
               },
               {
                 name: "SCSS",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               },
               {
                 name: "Auth0",
@@ -138,7 +136,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                imageSrc: "/SQL-Lite-Logo.PNG"
               }
             ]}
           />
@@ -147,11 +145,9 @@ function Home() {
             title="Steno Briefs"
             githubUrl="https://github.com/tom-mcivor/steno-briefs"
             description={[
-              "StenoBriefs is a modern, web-based platform for the stenography community to collaborate on and vote for the best stenography briefs. The app helps stenographers discover, share, and improve stenographic briefs across different theories like Phoenix, Plover, StenEd, and Magnum Steno.",
-              "• Browse & Search: Users can browse a database of English words and view various community-contributed briefs",
-              "• Vote & Discuss: Each word can have multiple briefs, and users can vote for the most efficient ones and participate in discussions",
-              "• Theory Support: Briefs are categorized by stenography theory, with user accounts enabling voting, submissions, and community interaction",
-              "Built with React/Next.js, TypeScript, Tailwind CSS, and features Stripe integration for donations, making it a comprehensive tool for the stenography community."
+              "Steno Briefs is a comprehensive stenography learning platform designed to help users master shorthand writing techniques. The application provides an interactive environment where users can practice stenographic briefs, create custom theories, and track their progress.",
+              "With features like word addition, theory creation, and a comprehensive dashboard, Steno Briefs makes learning stenography accessible and engaging.",
+              "The platform supports both beginners and advanced users with its intuitive interface and structured learning approach, making it an ideal tool for anyone looking to develop their stenographic skills."
             ]}
             images={[
               { src: "/Steno-briefs-home.PNG", alt: "Steno Briefs Home", width: 400, height: 400 },
@@ -165,19 +161,19 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                imageSrc: "/React.PNG"
               },
               {
                 name: "Next.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "TypeScript",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                imageSrc: "/TypeScript.png"
               },
               {
                 name: "Tailwind CSS",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               },
               {
                 name: "Knex.js",
@@ -185,7 +181,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                imageSrc: "/SQL-Lite-Logo.PNG"
               }
             ]}
           />
@@ -208,27 +204,27 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                imageSrc: "/React.PNG"
               },
               {
                 name: "Node.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "Express",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                imageSrc: "/Express-Icon.PNG"
               },
               {
                 name: "HTML5",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                imageSrc: "/HTML5.png"
               },
               {
                 name: "CSS3",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               },
               {
                 name: "JavaScript",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                imageSrc: "/JavaScript.png"
               }
             ]}
           />
@@ -237,9 +233,9 @@ function Home() {
             title="Ginew Force"
             githubUrl="https://github.com/tom-mcivor/Ginew-force"
             description={[
-              "The Ginew-force app is a web-based battle simulator themed around the Dragon Ball Super universe, specifically featuring the Ginyu Force characters. The app allows users to select characters from the Dragon Ball Super series, fetched from an external API.",
-              "Users can simulate battles between selected characters by comparing their randomly assigned strengths, view the winner of a match, or see a draw if both characters have equal strength. The interactive interface is built with React, Redux, and Mantine components.",
-              "The app is structured as a fullstack JavaScript project, with a React/Redux frontend, Node.js backend, and uses Webpack/Babel for bundling. It is designed for fun and demonstrates concepts like state management, API integration, and modern React development."
+              "Ginew force is an interactive app that lets users pit their favorite Dragon Ball Super characters against each other in epic battles. Users can select from a roster of iconic heroes and villains, customize their teams, and simulate exciting matchups to determine the ultimate winner.",
+              "The app features detailed character stats, special moves, and dynamic battle animations that bring the Dragon Ball universe to life.",
+              "Whether you're strategizing for victory or just having fun with friends, Ginew force offers a unique and entertaining way to explore the world of Dragon Ball. Challenge yourself, discover new character combinations, and see who will emerge as the champion in this action-packed fan experience."
             ]}
             images={[
               { src: ginewForeCode2, alt: "Ginew Force Code", width: 400, height: 400 },
@@ -251,15 +247,15 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                imageSrc: "/React.PNG"
               },
               {
                 name: "Redux",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                imageSrc: "/Redux-Icon.PNG"
               },
               {
                 name: "Node.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "Mantine",
@@ -267,11 +263,11 @@ function Home() {
               },
               {
                 name: "HTML5",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                imageSrc: "/HTML5.png"
               },
               {
                 name: "CSS3",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               }
             ]}
           />
@@ -294,27 +290,27 @@ function Home() {
             techStack={[
               {
                 name: "Node.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                imageSrc: "/Node-Image.PNG"
               },
               {
                 name: "Express",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                imageSrc: "/Express-Icon.PNG"
               },
               {
                 name: "Handlebars",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg"
+                imageSrc: "/HTML5.png"
               },
               {
                 name: "HTML5",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                imageSrc: "/HTML5.png"
               },
               {
                 name: "CSS3",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               },
               {
                 name: "JavaScript",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                imageSrc: "/JavaScript.png"
               }
             ]}
           />
@@ -338,27 +334,27 @@ function Home() {
             techStack={[
               {
                 name: "Vue.js",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                imageSrc: "/Vue-logo.svg"
               },
               {
                 name: ".NET Core",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                imageSrc: "/DotNet-logo.svg"
               },
               {
                 name: "TypeScript",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                imageSrc: "/TypeScript.png"
               },
               {
                 name: "JavaScript",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                imageSrc: "/JavaScript.png"
               },
               {
                 name: "HTML5",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                imageSrc: "/HTML5.png"
               },
               {
                 name: "SCSS",
-                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                imageSrc: "/SCSS-icon.PNG"
               }
             ]}
           />

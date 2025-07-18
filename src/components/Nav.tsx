@@ -13,7 +13,7 @@ import {
   Button,
   ThemeProvider,
 } from "@material-tailwind/react";
-import {  ChevronUpIcon, ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import {  ChevronUpIcon } from "@heroicons/react/24/solid";
 
  
 function NavList() {
@@ -122,11 +122,13 @@ function Nav() {
                   offset={15}
                 >
                   <MenuHandler className="flex items-center justify-between">
-                    <MenuItem className="flex items-center justify-between w-full">
-                      <span>Bootcamp</span>
-                      <ChevronRightIcon
-                        strokeWidth={2}
-                        className="h-5 w-5 text-gray-600"
+                    <MenuItem>
+                      Bootcamp
+                      <ChevronUpIcon
+                        strokeWidth={2.5}
+                        className={`h-3.5 w-3.5 transition-transform ${
+                          openMenu ? 'rotate-90' : ''
+                        }`}
                       />
                     </MenuItem>
                   </MenuHandler>
@@ -137,11 +139,11 @@ function Nav() {
                       offset={15}
                     >
                       <MenuHandler className="flex items-center justify-between">
-                        <MenuItem className="flex items-center justify-between w-full">
-                          <span>TECH</span>
-                          <ChevronRightIcon
-                            strokeWidth={2}
-                            className="h-5 w-5 text-gray-600"
+                        <MenuItem>
+                          TECH
+                          <ChevronUpIcon
+                            strokeWidth={2.5}
+                            className="h-3.5 w-3.5 transition-transform"
                           />
                         </MenuItem>
                       </MenuHandler>
@@ -169,11 +171,11 @@ function Nav() {
                       offset={15}
                     >
                       <MenuHandler className="flex items-center justify-between">
-                        <MenuItem className="flex items-center justify-between w-full">
-                          <span>CORE</span>
-                          <ChevronRightIcon
-                            strokeWidth={2}
-                            className="h-5 w-5 text-gray-600"
+                        <MenuItem>
+                          CORE
+                          <ChevronUpIcon
+                            strokeWidth={2.5}
+                            className="h-3.5 w-3.5 transition-transform"
                           />
                         </MenuItem>
                       </MenuHandler>
@@ -208,17 +210,7 @@ function Nav() {
                   </MenuList>
                 </Menu>
                 <Link href="ai-essentials">
-                  <MenuItem
-                    className="hover:text-blue-500 transition-colors"
-                    style={{
-                      border: 'none !important',
-                      outline: 'none !important',
-                      boxShadow: 'none !important',
-                      borderWidth: '0 !important',
-                      borderStyle: 'none !important',
-                      borderColor: 'transparent !important'
-                    }}
-                  >
+                  <MenuItem className="hover:text-blue-500 transition-colors">
                     AI Essentials
                   </MenuItem>
                 </Link>

@@ -616,36 +616,3 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
   z-index: 1000;
 }
 
-/* Handlebars logo contrast */
-.handlebars-contrast {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Express logo contrast */
-.express-contrast {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Remove black borders from menu items */
-.menu-item,
-[role="menuitem"],
-li[role="menuitem"] {
-  border: none !important;
-  outline: none !important;
-}
-
-.menu-item:focus,
-.menu-item:active,
-[role="menuitem"]:focus,
-[role="menuitem"]:active,
-li[role="menuitem"]:focus,
-li[role="menuitem"]:active {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
