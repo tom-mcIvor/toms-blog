@@ -74,10 +74,8 @@ export default function AnimatedProject({
             {techStack.map((tech, index) => (
               <div
                 key={index}
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 ${
-                  tech.imageSrc ? 'bg-white p-1' : ''
-                }`}
-                style={{ backgroundColor: tech.imageSrc ? 'white' : tech.color }}
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110`}
+                style={{ backgroundColor: tech.color }}
                 title={tech.name}
               >
                 {tech.imageSrc ? (
