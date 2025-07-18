@@ -63,19 +63,19 @@ function Home() {
               },
               {
                 name: "Redux",
-                imageSrc: "/Redux-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
               },
               {
                 name: "Node.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               },
               {
                 name: "Express",
-                imageSrc: "/Express-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
               },
               {
                 name: "SCSS",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
               },
               {
                 name: "Mantine",
@@ -87,7 +87,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "/SQL-Lite-Logo.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
               }
             ]}
           />
@@ -114,19 +114,19 @@ function Home() {
               },
               {
                 name: "Redux",
-                imageSrc: "/Redux-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
               },
               {
                 name: "Node.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               },
               {
                 name: "Express",
-                imageSrc: "/Express-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
               },
               {
                 name: "SCSS",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
               },
               {
                 name: "Auth0",
@@ -138,7 +138,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "/SQL-Lite-Logo.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
               }
             ]}
           />
@@ -169,15 +169,15 @@ function Home() {
               },
               {
                 name: "Next.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
               },
               {
                 name: "TypeScript",
-                imageSrc: "/TypeScript.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
               },
               {
                 name: "Tailwind CSS",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
               },
               {
                 name: "Knex.js",
@@ -185,7 +185,7 @@ function Home() {
               },
               {
                 name: "SQLite",
-                imageSrc: "/SQL-Lite-Logo.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
               }
             ]}
           />
@@ -212,23 +212,23 @@ function Home() {
               },
               {
                 name: "Node.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               },
               {
                 name: "Express",
-                imageSrc: "/Express-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
               },
               {
                 name: "HTML5",
-                imageSrc: "/HTML5.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               },
               {
                 name: "CSS3",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
               },
               {
                 name: "JavaScript",
-                imageSrc: "/JavaScript.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               }
             ]}
           />
@@ -255,11 +255,11 @@ function Home() {
               },
               {
                 name: "Redux",
-                imageSrc: "/Redux-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
               },
               {
                 name: "Node.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               },
               {
                 name: "Mantine",
@@ -267,11 +267,11 @@ function Home() {
               },
               {
                 name: "HTML5",
-                imageSrc: "/HTML5.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               },
               {
                 name: "CSS3",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
               }
             ]}
           />
@@ -294,27 +294,27 @@ function Home() {
             techStack={[
               {
                 name: "Node.js",
-                imageSrc: "/Node-Image.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               },
               {
                 name: "Express",
-                imageSrc: "/Express-Icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
               },
               {
                 name: "Handlebars",
-                imageSrc: "/HTML5.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg"
               },
               {
                 name: "HTML5",
-                imageSrc: "/HTML5.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               },
               {
                 name: "CSS3",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
               },
               {
                 name: "JavaScript",
-                imageSrc: "/JavaScript.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               }
             ]}
           />
@@ -338,27 +338,27 @@ function Home() {
             techStack={[
               {
                 name: "Vue.js",
-                imageSrc: "/Vue-logo.svg"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
               },
               {
                 name: ".NET Core",
-                imageSrc: "/DotNet-logo.svg"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
               },
               {
                 name: "TypeScript",
-                imageSrc: "/TypeScript.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
               },
               {
                 name: "JavaScript",
-                imageSrc: "/JavaScript.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               },
               {
                 name: "HTML5",
-                imageSrc: "/HTML5.png"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               },
               {
                 name: "SCSS",
-                imageSrc: "/SCSS-icon.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
               }
             ]}
           />
