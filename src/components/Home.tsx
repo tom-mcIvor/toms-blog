@@ -59,7 +59,7 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "/React.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               },
               {
                 name: "Redux",
@@ -110,7 +110,7 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "/React.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               },
               {
                 name: "Redux",
@@ -165,7 +165,7 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "/React.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               },
               {
                 name: "Next.js",
@@ -208,7 +208,7 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "/React.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               },
               {
                 name: "Node.js",
@@ -251,7 +251,7 @@ function Home() {
             techStack={[
               {
                 name: "React",
-                imageSrc: "/React.PNG"
+                imageSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               },
               {
                 name: "Redux",
