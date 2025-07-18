@@ -74,7 +74,9 @@ export default function AnimatedProject({
             {techStack.map((tech, index) => (
               <div
                 key={index}
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110`}
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 ${
+                  tech.name.toLowerCase().includes('handlebars') ? 'handlebars-contrast' : ''
+                }`}
                 style={{ backgroundColor: tech.color }}
                 title={tech.name}
               >
