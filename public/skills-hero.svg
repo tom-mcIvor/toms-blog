@@ -121,24 +121,52 @@
     </g>
   </g>
   
-  <!-- Floating code symbols (simplified) -->
-  <g font-family="'Fira Code', monospace" font-weight="bold" fill="url(#codeGradient)" opacity="0.6">
-    <!-- Simple code symbols -->
-    <text x="100" y="80" font-size="24" filter="url(#enhancedGlow)">
-      &lt;/&gt;
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  <!-- Floating code elements -->
+  <g font-family="'Fira Code', monospace" font-weight="bold" fill="url(#codeGradient)" opacity="0.7">
+    <!-- Left side code -->
+    <text x="50" y="80" font-size="16" filter="url(#enhancedGlow)">
+      &lt;div&gt;
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
     </text>
-    <text x="480" y="220" font-size="24" filter="url(#enhancedGlow)">
-      { }
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+    <text x="70" y="100" font-size="14" opacity="0.6">
+      className=
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite"/>
     </text>
-    <text x="150" y="250" font-size="20" opacity="0.5">
-      #
-      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s" repeatCount="indefinite"/>
+    <text x="50" y="120" font-size="16" filter="url(#enhancedGlow)">
+      &lt;/div&gt;
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.2s" repeatCount="indefinite"/>
     </text>
-    <text x="450" y="80" font-size="20" opacity="0.5">
-      ( )
-      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.7s" repeatCount="indefinite"/>
+    
+    <!-- Right side code -->
+    <text x="450" y="200" font-size="16" filter="url(#enhancedGlow)">
+      const skills = {
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="470" y="220" font-size="14" opacity="0.6">
+      frontend: true,
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.3s" repeatCount="indefinite"/>
+    </text>
+    <text x="470" y="240" font-size="14" opacity="0.6">
+      backend: true
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.7s" repeatCount="indefinite"/>
+    </text>
+    <text x="450" y="260" font-size="16" filter="url(#enhancedGlow)">
+      }
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.1s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- Top decorative elements -->
+    <text x="200" y="40" font-size="20" filter="url(#enhancedGlow)">
+      function() {
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+    </text>
+    <text x="350" y="60" font-size="18" opacity="0.6">
+      return &lt;Skills /&gt;;
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.9s" repeatCount="indefinite"/>
+    </text>
+    <text x="380" y="80" font-size="20" filter="url(#enhancedGlow)">
+      }
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.4s" repeatCount="indefinite"/>
     </text>
   </g>
   

@@ -93,13 +93,13 @@ export default function AboutMeAndSkills() {
         </div>
       </div>
       <div ref={skillsRef} className="lg:w-1/2">
-        <h2 className={`text-5xl font-black mb-6 transition-all duration-1000 ${
+        <h2 className={`text-5xl font-black mb-6 text-center transition-all duration-1000 ${
           skillsVisible
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10'
         }`}>My Skills</h2>
         
-        <div className={`flex flex-wrap gap-3 transition-all duration-1000 delay-300 ${
+        <div className={`flex flex-wrap gap-3 justify-center transition-all duration-1000 delay-300 ${
           skillsVisible
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10'
@@ -107,16 +107,13 @@ export default function AboutMeAndSkills() {
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className={`flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:bg-gray-800 hover:text-white ${
+              className={`flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-500 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2 ${
                 skillsVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-5'
               }`}
               style={{
-                transitionDelay: skillsVisible ? `${500 + index * 50}ms` : '0ms',
-                transition: skillsVisible
-                  ? 'opacity 1000ms, transform 1000ms, background-color 300ms, color 300ms, box-shadow 300ms'
-                  : 'opacity 1000ms, transform 1000ms'
+                transitionDelay: skillsVisible ? `${500 + index * 50}ms` : '0ms'
               }}
             >
               <Image
