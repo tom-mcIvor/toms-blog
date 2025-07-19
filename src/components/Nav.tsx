@@ -95,7 +95,7 @@ function Nav() {
         <a href="/">
           <div className="pl-20 m-5 flex items-center h-full">
             <button className="mybutton">
-              <div className="hello">Tom&apos;s Blog</div>
+              <div className="hello">About</div>
               <svg className="w-[180px] h-[60px] inline">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
