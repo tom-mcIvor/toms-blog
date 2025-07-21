@@ -117,8 +117,8 @@ export default function AboutMeAndSkills() {
               }`}
               style={{
                 transition: skillsVisible
-                  ? `opacity 1000ms ease-out ${500 + index * 50}ms, transform 1000ms ease-out ${500 + index * 50}ms`
-                  : 'opacity 1000ms ease-out, transform 1000ms ease-out',
+                  ? `opacity 600ms ease-out ${300 + index * 100}ms, transform 600ms ease-out ${300 + index * 100}ms`
+                  : 'opacity 600ms ease-out, transform 600ms ease-out',
                 transitionProperty: 'opacity, transform, background-color, box-shadow, scale'
               }}
               onMouseEnter={(e) => {
