@@ -110,13 +110,26 @@ export default function AboutMeAndSkills() {
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className={`flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-500 cursor-pointer transform hover:scale-110 hover:shadow-2xl hover:-translate-y-2 ${
+              className={`flex items-center gap-2 bg-gray-100 px-4 py-2 rounded shadow text-lg text-gray-700 hover:bg-gray-800 hover:text-white cursor-pointer ${
                 skillsVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-5'
               }`}
               style={{
-                transitionDelay: skillsVisible ? `${500 + index * 50}ms` : '0ms'
+                transition: skillsVisible
+                  ? `opacity 1000ms ease-out ${500 + index * 50}ms, transform 1000ms ease-out ${500 + index * 50}ms`
+                  : 'opacity 1000ms ease-out, transform 1000ms ease-out',
+                transitionProperty: 'opacity, transform, background-color, box-shadow, scale'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05) translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+                e.currentTarget.style.transition = 'transform 150ms ease-out, box-shadow 150ms ease-out, background-color 150ms ease-out';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = skillsVisible ? 'scale(1) translateY(0)' : 'scale(1) translateY(20px)';
+                e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.12)';
+                e.currentTarget.style.transition = 'transform 150ms ease-out, box-shadow 150ms ease-out, background-color 150ms ease-out';
               }}
             >
               <Image
