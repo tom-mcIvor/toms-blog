@@ -552,7 +552,7 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
 
 /* Project Layout Styles - Clean and Maintainable */
 .project {
-  @apply pt-10 w-full flex flex-col md:flex-row items-center md:items-start gap-8 mb-12;
+  @apply pt-10 w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12;
 }
 
 .project-content {
@@ -573,7 +573,7 @@ body > div.m-20 > div > div:nth-child(17) > button.\!absolute.top-2\/4.right-4.-
 }
 
 .project-carousel-container {
-  @apply md:w-1/2 flex justify-center;
+  @apply lg:w-1/2 flex justify-center;
 }
 
 .project-carousel {

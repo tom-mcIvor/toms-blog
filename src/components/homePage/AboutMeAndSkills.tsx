@@ -25,6 +25,9 @@ const skills = [
   { name: 'VSCode', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
   { name: 'TailwindCSS', image: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
   { name: 'Plover', image: '/Plover-Icon.PNG' },
+  { name: 'Cursor', image: 'https://cursor.sh/brand/icon.svg' },
+  { name: 'Aider', image: '/aider-logo.svg' },
+  { name: 'RooCode', image: '/Roo-code-icon.PNG' },
 ]
 
 export default function AboutMeAndSkills() {
