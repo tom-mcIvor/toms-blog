@@ -15,7 +15,7 @@ export default function AIEssentials() {
   const outcomesAnimation = useScrollAnimation(0.1)
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-16">
+    <div className="min-h-screen py-12 px-4 md:px-16">
       <div className="max-w-4xl mx-auto">
         <div
           ref={titleAnimation.ref}
@@ -25,17 +25,17 @@ export default function AIEssentials() {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <h1 className="text-5xl font-black mb-8 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-black mb-8 text-center">
             AI Coding Essentials Course
           </h1>
         </div>
         
         <div
           ref={overviewAnimation.ref}
-          className={`bg-white rounded-lg shadow-lg p-8 mb-8 transition-all duration-1000 ease-out ${
+          className={`mb-8 transition-all duration-1000 ease-out ${
             overviewAnimation.isVisible
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-8 scale-95'
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
           }`}
         >
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Course Overview</h2>
@@ -82,13 +82,13 @@ export default function AIEssentials() {
         <div className="space-y-8">
           <div
             ref={week1Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out ${
+            className={`mb-6 transition-all duration-1000 ease-out ${
               week1Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 1: AI-Powered Coding
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -101,13 +101,13 @@ export default function AIEssentials() {
 
           <div
             ref={week2Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out delay-100 ${
+            className={`mb-6 transition-all duration-1000 ease-out delay-100 ${
               week2Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 2: Abstraction Libraries and APIs
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -120,13 +120,13 @@ export default function AIEssentials() {
 
           <div
             ref={week3Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out delay-200 ${
+            className={`mb-6 transition-all duration-1000 ease-out delay-200 ${
               week3Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 3: Evaluation, Workflow & Observability
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -139,13 +139,13 @@ export default function AIEssentials() {
 
           <div
             ref={week4Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out delay-300 ${
+            className={`mb-6 transition-all duration-1000 ease-out delay-300 ${
               week4Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 4: Retrieval Augmented Generation (RAG)
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -158,13 +158,13 @@ export default function AIEssentials() {
 
           <div
             ref={week5Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out delay-400 ${
+            className={`mb-6 transition-all duration-1000 ease-out delay-400 ${
               week5Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 5: Multimodal AI with Voice Focus
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -177,13 +177,13 @@ export default function AIEssentials() {
 
           <div
             ref={week6Animation.ref}
-            className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-1000 ease-out delay-500 ${
+            className={`mb-6 transition-all duration-1000 ease-out delay-500 ${
               week6Animation.isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 translate-x-8'
             }`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-teal-600 to-green-600 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 6: Agent-Based AI Systems
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -197,13 +197,13 @@ export default function AIEssentials() {
 
         <div
           ref={exercisesAnimation.ref}
-          className={`bg-white rounded-lg shadow-lg p-8 mt-8 transition-all duration-1000 ease-out ${
+          className={`mt-8 transition-all duration-1000 ease-out ${
             exercisesAnimation.isVisible
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-8 scale-95'
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-3xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
             Practical Exercises Completed
           </h2>
           <div className="space-y-3">
@@ -244,22 +244,22 @@ export default function AIEssentials() {
 
         <div
           ref={outcomesAnimation.ref}
-          className={`bg-white rounded-lg shadow-lg p-8 mt-8 transition-all duration-1000 ease-out ${
+          className={`mt-8 transition-all duration-1000 ease-out ${
             outcomesAnimation.isVisible
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-8 scale-95'
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-3xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
             Key Outcomes
           </h2>
           <p className="text-lg text-gray-700 mb-4">
             This course provided immediate, practical skills for integrating AI into development workflows while building a foundation for creating sophisticated AI-powered applications. The self-regulated learning approach allowed for deep exploration of areas most relevant to my development goals.
           </p>
-          <div className={`bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mt-6 transform transition-all duration-1000 ease-out hover:shadow-xl ${
+          <div className={`mt-6 transition-all duration-1000 ease-out ${
             outcomesAnimation.isVisible
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-4 scale-95'
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-4'
           }`} style={{ transitionDelay: '400ms' }}>
             <h4 className="font-bold text-gray-800 mb-3">Skills Acquired:</h4>
             <div className="grid md:grid-cols-2 gap-4">
