@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tom McIvor - Developer Portfolio',
   description: 'Full-stack developer specializing in React, TypeScript, and Node.js. Explore my projects and skills.',
   icons: {
-    icon: '/Fav-Icon.PNG',
+    icon: '/TM-logo.PNG',
   },
 }
 
