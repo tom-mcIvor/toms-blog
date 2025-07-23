@@ -2,6 +2,9 @@
 import React from 'react'
 import { Carousel } from '@material-tailwind/react'
 import Image, { StaticImageData } from 'next/image'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 interface TechStackIcon {
@@ -74,16 +77,11 @@ export default function AnimatedProject({
               }}
             >
               {paragraph.startsWith('•') ? (
-                <div className="flex items-start gap-3">
-                  <Image
-                    src="/bullet-point.svg"
-                    alt="bullet point"
-                    width={16}
-                    height={16}
-                    className="w-4 h-4 mt-1 flex-shrink-0"
-                  />
-                  <p className="flex-1">{paragraph.substring(2)}</p>
-                </div>
+                <ul className="list-disc pl-4 py-0 text-white">
+                  <li className="ml-4">
+                    {paragraph.substring(2)}
+                  </li>
+                </ul>
               ) : (
                 <p>{paragraph}</p>
               )}

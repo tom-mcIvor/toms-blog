@@ -5,6 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Make MUI List bullet points visible */
+.MuiList-root.list-disc .MuiListItem-root.list-item {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.MuiList-root.list-disc {
+  list-style-type: disc;
+}
+
+/* Ensure bullet points are visible on dark backgrounds */
+.MuiList-root.list-disc .MuiListItem-root.list-item::marker {
+  color: currentColor;
+}
+
 /* ===================================
    CSS CUSTOM PROPERTIES
    =================================== */
@@ -375,5 +392,693 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 300px) {
   body .container3 span div p {
     margin: 0px;
+  }
+}
+
+/* ===================================
+   PROBLEM SOLVING PAGE STYLES
+   =================================== */
+
+/* Scoped styles for problem-solving page only */
+.problem-solving-page {
+  font-family: Cambria;
+  background-color: bisque;
+  font-family: cursive;
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+  color: black;
+}
+
+.problem-solving-page .container-8 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  right: 5%;
+}
+
+.problem-solving-page .container-8 > .image2 {
+  background-image: url('https://www.skipprichard.com/wp-content/uploads/2019/06/bigstock-Problem-Solution-Concept-The-286309309.jpg');
+  margin-left: 20%;
+  height: 200px;
+  width: 300px;
+  background-size: cover;
+}
+
+.problem-solving-page .container-8 > p {
+  background-color: rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  padding: 10px;
+  opacity: .5;
+}
+
+.problem-solving-page .container-8 > .image3 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTWoM8lkNGmvQ_hzdRwf9SksygXq3bxvQAkA&usqp=CAU);
+  margin-left: 20%;
+  height: 400px;
+  width: 350px;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.problem-solving-page .yellow {
+  color: rgba(202, 202, 0, 0.726);
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+}
+
+.problem-solving-page .reflection {
+  color: blue;
+}
+
+.problem-solving-page .qustion {
+  color: brown;
+}
+
+/* Progress bar styles for skills section */
+.problem-solving-page .container250 {
+  /* Add any specific container styles here */
+}
+
+.problem-solving-page .bar {
+  text-align: center;
+}
+
+.problem-solving-page .bar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.problem-solving-page .bar progress {
+  width: 100%;
+  height: 20px;
+}
+
+/* Responsive styles for problem-solving page */
+@media screen and (max-width: 1500px) {
+  .problem-solving-page {
+    width: 100%;
+    color: white;
+    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .problem-solving-page .container-8 > ul > div {
+    background-color: rgb(26, 26, 26);
+    width: 150vw;
+    height: 150px;
+    margin-bottom: -200px;
+    margin-left: -200px;
+    color: white !important;
+  }
+
+  .problem-solving-page .container-8 > ul > div > ul > ul > h3 {
+    margin-left: 200px;
+  }
+  
+  .problem-solving-page .container-8 > ul > div > ul > ul > div:nth-child(18) {
+    padding-bottom: 100px;
+  }
+
+  .problem-solving-page #yellow {
+    color: white;
+  }
+
+  .problem-solving-page a {
+    color: blue;
+  }
+}
+
+/* ===================================
+   NEUROPLASTICITY PAGE STYLES
+   =================================== */
+
+/* Scoped styles for neuroplasticity page only */
+.neuroplasticity-page {
+  font-family: Cambria;
+  background-color: bisque;
+  font-family: cursive;
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+  color: black;
+}
+
+.neuroplasticity-page .container-11 {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  right: 5%;
+}
+
+.neuroplasticity-page .container-11 p {
+  background-color: rgba(0, 0, 0, 0.199);
+  padding: 10px;
+}
+
+/* 3D Container and Stage */
+.neuroplasticity-page #container {
+  width: 100%;
+  height: 700px;
+  -webkit-perspective: 800;
+  /* For compatibility with iPhone 3.0, we leave off the units here */
+  -webkit-perspective-origin: 50% 225px;
+  perspective: 800px;
+  perspective-origin: 50% 225px;
+}
+
+.neuroplasticity-page #stage {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 2s;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.neuroplasticity-page #shape {
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* Plane (Face) Styles */
+.neuroplasticity-page .plane {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Times, serif;
+  font-size: 124pt;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: -webkit-transform 2s, opacity 2s;
+  transition: transform 2s, opacity 2s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.neuroplasticity-page #shape.backfaces .plane {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* Animation */
+.neuroplasticity-page #shape {
+  -webkit-animation: spin 8s infinite linear;
+  animation: spin 8s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/* Cube Styles */
+.neuroplasticity-page .cube > .one {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .two {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .three {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .four {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .five {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .six {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+  transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+
+.neuroplasticity-page .cube > .seven {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+  transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+}
+
+.neuroplasticity-page .cube > .eight {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .nine {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .ten {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .eleven {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+}
+
+.neuroplasticity-page .cube > .twelve {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+}
+
+/* Ring Styles */
+.neuroplasticity-page .ring > .one {
+  -webkit-transform: translateZ(380px);
+  transform: translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .two {
+  -webkit-transform: rotateY(30deg) translateZ(380px);
+  transform: rotateY(30deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .three {
+  -webkit-transform: rotateY(60deg) translateZ(380px);
+  transform: rotateY(60deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .four {
+  -webkit-transform: rotateY(90deg) translateZ(380px);
+  transform: rotateY(90deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .five {
+  -webkit-transform: rotateY(120deg) translateZ(380px);
+  transform: rotateY(120deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .six {
+  -webkit-transform: rotateY(150deg) translateZ(380px);
+  transform: rotateY(150deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .seven {
+  -webkit-transform: rotateY(180deg) translateZ(380px);
+  transform: rotateY(180deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .eight {
+  -webkit-transform: rotateY(210deg) translateZ(380px);
+  transform: rotateY(210deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .nine {
+  -webkit-transform: rotateY(-120deg) translateZ(380px);
+  transform: rotateY(-120deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .ten {
+  -webkit-transform: rotateY(-90deg) translateZ(380px);
+  transform: rotateY(-90deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .eleven {
+  -webkit-transform: rotateY(300deg) translateZ(380px);
+  transform: rotateY(300deg) translateZ(380px);
+}
+
+.neuroplasticity-page .ring > .twelve {
+  -webkit-transform: rotateY(330deg) translateZ(380px);
+  transform: rotateY(330deg) translateZ(380px);
+}
+
+/* Controls */
+.neuroplasticity-page .controls {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px 20px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.neuroplasticity-page .controls > div {
+  margin: 10px;
+}
+
+.neuroplasticity-page .controls button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.neuroplasticity-page .controls button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Responsive styles for neuroplasticity page */
+@media screen and (max-width: 1500px) {
+  .neuroplasticity-page {
+    width: 100%;
+    color: white;
+    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+
+/* ===================================
+   LEARNING PLAN PAGE STYLES
+   =================================== */
+
+/* Scoped styles for learning plan page only */
+.learning-plan-page {
+  font-family: Cambria;
+  background-color: bisque;
+  font-family: cursive;
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+  color: black;
+}
+
+/* Question styling */
+.learning-plan-page .qustion {
+  color: brown;
+}
+
+/* Reflection text styling */
+.learning-plan-page .reflection {
+  color: blue;
+}
+
+/* Bootcamp section with special styling */
+.learning-plan-page .bootcamp {
+  border: 25px solid;
+  border-image-slice: 1;
+  border-image-source: conic-gradient(
+    hsl(100 100% 60%),
+    hsl(200 100% 60%),
+    hsl(100 100% 60%)
+  );
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,121,9,1) 35%, rgba(0,212,255,1) 100%);
+  opacity: .7;
+  text-align: center;
+}
+
+.learning-plan-page .bootcamp p {
+  color: rgb(187, 144, 230);
+}
+
+.learning-plan-page .bootcamp .reflection {
+  color: rgb(233, 233, 233);
+}
+
+/* Progress bar styling */
+.learning-plan-page .bar {
+  text-align: center;
+}
+
+.learning-plan-page .bar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.learning-plan-page .bar progress {
+  width: 100%;
+  height: 20px;
+}
+
+/* Goals section with background image */
+.learning-plan-page .goals {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin-top: 20%;
+  flex-direction: column;
+  display: flex;
+  background-image: top center;
+  position: relative;
+  height: 300px;
+  width: 430px;
+  opacity: .7;
+  background-image: url("https://content.thriveglobal.com/wp-content/uploads/2019/07/bigstock-set-goal-make-plan-work-sti-66642022.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Celebration element */
+.learning-plan-page .tada {
+  top: 120%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  flex-direction: column;
+  display: flex;
+  background-image: top center;
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  opacity: .7;
+  background-image: url("https://media.hearthpwn.com/attachments/96/921/tada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Spider decorative element */
+.learning-plan-page .spider {
+  z-index: -1;
+  top: 40px;
+  left: 80%;
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  opacity: .3;
+  background-image: url("https://t4.ftcdn.net/jpg/01/24/82/05/360_F_124820599_V1z5gBtOnVAsJZKyRM53bbgEEhbGtzlF.jpg");
+  background-repeat: no-repeat;
+}
+
+/* Container styling */
+.learning-plan-page .container2 {
+  margin-top: 150px;
+  margin-left: 40px;
+  border-style: solid;
+  border-color: black;
+  border-top: none;
+  border-right: none;
+  border-bottom: dotted;
+  margin-right: 20%;
+}
+
+.learning-plan-page .container2 p {
+  margin-left: 40px;
+}
+
+/* White space pre-wrap for formatted text */
+.learning-plan-page .white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Responsive styles for learning plan page */
+@media screen and (max-width: 1500px) {
+  .learning-plan-page {
+    width: 100%;
+    color: white;
+    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .learning-plan-page .goals {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-top: 12%;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    background-size: cover;
+  }
+
+  .learning-plan-page a {
+    color: blue;
+  }
+}
+
+/* Yellow text effects */
+.learning-plan-page .yellow {
+  color: rgba(202, 202, 0, 0.726);
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+}
+
+@media screen and (max-width: 1500px) {
+  .learning-plan-page #yellow {
+    color: white;
+  }
+}
+
+/* ===================================
+   JAVASCRIPT DOM PAGE STYLES
+   =================================== */
+
+/* Scoped styles for javascript-dom page only */
+.javascript-dom-page {
+  font-family: Cambria;
+  background-color: bisque;
+  font-family: cursive;
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+  color: black;
+}
+
+/* Container styling */
+.javascript-dom-page .container5 {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+/* Inline heading styles for better formatting */
+.javascript-dom-page h4 {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Utility class for inline headings with margin */
+.javascript-dom-page .inline {
+  display: inline;
+}
+
+.javascript-dom-page .mr-4 {
+  margin-right: 1rem;
+}
+
+/* Summary styling for questions */
+.javascript-dom-page summary {
+  color: blueviolet;
+  display: list-item;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Details element styling */
+.javascript-dom-page details {
+  margin-bottom: 1rem;
+}
+
+/* List styling */
+.javascript-dom-page li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Bold text styling */
+.javascript-dom-page b {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Paragraph spacing */
+.javascript-dom-page p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Navigation styling - inherits from base styles */
+.javascript-dom-page .navbar.active .black-4 {
+  color: black;
+}
+
+.javascript-dom-page .tech {
+  display: flex;
+  flex-direction: row;
+  border: groove;
+  border-radius: 5px;
+  border-color: blueviolet;
+  padding: 5px;
+  word-wrap: normal;
+  margin: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.javascript-dom-page .core {
+  display: flex;
+  flex-direction: row;
+  border: groove;
+  border-color: rgb(129, 66, 129);
+  border-radius: 5px;
+  padding: 5px;
+  word-wrap: normal;
+  margin: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive styles for javascript-dom page */
+@media screen and (max-width: 1500px) {
+  .javascript-dom-page {
+    width: 100%;
+    color: white;
+    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .javascript-dom-page a {
+    color: blue;
+  }
+
+  .javascript-dom-page summary {
+    color: lightblue;
+  }
+}
+
+/* Yellow text effects */
+.javascript-dom-page .yellow {
+  color: rgba(202, 202, 0, 0.726);
+  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+}
+
+@media screen and (max-width: 1500px) {
+  .javascript-dom-page #yellow {
+    color: white;
   }
 }

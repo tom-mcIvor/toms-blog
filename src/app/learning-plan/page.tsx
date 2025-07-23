@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-function learningPlan() {
+function LearningPlan() {
   return (
-    <>  
-       <div> 
+    <div className="learning-plan-page">
+       <div>
  <pre className="white-space-pre-wrap">       
 key:
   before bootcamp: black
@@ -124,8 +124,8 @@ key:
     <p>Just to do the work</p>
     <p className="reflection">I will work hard and be successful.</p>
     </div>
-    </>
+    </div>
   )
 }
 
-export default learningPlan
+export default LearningPlan

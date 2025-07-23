@@ -17,7 +17,7 @@ function JavaScriptDom() {
  
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value)
   return (
-    <>
+    <div className="javascript-dom-page">
   
     <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
         <AccordionHeader onClick={() => handleOpen(1)}>An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
@@ -118,7 +118,7 @@ function JavaScriptDom() {
       <li>A set of statements that performs a task or calculates a value</li>
     
       <li>Reduces duplication of code. Decomposes complex problems into simpler pieces</li>
-    </>
+    </div>
   )
 }
 

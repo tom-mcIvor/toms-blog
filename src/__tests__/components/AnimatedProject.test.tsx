@@ -40,7 +40,7 @@ describe('AnimatedProject', () => {
     })
   })
 
-  it('renders bullet points with bullet icon', () => {
+  it('renders bullet points with MUI List components', () => {
     const propsWithBullets = {
       ...mockProjectProps,
       description: ['Regular text', '• Bullet point 1', '• Bullet point 2']
@@ -48,12 +48,13 @@ describe('AnimatedProject', () => {
     
     render(<AnimatedProject {...propsWithBullets} />)
     
-    const bulletImages = screen.getAllByAltText('bullet point')
-    expect(bulletImages).toHaveLength(2)
+    // Check for MUI List components
+    const listItems = screen.getAllByRole('listitem')
+    expect(listItems).toHaveLength(2)
     
-    bulletImages.forEach(img => {
-      expect(img).toHaveAttribute('src', '/bullet-point.svg')
-    })
+    // Check that the bullet point text is rendered (without the bullet symbol)
+    expect(screen.getByText('Bullet point 1')).toBeInTheDocument()
+    expect(screen.getByText('Bullet point 2')).toBeInTheDocument()
   })
 
   it('renders carousel with all images', () => {

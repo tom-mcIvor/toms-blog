@@ -1,5 +1,8 @@
 'use client'
 import React from 'react'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function AIEssentials() {
@@ -91,11 +94,11 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 1: AI-Powered Coding
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Mastered AI coding assistants and IDE integrations</li>
-              <li>• Learned effective prompting techniques for developers</li>
-              <li>• Optimized development workflows with AI pair programming</li>
-              <li>• Practiced code generation, explanation, and refactoring with AI assistance</li>
+            <ul className="list-disc pl-4 space-y-2 text-gray-700">
+              <li className="ml-4">Mastered AI coding assistants and IDE integrations</li>
+              <li className="ml-4">Learned effective prompting techniques for developers</li>
+              <li className="ml-4">Optimized development workflows with AI pair programming</li>
+              <li className="ml-4">Practiced code generation, explanation, and refactoring with AI assistance</li>
             </ul>
           </div>
 
@@ -110,11 +113,11 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 2: Abstraction Libraries and APIs
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Explored LLM abstraction libraries and design patterns</li>
-              <li>• Implemented prompt engineering best practices</li>
-              <li>• Learned model selection, evaluation, and cost optimization strategies</li>
-              <li>• Built API integration patterns with observability and monitoring</li>
+            <ul className="list-disc pl-4 space-y-2 text-gray-700">
+              <li className="ml-4">Explored LLM abstraction libraries and design patterns</li>
+              <li className="ml-4">Implemented prompt engineering best practices</li>
+              <li className="ml-4">Learned model selection, evaluation, and cost optimization strategies</li>
+              <li className="ml-4">Built API integration patterns with observability and monitoring</li>
             </ul>
           </div>
 
@@ -129,11 +132,11 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 3: Evaluation, Workflow & Observability
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Developed evaluation frameworks for AI components</li>
-              <li>• Created automated testing systems for AI applications</li>
-              <li>• Implemented A/B testing and performance metrics</li>
-              <li>• Learned deployment strategies and cost management</li>
+            <ul className="list-disc pl-4 space-y-2 text-gray-700">
+              <li className="ml-4">Developed evaluation frameworks for AI components</li>
+              <li className="ml-4">Created automated testing systems for AI applications</li>
+              <li className="ml-4">Implemented A/B testing and performance metrics</li>
+              <li className="ml-4">Learned deployment strategies and cost management</li>
             </ul>
           </div>
 
@@ -148,12 +151,32 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 4: Retrieval Augmented Generation (RAG)
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Built RAG architectures with vector databases and embeddings</li>
-              <li>• Implemented semantic search and knowledge base management</li>
-              <li>• Mastered chunking strategies and hybrid search approaches</li>
-              <li>• Developed context-aware applications</li>
-            </ul>
+            <List className="list-disc pl-4 marker:text-gray-700">
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Built RAG architectures with vector databases and embeddings"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Implemented semantic search and knowledge base management"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Mastered chunking strategies and hybrid search approaches"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Developed context-aware applications"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+            </List>
           </div>
 
           <div
@@ -167,12 +190,32 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 5: Multimodal AI with Voice Focus
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Implemented speech-to-text with Whisper and text-to-speech technologies</li>
-              <li>• Designed voice-first applications and voice UI principles</li>
-              <li>• Explored text-to-image generation and multimodal integration</li>
-              <li>• Considered accessibility in voice applications</li>
-            </ul>
+            <List className="list-disc pl-4 marker:text-gray-700">
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Implemented speech-to-text with Whisper and text-to-speech technologies"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Designed voice-first applications and voice UI principles"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Explored text-to-image generation and multimodal integration"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+              <ListItem className="p-0 list-item">
+                <ListItemText
+                  primary="Considered accessibility in voice applications"
+                  sx={{ '& .MuiListItemText-primary': { color: '#374151' } }}
+                />
+              </ListItem>
+            </List>
           </div>
 
           <div
@@ -186,12 +229,20 @@ export default function AIEssentials() {
             <h3 className="text-2xl font-bold mb-4 text-gray-800">
               Week 6: Agent-Based AI Systems
             </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Designed autonomous AI agents with planning and tool use capabilities</li>
-              <li>• Built custom tools and orchestrated multi-agent systems</li>
-              <li>• Implemented human supervision patterns and safety considerations</li>
-              <li>• Applied real-world agent applications and case studies</li>
-            </ul>
+            <List className="list-disc pl-4">
+              <ListItem className="p-0">
+                <ListItemText primary="Designed autonomous AI agents with planning and tool use capabilities" className="text-gray-700" />
+              </ListItem>
+              <ListItem className="p-0">
+                <ListItemText primary="Built custom tools and orchestrated multi-agent systems" className="text-gray-700" />
+              </ListItem>
+              <ListItem className="p-0">
+                <ListItemText primary="Implemented human supervision patterns and safety considerations" className="text-gray-700" />
+              </ListItem>
+              <ListItem className="p-0">
+                <ListItemText primary="Applied real-world agent applications and case studies" className="text-gray-700" />
+              </ListItem>
+            </List>
           </div>
         </div>
 
@@ -268,34 +319,70 @@ export default function AIEssentials() {
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 -translate-x-4'
-                }`} style={{ transitionDelay: '600ms' }}>• AI-augmented development workflows</p>
+                }`} style={{ transitionDelay: '600ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="AI-augmented development workflows" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
                 <p className={`text-gray-700 font-medium transition-all duration-700 ease-out ${
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 -translate-x-4'
-                }`} style={{ transitionDelay: '800ms' }}>• RAG system implementation</p>
+                }`} style={{ transitionDelay: '800ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="RAG system implementation" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
                 <p className={`text-gray-700 font-medium transition-all duration-700 ease-out ${
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 -translate-x-4'
-                }`} style={{ transitionDelay: '1000ms' }}>• Multimodal AI integration</p>
+                }`} style={{ transitionDelay: '1000ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="Multimodal AI integration" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
               </div>
               <div className="space-y-2">
                 <p className={`text-gray-700 font-medium transition-all duration-700 ease-out ${
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 translate-x-4'
-                }`} style={{ transitionDelay: '700ms' }}>• Agent-based system design</p>
+                }`} style={{ transitionDelay: '700ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="Agent-based system design" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
                 <p className={`text-gray-700 font-medium transition-all duration-700 ease-out ${
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 translate-x-4'
-                }`} style={{ transitionDelay: '900ms' }}>• AI evaluation and monitoring</p>
+                }`} style={{ transitionDelay: '900ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="AI evaluation and monitoring" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
                 <p className={`text-gray-700 font-medium transition-all duration-700 ease-out ${
                   outcomesAnimation.isVisible
                     ? 'opacity-100 translate-x-0'
                     : 'opacity-0 translate-x-4'
-                }`} style={{ transitionDelay: '1100ms' }}>• Voice-first application development</p>
+                }`} style={{ transitionDelay: '1100ms' }}>
+                  <List className="list-disc pl-4 py-0">
+                    <ListItem className="p-0">
+                      <ListItemText primary="Voice-first application development" className="text-gray-700 font-medium" />
+                    </ListItem>
+                  </List>
+                </p>
               </div>
             </div>
           </div>

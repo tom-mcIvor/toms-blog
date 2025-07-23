@@ -130,10 +130,10 @@ describe('Portfolio Section Integration Tests', () => {
 
     await waitForAnimation(500)
 
-    // Check for bullet points in descriptions
-    expect(screen.getByText(/• View & Edit Books:/)).toBeInTheDocument()
-    expect(screen.getByText(/• Browse & Search:/)).toBeInTheDocument()
-    expect(screen.getByText(/• Vote & Discuss:/)).toBeInTheDocument()
+    // Check for bullet points in descriptions (now rendered as MUI List items)
+    expect(screen.getByText(/View & Edit Books:/)).toBeInTheDocument()
+    expect(screen.getByText(/Browse & Search:/)).toBeInTheDocument()
+    expect(screen.getByText(/Vote & Discuss:/)).toBeInTheDocument()
 
     // Check for multi-paragraph descriptions
     expect(screen.getByText(/Yeah-Book app is a platform that allows users to create yearbooks/)).toBeInTheDocument()

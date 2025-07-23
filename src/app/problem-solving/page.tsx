@@ -3,7 +3,7 @@ import React from 'react'
 
 function page() {
   return (
-    <>
+    <div className="problem-solving-page">
     <div className="container-8">
       <p>
         Solving problems is the core of computer science. Programmers must first
@@ -157,7 +157,7 @@ function page() {
       <br />
       <br />
     </div>
-    </>
+    </div>
   )
 }
 
