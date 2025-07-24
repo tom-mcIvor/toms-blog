@@ -7,10 +7,10 @@ import cssSelectorEvenMoreComplex from '../../../public/css-selector.png'
 import { CLIENT_STATIC_FILES_RUNTIME } from 'next/dist/shared/lib/constants'
 
 
-function page() {
+function Page() {
   return (
-    <>
-    <div className="ml-20 mt-20">
+    <div className="html-css-page">
+    <div className="container5">
     <a href="html-css-2.html">Whats the difference between padding border and margin?</a>
     <h1>CSS selectors </h1>
     <p>in this guide we will learn how to use complex css selctors </p>
@@ -41,8 +41,8 @@ function page() {
     </p>
     <p>Its important to remember you can add classes togehter and also list HTML code with more than one class</p>
   </div>
-  </>
+  </div>
   )
 }
 
-export default page
+export default Page

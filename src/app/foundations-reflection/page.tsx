@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
 
-function foundations() {
+function Foundations() {
   return (
-    <>
+    <div className="foundations-reflection-page">
+    <div className="container-20">
     <h1>Foundations reflections</h1>
     <h2>Weeks 1-5</h2>
     <h3>Week 1</h3>
@@ -46,7 +47,8 @@ function foundations() {
       different parts of the template literal.
     </p>
    
-    <div>
+    <hr />
+    <div className="container101">
       <h3>What are three new things you have learnt about yourself and your ego due to the core learning?</h3>
       <ul>
         <p>
@@ -100,8 +102,9 @@ function foundations() {
         </p>
       </ul>  
       </div>
-    </>
+    </div>
+    </div>
   )
 }
 
-export default foundations
+export default Foundations

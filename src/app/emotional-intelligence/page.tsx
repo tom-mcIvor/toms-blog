@@ -2,9 +2,9 @@
 import React from 'react'
 
 
-function page() {
+function Page() {
   return (
-    <>
+    <div className="emotional-intelligence-page">
         <div className="container4">
         </div>
         <div className="move-me">
@@ -33,8 +33,23 @@ function page() {
         </p>
         </div>
         <div className="area"></div>
-    </>
+        
+        {/* Animated balls */}
+        <div className="ball"></div>
+        
+        {/* Interactive dropdown */}
+        <div className="dropdown">
+          <button className="dropbtn">More Info</button>
+          <div className="dropdown-content">
+            <a href="#">Self-awareness</a>
+            <a href="#">Self-regulation</a>
+            <a href="#">Motivation</a>
+            <a href="#">Empathy</a>
+            <a href="#">Social skills</a>
+          </div>
+        </div>
+    </div>
   )
 }
 
-export default page
+export default Page

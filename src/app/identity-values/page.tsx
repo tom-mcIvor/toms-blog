@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
 
-function page() {
+function Page() {
   return (
-    <>
+    <div className="identity-values-page">
+    <div className="container3">
     <p id="white"> Identity and personal stuff... </p>
     <span className="inside-container">
       <div className="question1">
@@ -67,8 +68,9 @@ function page() {
         <option>Question 5</option>
     </datalist>
     </span>
-    </>
+    </div>
+    </div>
   )
 }
 
-export default page
+export default Page
