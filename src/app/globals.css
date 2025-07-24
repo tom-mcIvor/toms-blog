@@ -5,45 +5,94 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Make MUI List bullet points visible */
-.MuiList-root.list-disc .MuiListItem-root.list-item {
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 1rem;
-}
-
-.MuiList-root.list-disc {
-  list-style-type: disc;
-}
-
-/* Ensure bullet points are visible on dark backgrounds */
-.MuiList-root.list-disc .MuiListItem-root.list-item::marker {
-  color: currentColor;
-}
-
 /* ===================================
-   CSS CUSTOM PROPERTIES
+   CSS CUSTOM PROPERTIES (DESIGN TOKENS)
    =================================== */
 :root {
-  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --color-text: #828394;
+  /* Typography */
+  --font-family-primary: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-secondary: Cambria, serif;
+  --font-family-cursive: cursive;
+  --font-family-times: Times, serif;
+  --font-family-verdana: Verdana, Geneva, Tahoma, sans-serif;
+
+  /* Colors - Primary Palette */
   --color-primary: #4FD1C5;
   --color-accent: rgb(0, 92, 92);
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-dark: #0f0f0f;
+  --color-text: #828394;
+  --color-text-light: #333;
+  --color-text-dark: #444;
+
+  /* Colors - Semantic */
+  --color-blue: #0066cc;
+  --color-blue-hover: #004499;
+  --color-blue-light: lightblue;
+  --color-brown: brown;
+  --color-blueviolet: blueviolet;
+  --color-yellowgreen: yellowgreen;
+
+  /* Colors - Special Effects */
+  --color-yellow-text: rgba(202, 202, 0, 0.726);
+  --color-yellow-shadow: rgba(202, 202, 0, 0.526);
+  --color-yellow-emotional: rgba(202, 202, 0, 0.493);
+
+  /* Backgrounds */
+  --bg-bisque: bisque;
+  --bg-space: url("https://wallpaperaccess.com/full/3205414.jpg");
+  --bg-nebula: url("https://media.npr.org/assets/img/2022/07/12/southern-ring-nebula-2-_custom-60c7d16d9c36f085646be2dad4585892c783952d-s1300-c85.webp");
+  --bg-galaxy: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1211&q=80");
+  --bg-ocean: url("https://live-production.wcms.abc-cdn.net.au/69c0db8671502e7963af2f375a57486f?impolicy=wcms_crop_resize&cropH=2193&cropW=3899&xPos=0&yPos=1178&width=862&height=485%22");
+
+  /* Gradients */
   --gradient-primary: linear-gradient(135deg, #10131b 0%, #181c2b 100%);
+  --gradient-bootcamp: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,121,9,1) 35%, rgba(0,212,255,1) 100%);
+  --gradient-reflection: linear-gradient(rgba(128, 128, 128, 0.712), rgba(53, 53, 53, 0.685), rgba(53, 53, 53, 0.685));
+  --gradient-hr: linear-gradient(to right, transparent, rgba(202, 202, 0, 0.726), transparent);
+
+  /* Shadows */
   --shadow-button: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
   --shadow-carousel: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-dropdown: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  --shadow-image: 0 2px 4px rgba(0,0,0,0.1);
+
+  /* Transitions & Animations */
   --transition-smooth: 1s ease-in-out;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+
+  /* Spacing & Layout */
   --border-radius: 0.5rem;
+  --border-radius-large: 1rem;
+  --border-radius-circle: 50%;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Opacity Values */
+  --opacity-light: 0.3;
+  --opacity-medium: 0.5;
+  --opacity-heavy: 0.7;
+  --opacity-overlay: 0.85;
+
+  /* Z-Index Scale */
+  --z-background: -1;
+  --z-base: 0;
+  --z-content: 1;
+  --z-overlay: 10;
+  --z-modal: 100;
+  --z-tooltip: 1000;
 }
 
 /* ===================================
-   GLOBAL STYLES
+   GLOBAL BASE STYLES
    =================================== */
 * {
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
 }
 
 body {
@@ -51,12 +100,58 @@ body {
   display: flex;
   width: 100%;
   height: 1900px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   flex-direction: column;
 }
 
 /* ===================================
-   BACKGROUND & LAYOUT
+   UTILITY CLASSES
+   =================================== */
+.text-yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+}
+
+.bg-overlay-dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-overlay-light {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.border-groove {
+  border-style: groove;
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+.transition-fast {
+  transition: var(--transition-fast);
+}
+
+/* ===================================
+   MUI INTEGRATION STYLES
+   =================================== */
+.MuiList-root.list-disc .MuiListItem-root.list-item {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: var(--spacing-md);
+}
+
+.MuiList-root.list-disc {
+  list-style-type: disc;
+}
+
+.MuiList-root.list-disc .MuiListItem-root.list-item::marker {
+  color: currentColor;
+}
+
+/* ===================================
+   BACKGROUND & LAYOUT COMPONENTS
    =================================== */
 .portfolio-bg {
   background: var(--gradient-primary);
@@ -73,7 +168,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: var(--z-background);
   pointer-events: none;
   background: repeating-radial-gradient(
     circle at 50% 50%, 
@@ -86,7 +181,7 @@ body {
 }
 
 /* ===================================
-   ANIMATIONS
+   ANIMATIONS & KEYFRAMES
    =================================== */
 @keyframes movePattern {
   0% { background-position: 0 0, 0 0; }
@@ -126,6 +221,27 @@ body {
   }
 }
 
+@keyframes spin {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(-360deg); }
+}
+
+@keyframes right {
+  0% { transform: translate(-15px); }
+  50% { transform: translate(15px); }
+  100% { transform: translate(-15px); }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
 /* Animation Classes */
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out;
@@ -138,6 +254,18 @@ body {
 
 .animate-slide-in-right {
   animation: slide-in-right 1s ease-out;
+}
+
+.animate-spin {
+  animation: spin 8s infinite linear;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s linear infinite;
+}
+
+.animate-bounce {
+  animation: right 1s infinite ease-in-out;
 }
 
 /* ===================================
@@ -153,10 +281,10 @@ body {
   align-items: center;
   margin-top: 3%;
   color: var(--color-white);
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
 }
 
-/* Custom Button */
+/* Custom Button Component */
 .mybutton {
   width: 180px;
   height: 60px;
@@ -200,14 +328,14 @@ svg {
 }
 
 /* ===================================
-   PROJECT LAYOUT STYLES
+   PROJECT LAYOUT COMPONENTS
    =================================== */
 .project {
   @apply pt-10 w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12;
   position: relative;
-  margin-bottom: 4rem;
-  padding: 2rem;
-  border-radius: 1rem;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-large);
   overflow: hidden;
 }
 
@@ -241,7 +369,7 @@ svg {
 }
 
 /* ===================================
-   PORTFOLIO SECTION STYLES
+   PORTFOLIO SECTION COMPONENTS
    =================================== */
 .portfolio-section {
   @apply w-screen relative py-10;
@@ -255,8 +383,8 @@ svg {
 .portfolio-content {
   @apply text-center justify-center items-center flex flex-col mb-20;
   background: rgba(255, 255, 255, 0.0);
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-lg);
   color: var(--color-white);
 }
 
@@ -265,25 +393,24 @@ svg {
 }
 
 /* ===================================
-   CAROUSEL ARROW STYLES
+   CAROUSEL COMPONENTS
    =================================== */
 .portfolio-bg .home-page .project .carousel button[aria-label="Previous"],
 .portfolio-bg .home-page .project .carousel button[aria-label="Next"],
 .home-page .project .rounded-xl button.\!absolute {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: var(--bg-overlay-light) !important;
   color: #222 !important;
   box-shadow: var(--shadow-carousel) !important;
-  z-index: 10 !important;
+  z-index: var(--z-overlay) !important;
   display: grid !important;
   place-items: center !important;
   width: 48px !important;
   height: 48px !important;
-  border-radius: 9999px !important;
+  border-radius: var(--border-radius-circle) !important;
   border: none !important;
   opacity: 1 !important;
 }
 
-/* Carousel Arrow Icons */
 .portfolio-bg .home-page .project .carousel button[aria-label="Previous"]::before,
 .portfolio-bg .home-page .project .carousel button[aria-label="Next"]::before,
 .home-page .project .rounded-xl button.\!absolute::before {
@@ -297,7 +424,6 @@ svg {
   margin-bottom: 0px;
 }
 
-/* Left Arrow */
 .portfolio-bg .home-page .project .carousel button[aria-label="Previous"]::before,
 .home-page .project .rounded-xl button.\!absolute.left-4::before {
   border-left: 3px solid currentColor;
@@ -305,7 +431,6 @@ svg {
   margin-left: 6px;
 }
 
-/* Right Arrow */
 .portfolio-bg .home-page .project .carousel button[aria-label="Next"]::before,
 .home-page .project .rounded-xl button.\!absolute.right-4::before {
   border-right: 3px solid currentColor;
@@ -314,7 +439,7 @@ svg {
 }
 
 /* ===================================
-   SOCIAL ICONS & SPECIAL ELEMENTS
+   SOCIAL & SPECIAL ELEMENTS
    =================================== */
 .social-icons-bar {
   @apply flex justify-center gap-8;
@@ -322,18 +447,16 @@ svg {
   left: 50%;
   transform: translateX(-50%);
   bottom: 32px;
-  z-index: 1000;
+  z-index: var(--z-tooltip);
 }
 
-/* Logo Contrast Styles */
 .handlebars-contrast,
 .express-contrast {
-  background: rgba(255, 255, 255, 0.9) !important;
+  background: var(--bg-overlay-light) !important;
   border: 2px solid rgba(0, 0, 0, 0.1) !important;
   box-shadow: var(--shadow-carousel) !important;
 }
 
-/* Menu Item Styles */
 .menu-item,
 [role="menuitem"],
 li[role="menuitem"] {
@@ -353,7 +476,55 @@ li[role="menuitem"]:active {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN
+   SHARED COMPONENT STYLES
+   =================================== */
+
+/* Tech and Core Sections (used across multiple pages) */
+.tech {
+  display: flex;
+  flex-direction: row;
+  border: groove;
+  border-radius: 5px;
+  border-color: var(--color-blueviolet);
+  padding: 5px;
+  word-wrap: normal;
+  margin: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.core {
+  display: flex;
+  flex-direction: row;
+  border: groove;
+  border-color: rgb(129, 66, 129);
+  border-radius: 5px;
+  padding: 5px;
+  word-wrap: normal;
+  margin: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Progress Bar Component */
+.bar {
+  text-align: center;
+}
+
+.bar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bar progress {
+  width: 100%;
+  height: 20px;
+}
+
+/* ===================================
+   BASE RESPONSIVE DESIGN
    =================================== */
 @media screen and (max-width: 1800px) {
   body > div.navbar.active {
@@ -396,16 +567,16 @@ li[role="menuitem"]:active {
 }
 
 /* ===================================
-   PROBLEM SOLVING PAGE STYLES
+   PAGE-SPECIFIC STYLES
    =================================== */
 
-/* Scoped styles for problem-solving page only */
+/* Problem Solving Page */
 .problem-solving-page {
-  font-family: Cambria;
-  background-color: bisque;
-  font-family: cursive;
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
-  color: black;
+  font-family: var(--font-family-secondary);
+  background-color: var(--bg-bisque);
+  font-family: var(--font-family-cursive);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-black);
 }
 
 .problem-solving-page .container-8 {
@@ -427,7 +598,7 @@ li[role="menuitem"]:active {
   background-color: rgba(0, 0, 0, 0.274);
   border-radius: 5px;
   padding: 10px;
-  opacity: .5;
+  opacity: var(--opacity-medium);
 }
 
 .problem-solving-page .container-8 > .image3 {
@@ -436,47 +607,27 @@ li[role="menuitem"]:active {
   height: 400px;
   width: 350px;
   background-size: cover;
-  opacity: 0.5;
+  opacity: var(--opacity-medium);
 }
 
 .problem-solving-page .yellow {
-  color: rgba(202, 202, 0, 0.726);
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
 }
 
 .problem-solving-page .reflection {
-  color: blue;
+  color: var(--color-blue);
 }
 
 .problem-solving-page .qustion {
-  color: brown;
+  color: var(--color-brown);
 }
 
-/* Progress bar styles for skills section */
-.problem-solving-page .container250 {
-  /* Add any specific container styles here */
-}
-
-.problem-solving-page .bar {
-  text-align: center;
-}
-
-.problem-solving-page .bar label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.problem-solving-page .bar progress {
-  width: 100%;
-  height: 20px;
-}
-
-/* Responsive styles for problem-solving page */
 @media screen and (max-width: 1500px) {
   .problem-solving-page {
     width: 100%;
-    color: white;
-    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    color: var(--color-white);
+    background: var(--bg-space);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -489,7 +640,7 @@ li[role="menuitem"]:active {
     height: 150px;
     margin-bottom: -200px;
     margin-left: -200px;
-    color: white !important;
+    color: var(--color-white) !important;
   }
 
   .problem-solving-page .container-8 > ul > div > ul > ul > h3 {
@@ -501,25 +652,21 @@ li[role="menuitem"]:active {
   }
 
   .problem-solving-page #yellow {
-    color: white;
+    color: var(--color-white);
   }
 
   .problem-solving-page a {
-    color: blue;
+    color: var(--color-blue);
   }
 }
 
-/* ===================================
-   NEUROPLASTICITY PAGE STYLES
-   =================================== */
-
-/* Scoped styles for neuroplasticity page only */
+/* Neuroplasticity Page */
 .neuroplasticity-page {
-  font-family: Cambria;
-  background-color: bisque;
-  font-family: cursive;
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
-  color: black;
+  font-family: var(--font-family-secondary);
+  background-color: var(--bg-bisque);
+  font-family: var(--font-family-cursive);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-black);
 }
 
 .neuroplasticity-page .container-11 {
@@ -538,9 +685,6 @@ li[role="menuitem"]:active {
 .neuroplasticity-page #container {
   width: 100%;
   height: 700px;
-  -webkit-perspective: 800;
-  /* For compatibility with iPhone 3.0, we leave off the units here */
-  -webkit-perspective-origin: 50% 225px;
   perspective: 800px;
   perspective-origin: 50% 225px;
 }
@@ -548,8 +692,6 @@ li[role="menuitem"]:active {
 .neuroplasticity-page #stage {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 2s;
-  -webkit-transform-style: preserve-3d;
   transition: transform 2s;
   transform-style: preserve-3d;
 }
@@ -560,194 +702,141 @@ li[role="menuitem"]:active {
   margin: 0 auto;
   height: 200px;
   width: 200px;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/* Plane (Face) Styles */
 .neuroplasticity-page .plane {
   position: absolute;
   height: 200px;
   width: 200px;
-  border: 1px solid white;
-  -webkit-border-radius: 12px;
+  border: 1px solid var(--color-white);
   border-radius: 12px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
-  font-family: Times, serif;
+  font-family: var(--font-family-times);
   font-size: 124pt;
-  color: black;
+  color: var(--color-black);
   background-color: rgba(255, 255, 255, 0.6);
-  -webkit-transition: -webkit-transform 2s, opacity 2s;
   transition: transform 2s, opacity 2s;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .neuroplasticity-page #shape.backfaces .plane {
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
 
-/* Animation */
 .neuroplasticity-page #shape {
-  -webkit-animation: spin 8s infinite linear;
   animation: spin 8s infinite linear;
-}
-
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateY(0);
-  }
-  to {
-    -webkit-transform: rotateY(-360deg);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotateY(0);
-  }
-  to {
-    transform: rotateY(-360deg);
-  }
 }
 
 /* Cube Styles */
 .neuroplasticity-page .cube > .one {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .two {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .three {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .four {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .five {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .six {
-  opacity: 0.5;
-  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+  opacity: var(--opacity-medium);
   transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
 }
 
 .neuroplasticity-page .cube > .seven {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
   transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
 }
 
 .neuroplasticity-page .cube > .eight {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
   transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .nine {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
   transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .ten {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
   transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .eleven {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
   transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
 }
 
 .neuroplasticity-page .cube > .twelve {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
   transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
 }
 
 /* Ring Styles */
 .neuroplasticity-page .ring > .one {
-  -webkit-transform: translateZ(380px);
   transform: translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .two {
-  -webkit-transform: rotateY(30deg) translateZ(380px);
   transform: rotateY(30deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .three {
-  -webkit-transform: rotateY(60deg) translateZ(380px);
   transform: rotateY(60deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .four {
-  -webkit-transform: rotateY(90deg) translateZ(380px);
   transform: rotateY(90deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .five {
-  -webkit-transform: rotateY(120deg) translateZ(380px);
   transform: rotateY(120deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .six {
-  -webkit-transform: rotateY(150deg) translateZ(380px);
   transform: rotateY(150deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .seven {
-  -webkit-transform: rotateY(180deg) translateZ(380px);
   transform: rotateY(180deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .eight {
-  -webkit-transform: rotateY(210deg) translateZ(380px);
   transform: rotateY(210deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .nine {
-  -webkit-transform: rotateY(-120deg) translateZ(380px);
   transform: rotateY(-120deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .ten {
-  -webkit-transform: rotateY(-90deg) translateZ(380px);
   transform: rotateY(-90deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .eleven {
-  -webkit-transform: rotateY(300deg) translateZ(380px);
   transform: rotateY(300deg) translateZ(380px);
 }
 
 .neuroplasticity-page .ring > .twelve {
-  -webkit-transform: rotateY(330deg) translateZ(380px);
   transform: rotateY(330deg) translateZ(380px);
 }
 
-/* Controls */
 .neuroplasticity-page .controls {
   width: 80%;
   margin: 0 auto;
   padding: 5px 20px;
-  -webkit-border-radius: 12px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -762,19 +851,18 @@ li[role="menuitem"]:active {
   border-radius: 5px;
   padding: 8px 16px;
   cursor: pointer;
-  font-family: cursive;
+  font-family: var(--font-family-cursive);
 }
 
 .neuroplasticity-page .controls button:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* Responsive styles for neuroplasticity page */
 @media screen and (max-width: 1500px) {
   .neuroplasticity-page {
     width: 100%;
-    color: white;
-    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    color: var(--color-white);
+    background: var(--bg-space);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -782,30 +870,23 @@ li[role="menuitem"]:active {
   }
 }
 
-/* ===================================
-   LEARNING PLAN PAGE STYLES
-   =================================== */
-
-/* Scoped styles for learning plan page only */
+/* Learning Plan Page */
 .learning-plan-page {
-  font-family: Cambria;
-  background-color: bisque;
-  font-family: cursive;
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
-  color: black;
+  font-family: var(--font-family-secondary);
+  background-color: var(--bg-bisque);
+  font-family: var(--font-family-cursive);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-black);
 }
 
-/* Question styling */
 .learning-plan-page .qustion {
-  color: brown;
+  color: var(--color-brown);
 }
 
-/* Reflection text styling */
 .learning-plan-page .reflection {
-  color: blue;
+  color: var(--color-blue);
 }
 
-/* Bootcamp section with special styling */
 .learning-plan-page .bootcamp {
   border: 25px solid;
   border-image-slice: 1;
@@ -814,8 +895,8 @@ li[role="menuitem"]:active {
     hsl(200 100% 60%),
     hsl(100 100% 60%)
   );
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,121,9,1) 35%, rgba(0,212,255,1) 100%);
-  opacity: .7;
+  background: var(--gradient-bootcamp);
+  opacity: var(--opacity-heavy);
   text-align: center;
 }
 
@@ -827,22 +908,6 @@ li[role="menuitem"]:active {
   color: rgb(233, 233, 233);
 }
 
-/* Progress bar styling */
-.learning-plan-page .bar {
-  text-align: center;
-}
-
-.learning-plan-page .bar label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.learning-plan-page .bar progress {
-  width: 100%;
-  height: 20px;
-}
-
-/* Goals section with background image */
 .learning-plan-page .goals {
   transform: translate(-50%, -50%);
   left: 50%;
@@ -853,13 +918,12 @@ li[role="menuitem"]:active {
   position: relative;
   height: 300px;
   width: 430px;
-  opacity: .7;
+  opacity: var(--opacity-heavy);
   background-image: url("https://content.thriveglobal.com/wp-content/uploads/2019/07/bigstock-set-goal-make-plan-work-sti-66642022.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Celebration element */
 .learning-plan-page .tada {
   top: 120%;
   z-index: 4;
@@ -871,32 +935,30 @@ li[role="menuitem"]:active {
   position: absolute;
   height: 300px;
   width: 400px;
-  opacity: .7;
+  opacity: var(--opacity-heavy);
   background-image: url("https://media.hearthpwn.com/attachments/96/921/tada.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-/* Spider decorative element */
 .learning-plan-page .spider {
-  z-index: -1;
+  z-index: var(--z-background);
   top: 40px;
   left: 80%;
   position: fixed;
   height: 300px;
   width: 300px;
-  opacity: .3;
+  opacity: var(--opacity-light);
   background-image: url("https://t4.ftcdn.net/jpg/01/24/82/05/360_F_124820599_V1z5gBtOnVAsJZKyRM53bbgEEhbGtzlF.jpg");
   background-repeat: no-repeat;
 }
 
-/* Container styling */
 .learning-plan-page .container2 {
   margin-top: 150px;
   margin-left: 40px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--color-black);
   border-top: none;
   border-right: none;
   border-bottom: dotted;
@@ -907,17 +969,20 @@ li[role="menuitem"]:active {
   margin-left: 40px;
 }
 
-/* White space pre-wrap for formatted text */
 .learning-plan-page .white-space-pre-wrap {
   white-space: pre-wrap;
 }
 
-/* Responsive styles for learning plan page */
+.learning-plan-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+}
+
 @media screen and (max-width: 1500px) {
   .learning-plan-page {
     width: 100%;
-    color: white;
-    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    color: var(--color-white);
+    background: var(--bg-space);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -935,127 +1000,82 @@ li[role="menuitem"]:active {
   }
 
   .learning-plan-page a {
-    color: blue;
+    color: var(--color-blue);
   }
-}
 
-/* Yellow text effects */
-.learning-plan-page .yellow {
-  color: rgba(202, 202, 0, 0.726);
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
-}
-
-@media screen and (max-width: 1500px) {
   .learning-plan-page #yellow {
-    color: white;
+    color: var(--color-white);
   }
 }
 
-/* ===================================
-   JAVASCRIPT DOM PAGE STYLES
-   =================================== */
-
-/* Scoped styles for javascript-dom page only */
+/* JavaScript DOM Page */
 .javascript-dom-page {
-  font-family: Cambria;
-  background-color: bisque;
-  font-family: cursive;
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
-  color: black;
+  font-family: var(--font-family-secondary);
+  background-color: var(--bg-bisque);
+  font-family: var(--font-family-cursive);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-black);
 }
 
-/* Container styling */
 .javascript-dom-page .container5 {
   margin-top: 100px;
   margin-left: 50px;
 }
 
-/* Inline heading styles for better formatting */
 .javascript-dom-page h4 {
   display: inline;
   margin-right: 10px;
 }
 
-/* Utility class for inline headings with margin */
 .javascript-dom-page .inline {
   display: inline;
 }
 
 .javascript-dom-page .mr-4 {
-  margin-right: 1rem;
+  margin-right: var(--spacing-md);
 }
 
-/* Summary styling for questions */
 .javascript-dom-page summary {
-  color: blueviolet;
+  color: var(--color-blueviolet);
   display: list-item;
   margin: 0;
   cursor: pointer;
 }
 
-/* Details element styling */
 .javascript-dom-page details {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
-/* List styling */
 .javascript-dom-page li {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
   list-style-type: disc;
   margin-left: 1.5rem;
 }
 
-/* Bold text styling */
 .javascript-dom-page b {
   font-weight: bold;
-  color: #333;
+  color: var(--color-text-light);
 }
 
-/* Paragraph spacing */
 .javascript-dom-page p {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   line-height: 1.6;
 }
 
-/* Navigation styling - inherits from base styles */
 .javascript-dom-page .navbar.active .black-4 {
-  color: black;
+  color: var(--color-black);
 }
 
-.javascript-dom-page .tech {
-  display: flex;
-  flex-direction: row;
-  border: groove;
-  border-radius: 5px;
-  border-color: blueviolet;
-  padding: 5px;
-  word-wrap: normal;
-  margin: 4px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.javascript-dom-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
 }
 
-.javascript-dom-page .core {
-  display: flex;
-  flex-direction: row;
-  border: groove;
-  border-color: rgb(129, 66, 129);
-  border-radius: 5px;
-  padding: 5px;
-  word-wrap: normal;
-  margin: 4px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Responsive styles for javascript-dom page */
 @media screen and (max-width: 1500px) {
   .javascript-dom-page {
     width: 100%;
-    color: white;
-    background: url("https://wallpaperaccess.com/full/3205414.jpg");
+    color: var(--color-white);
+    background: var(--bg-space);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1063,22 +1083,700 @@ li[role="menuitem"]:active {
   }
 
   .javascript-dom-page a {
-    color: blue;
+    color: var(--color-blue);
   }
 
   .javascript-dom-page summary {
-    color: lightblue;
+    color: var(--color-blue-light);
+  }
+
+  .javascript-dom-page #yellow {
+    color: var(--color-white);
   }
 }
 
-/* Yellow text effects */
-.javascript-dom-page .yellow {
-  color: rgba(202, 202, 0, 0.726);
-  text-shadow: .1px .1px rgba(202, 202, 0, 0.526);
+/* HTML CSS Page */
+.html-css-page {
+  font-family: var(--font-family-secondary);
+  background-color: var(--bg-bisque);
+  font-family: var(--font-family-cursive);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-black);
+}
+
+.html-css-page .container5 {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.html-css-page .navbar .this-one .black-2 {
+  color: var(--color-black);
+}
+
+.html-css-page .tech > li {
+  border-right: solid;
+  border-bottom: solid;
+  color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(155, 49, 255, 0.664);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.html-css-page .core > li {
+  border-right: solid;
+  border-bottom: solid;
+  color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(134, 54, 134, 0.459);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.html-css-page h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.html-css-page h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-dark);
+}
+
+.html-css-page p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.html-css-page a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.html-css-page a:hover {
+  color: var(--color-blue-hover);
+}
+
+.html-css-page img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--spacing-md) 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: var(--shadow-image);
+}
+
+.html-css-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
 }
 
 @media screen and (max-width: 1500px) {
-  .javascript-dom-page #yellow {
-    color: white;
+  .html-css-page {
+    width: 100%;
+    color: var(--color-white);
+    background: var(--bg-space);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .html-css-page a {
+    color: var(--color-blue-light);
+  }
+
+  .html-css-page h1,
+  .html-css-page h2 {
+    color: var(--color-white);
+  }
+
+  .html-css-page #yellow {
+    color: var(--color-white);
+  }
+}
+
+/* Emotional Intelligence Page */
+.emotional-intelligence-page {
+  font-family: var(--font-family-cursive);
+  color: var(--color-yellow-emotional);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  margin: 0;
+  display: flex;
+  width: 100%;
+  height: 1900px;
+  background: var(--bg-space);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+.emotional-intelligence-page .container4 {
+  background-image: center;
+  width: 100vw;
+  background: var(--bg-nebula);
+  background-size: cover;
+  z-index: var(--z-background);
+  opacity: var(--opacity-medium);
+  background-blend-mode: lighten;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.emotional-intelligence-page .move-me {
+  right: 5%;
+  top: 20%;
+  left: 5%;
+  position: absolute;
+  color: var(--color-white);
+}
+
+.emotional-intelligence-page .move-me h3 {
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+.emotional-intelligence-page .move-me p {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.emotional-intelligence-page .area {
+  position: absolute;
+  background-image: url("https://www.torchgroup.com/wp-content/uploads/2018/04/Image-Emotional-Intelligence-1024x768.jpg");
+  background-size: cover;
+  left: 10%;
+  top: 8%;
+  width: 250px;
+  height: 200px;
+  z-index: var(--z-overlay);
+}
+
+.emotional-intelligence-page .navbar .this-one #black-1 {
+  color: var(--color-black);
+}
+
+.emotional-intelligence-page .ball {
+  width: 10px;
+  height: 10px;
+  margin: 10px auto;
+  border-radius: 50px;
+  opacity: var(--opacity-medium);
+  background: var(--color-white);
+  animation: right 1s infinite ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.emotional-intelligence-page .container span button {
+  animation: wiggle 2s linear infinite;
+}
+
+.emotional-intelligence-page .dropdown {
+  top: 70%;
+  position: absolute;
+  right: 20%;
+  transform: translate(50%, 50%);
+  border-radius: 5%;
+  opacity: var(--opacity-heavy);
+}
+
+.emotional-intelligence-page .dropbtn {
+  background-color: #4CAF50;
+  color: var(--color-white);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.emotional-intelligence-page .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: var(--shadow-dropdown);
+  z-index: var(--z-content);
+}
+
+.emotional-intelligence-page .dropdown-content a {
+  color: var(--color-black);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.emotional-intelligence-page .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.emotional-intelligence-page .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.emotional-intelligence-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+}
+
+@media screen and (max-width: 1500px) {
+  .emotional-intelligence-page {
+    width: 100vw;
+    color: var(--color-white);
+    margin: 0;
+    background-image: var(--bg-galaxy), var(--bg-space);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .emotional-intelligence-page #yellow {
+    color: var(--color-white);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .emotional-intelligence-page .container3 p {
+    font-size: 18px;
+    color: var(--color-yellowgreen);
+  }
+  
+  .emotional-intelligence-page .area {
+    width: 200px;
+    height: 150px;
+    left: 5%;
+    top: 5%;
+  }
+  
+  .emotional-intelligence-page .move-me {
+    left: 2%;
+    right: 2%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .emotional-intelligence-page .area {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .emotional-intelligence-page .move-me h3 {
+    font-size: 20px;
+  }
+  
+  .emotional-intelligence-page .dropdown {
+    right: 10%;
+    top: 80%;
+  }
+}
+
+/* Identity Values Page */
+.identity-values-page {
+  font-family: var(--font-family-cursive);
+  color: var(--color-yellow-emotional);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  margin: 0;
+  display: flex;
+  width: 100%;
+  background: var(--bg-space);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+.identity-values-page .navbar .this-one .change-3 {
+  color: var(--color-black);
+}
+
+.identity-values-page .container3 {
+  height: 2500px;
+  background-image: center;
+  width: 100%;
+  background: var(--bg-ocean);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.identity-values-page .container3 p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  justify-content: center;
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.identity-values-page .container3 div {
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 50px;
+  border-style: solid;
+  color: var(--color-white);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,var(--opacity-medium));
+}
+
+.identity-values-page .container3 .inside-container {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.identity-values-page .container3 #white {
+  margin-top: 150px;
+  color: var(--color-white);
+  margin-bottom: -150px;
+}
+
+.identity-values-page .question1,
+.identity-values-page .question2,
+.identity-values-page .question3,
+.identity-values-page .question4,
+.identity-values-page .question5 {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 30px;
+  background-color: rgba(0,0,0,var(--opacity-medium));
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.identity-values-page .question1 p,
+.identity-values-page .question2 p,
+.identity-values-page .question3 p,
+.identity-values-page .question4 p,
+.identity-values-page .question5 p {
+  color: var(--color-white);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.identity-values-page .direction {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: var(--z-tooltip);
+}
+
+.identity-values-page .direction input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.9);
+  font-family: var(--font-family-cursive);
+}
+
+.identity-values-page .direction datalist {
+  background-color: var(--color-white);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.identity-values-page .direction option {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.identity-values-page .direction option:hover {
+  background-color: #f0f0f0;
+}
+
+.identity-values-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+}
+
+@media screen and (max-width: 800px) {
+  .identity-values-page .container3 p {
+    font-size: 18px;
+    color: var(--color-yellowgreen);
+  }
+  
+  .identity-values-page .container3 div {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .identity-values-page .direction {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .identity-values-page .container3 span div p {
+    margin: 10px;
+  }
+  
+  .identity-values-page .container3 p {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .identity-values-page .container3 span div p {
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .identity-values-page .container3 p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .identity-values-page .container3 span div p {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .identity-values-page #yellow {
+    color: var(--color-white);
+  }
+}
+
+/* Foundations Reflection Page */
+.foundations-reflection-page {
+  font-family: var(--font-family-cursive);
+  color: var(--color-yellow-emotional);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  margin: 0;
+  display: flex;
+  width: 100%;
+  background: var(--bg-space);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.foundations-reflection-page .navbar .this-one .black-12 {
+  color: var(--color-black);
+}
+
+.foundations-reflection-page .container-20 {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  right: 5%;
+}
+
+.foundations-reflection-page .container-20 p {
+  font-size: 17px;
+  background-color: rgba(128, 128, 128, 0.151);
+  border-radius: 5%;
+  margin: 10px;
+  padding: 50px;
+}
+
+.foundations-reflection-page .container-20 h3 {
+  text-align: center;
+}
+
+.foundations-reflection-page .container-20 h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-white);
+}
+
+.foundations-reflection-page .container-20 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-yellow-text);
+}
+
+.foundations-reflection-page .container-20 > div {
+  display: grid;
+  flex-direction: column;
+  font-family: var(--font-family-verdana);
+}
+
+.foundations-reflection-page .container-20 > div > h3 {
+  margin-left: 200px;
+  text-align: left;
+  width: 80vw;
+  color: rgb(183, 211, 253);
+}
+
+.foundations-reflection-page .container-20 > div {
+  margin-left: -200px;
+  padding-left: 50px;
+  display: grid;
+  width: 150VW;
+  background-image: var(--gradient-reflection);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.foundations-reflection-page .container-20 > div > ul > p {
+  margin-left: 200px;
+  padding: 0;
+  width: 70vw;
+}
+
+.foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(2),
+.foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(3),
+.foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(4) {
+  margin-left: 300px;
+}
+
+.foundations-reflection-page .container101 {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.foundations-reflection-page .container101 h3 {
+  color: rgb(183, 211, 253);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.foundations-reflection-page .container101 ul {
+  margin-bottom: 30px;
+}
+
+.foundations-reflection-page .container101 ul p {
+  color: var(--color-white);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+}
+
+.foundations-reflection-page .container101 li {
+  color: var(--color-white);
+  margin: 10px 0;
+  margin-left: 20px;
+}
+
+.foundations-reflection-page .container101 em {
+  color: rgba(202, 202, 0, 0.8);
+  font-style: italic;
+}
+
+.foundations-reflection-page .container101 strong {
+  color: rgb(183, 211, 253);
+  font-weight: bold;
+}
+
+.foundations-reflection-page hr {
+  border: none;
+  height: 2px;
+  background: var(--gradient-hr);
+  margin: 50px 0;
+}
+
+.foundations-reflection-page .container-20 > h3 {
+  color: rgb(183, 211, 253);
+  font-size: 1.5rem;
+  margin: 30px 0 15px 0;
+  text-align: left;
+}
+
+.foundations-reflection-page .container-20 > p {
+  color: var(--color-white);
+  background-color: rgba(128, 128, 128, 0.151);
+  border-radius: 5%;
+  margin: 10px 0;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+.foundations-reflection-page .yellow {
+  color: var(--color-yellow-text);
+  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+}
+
+@media screen and (max-width: 1200px) {
+  .foundations-reflection-page .container-20 > div {
+    width: 100vw;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  .foundations-reflection-page .container-20 > div > h3 {
+    margin-left: 0;
+    width: 90vw;
+  }
+  
+  .foundations-reflection-page .container-20 > div > ul > p {
+    margin-left: 0;
+    width: 85vw;
+  }
+  
+  .foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(2),
+  .foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(3),
+  .foundations-reflection-page .container-20 > div > ul:nth-child(2) > li:nth-child(4) {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .foundations-reflection-page .container-20 {
+    left: 5%;
+    right: 5%;
+    top: 150px;
+  }
+  
+  .foundations-reflection-page .container-20 p {
+    font-size: 15px;
+    padding: 25px;
+  }
+  
+  .foundations-reflection-page .container-20 h1 {
+    font-size: 2rem;
+  }
+  
+  .foundations-reflection-page .container-20 h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .foundations-reflection-page .container-20 p {
+    font-size: 14px;
+    padding: 20px;
+    margin: 5px 0;
+  }
+  
+  .foundations-reflection-page .container101 {
+    padding: 20px;
+  }
+  
+  .foundations-reflection-page .container101 ul p {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .foundations-reflection-page #yellow {
+    color: var(--color-white);
   }
 }
