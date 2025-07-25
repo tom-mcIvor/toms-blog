@@ -573,10 +573,9 @@ li[role="menuitem"]:active {
 /* Problem Solving Page */
 .problem-solving-page {
   font-family: var(--font-family-secondary);
-  background-color: var(--bg-bisque);
+  background-color: var(--color-white);
   font-family: var(--font-family-cursive);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
-  color: var(--color-black);
+  color: var(--color-text-dark);
 }
 
 .problem-solving-page .container-8 {
@@ -626,11 +625,8 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .problem-solving-page {
     width: 100%;
-    color: var(--color-white);
-    background: var(--bg-space);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
     min-height: 100vh;
   }
 
@@ -663,10 +659,9 @@ li[role="menuitem"]:active {
 /* Neuroplasticity Page */
 .neuroplasticity-page {
   font-family: var(--font-family-secondary);
-  background-color: var(--bg-bisque);
+  background-color: var(--color-white);
   font-family: var(--font-family-cursive);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
-  color: var(--color-black);
+  color: var(--color-text-dark);
 }
 
 .neuroplasticity-page .container-11 {
@@ -861,11 +856,8 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .neuroplasticity-page {
     width: 100%;
-    color: var(--color-white);
-    background: var(--bg-space);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
     min-height: 100vh;
   }
 }
@@ -873,10 +865,9 @@ li[role="menuitem"]:active {
 /* Learning Plan Page */
 .learning-plan-page {
   font-family: var(--font-family-secondary);
-  background-color: var(--bg-bisque);
+  background-color: var(--color-white);
   font-family: var(--font-family-cursive);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
-  color: var(--color-black);
+  color: var(--color-text-dark);
 }
 
 .learning-plan-page .qustion {
@@ -981,11 +972,8 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .learning-plan-page {
     width: 100%;
-    color: var(--color-white);
-    background: var(--bg-space);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
     min-height: 100vh;
   }
 
@@ -1011,10 +999,9 @@ li[role="menuitem"]:active {
 /* JavaScript DOM Page */
 .javascript-dom-page {
   font-family: var(--font-family-secondary);
-  background-color: var(--bg-bisque);
+  background-color: var(--color-white);
   font-family: var(--font-family-cursive);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
-  color: var(--color-black);
+  color: var(--color-text-dark);
 }
 
 .javascript-dom-page .container5 {
@@ -1074,11 +1061,8 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .javascript-dom-page {
     width: 100%;
-    color: var(--color-white);
-    background: var(--bg-space);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
     min-height: 100vh;
   }
 
@@ -1098,10 +1082,9 @@ li[role="menuitem"]:active {
 /* HTML CSS Page */
 .html-css-page {
   font-family: var(--font-family-secondary);
-  background-color: var(--bg-bisque);
+  background-color: var(--color-white);
   font-family: var(--font-family-cursive);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
-  color: var(--color-black);
+  color: var(--color-text-dark);
 }
 
 .html-css-page .container5 {
@@ -1176,11 +1159,8 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .html-css-page {
     width: 100%;
-    color: var(--color-white);
-    background: var(--bg-space);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
     min-height: 100vh;
   }
 
@@ -1201,15 +1181,12 @@ li[role="menuitem"]:active {
 /* Emotional Intelligence Page */
 .emotional-intelligence-page {
   font-family: var(--font-family-cursive);
-  color: var(--color-yellow-emotional);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-text-dark);
   margin: 0;
   display: flex;
   width: 100%;
   height: 1900px;
-  background: var(--bg-space);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--color-white);
   flex-direction: column;
 }
 
@@ -1328,12 +1305,9 @@ li[role="menuitem"]:active {
 @media screen and (max-width: 1500px) {
   .emotional-intelligence-page {
     width: 100vw;
-    color: var(--color-white);
+    color: var(--color-text-dark);
     margin: 0;
-    background-image: var(--bg-galaxy), var(--bg-space);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--color-white);
   }
 
   .emotional-intelligence-page #yellow {
@@ -1380,14 +1354,11 @@ li[role="menuitem"]:active {
 /* Identity Values Page */
 .identity-values-page {
   font-family: var(--font-family-cursive);
-  color: var(--color-yellow-emotional);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-text-dark);
   margin: 0;
   display: flex;
   width: 100%;
-  background: var(--bg-space);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--color-white);
   flex-direction: column;
 }
 
@@ -1559,15 +1530,11 @@ li[role="menuitem"]:active {
 /* Foundations Reflection Page */
 .foundations-reflection-page {
   font-family: var(--font-family-cursive);
-  color: var(--color-yellow-emotional);
-  text-shadow: 0.1px 0.1px var(--color-yellow-shadow);
+  color: var(--color-text-dark);
   margin: 0;
   display: flex;
   width: 100%;
-  background: var(--bg-space);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--color-white);
   min-height: 100vh;
   flex-direction: column;
 }
