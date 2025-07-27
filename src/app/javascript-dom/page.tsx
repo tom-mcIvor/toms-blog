@@ -1,123 +1,169 @@
 'use client'
-import React, { useState } from 'react'
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from "@material-tailwind/react";
-
-const CUSTOM_ANIMATION = {
-  mount: { scale: 1 },
-  unmount: { scale: 0.9 },
-};
-
+import React, { useState, useEffect } from 'react'
 
 function JavaScriptDom() {
-  const [open, setOpen] = useState(0)
- 
-  const handleOpen = (value: number) => setOpen(open === value ? 0 : value)
+  const [visibleQuestions, setVisibleQuestions] = useState<number[]>([])
+
+  useEffect(() => {
+    // Animate questions appearing one by one
+    const timer1 = setTimeout(() => setVisibleQuestions([1]), 500)
+    const timer2 = setTimeout(() => setVisibleQuestions([1, 2]), 1000)
+    const timer3 = setTimeout(() => setVisibleQuestions([1, 2, 3]), 1500)
+    const timer4 = setTimeout(() => setVisibleQuestions([1, 2, 3, 4]), 2000)
+    const timer5 = setTimeout(() => setVisibleQuestions([1, 2, 3, 4, 5]), 2500)
+
+    return () => {
+      clearTimeout(timer1)
+      clearTimeout(timer2)
+      clearTimeout(timer3)
+      clearTimeout(timer4)
+      clearTimeout(timer5)
+    }
+  }, [])
+
   return (
     <div className="javascript-dom-page">
-  
-    <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader onClick={() => handleOpen(1)}>An analogy to describe JavaScript and its relationship to HTML and CSS.</AccordionHeader>
+      <div className="container5">
+        
+        {/* Animated Title */}
+        <div className="animated-title-container">
+          <h1 className="animated-title">
+            <span className="title-word">JavaScript</span>
+            <span className="title-word">&</span>
+            <span className="title-word">DOM</span>
+            <span className="title-word">Fundamentals</span>
+          </h1>
+          <div className="title-underline"></div>
+        </div>
+        
+        {/* Question 1 */}
+        <div className={`question-container ${visibleQuestions.includes(1) ? 'animate-slide-in-left' : 'opacity-0'}`}>
+          <div className="animated-question">
+            <h3 className="question-text">An analogy to describe JavaScript and its relationship to HTML and CSS.</h3>
+          </div>
+        </div>
+        <div className={`answer-container ${visibleQuestions.includes(1) ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
+          <div className="my-response-header">
+            <span className="response-label">My response:</span>
+          </div>
+          <p>
+            JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians HTML and CSS
+            to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
+            experiences. I like to think of it this way - HTML is like the skeleton of a house, CSS is the paint and decorations,
+            but JavaScript is what makes the lights turn on, the doors open, and brings everything to life. Without JavaScript,
+            websites would just be pretty static pictures!
+          </p>
+        </div>
+        <br />
 
-      <AccordionBody>
-      <p>
-        JavaScript is akin to a conductor orchestrating a symphony. Just as a conductor directs musicians HTML and CSS
-        to create harmonious music, JavaScript guides HTML and CSS elements to produce dynamic and interactive web
-        experiences.
-      </p>
-        </AccordionBody>
-        </Accordion>
-    <br />
-    <br />
-    <details>
-      <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
-        Question
-      </summary>
-      <h3>Explain control flow and loops using an example process from everyday life, for example, &apos;waking up&apos; or
-      &apos;br /ushing your teeth&apos; (but not those).</h3>
-    </details>
-    <br />
-    <p>
-    <h4>Control Flow:</h4> Control flow is evident in the decision-making process throughout, including ingredient
-    preparation, shaping cookies, setting the timer, and assessing doneness.
-    <br />
-    <h4 className="inline mr-4">Loop:</h4>
-    Loops are present in the mixing process and baking process, where certain actions are repeated until a specific
-    condition is met (mixing until the dough is well combined, baking for a set amount of time).
-    </p>
-    <br />
-    <details>
-      <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
-        Question
-      </summary>
-      <h3>Describe what the DOM is and an example of how you might interact with it.</h3>
-    </details>
-    <br />
-    <p>The DOM (Document Object Model) is a programming interface that represents the structure of a  web document, like
-      HTML, in a tree-like format. It allows you to interact with and manipulate the content and structure of a web page
-      using languages like JavaScript.
-      <br />
-      Example of interacting with the DOM: You can use JavaScript to change the text of a webpage element, like updating
-      a paragraph or changing the color of a button when clicked.
-    </p>
-    <br />
-    
-    <details>
-      <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
-        Question
-      </summary>
-      <h3>Explain the difference between accessing data from arrays and objects.</h3>
-    </details>
-    <br />
-    Arrays are like ordered containers of values, where each element has a numeric index, and you access data using
-      square br /ackets with an index, such as myArray[0] for the first item. Arrays are suitable for managing lists of
-      similar items, like a series of scores or names.
-      <br />
-      <br />
-      <p>
-      In contrast, objects are akin to labeled compartments, employing key-value pairs for data storage. To retrieve
-      data from objects, you use either dot notation or square brackets with the specific key, for instance,
-      myObject.property or myObject[&apos;property&apos;]. Objects are well-suited for organizing data with distinct attributes,
-      making them valuable for representing entities such as customers or products. Your choice between arrays and
-      objects hinges on your data&apos;s structure and the intended data manipulation tasks at hand.
-      </p>
-   
-      <li>Access data from OBJECTS with dot nottation eg Products.Name</li>
-    
-      <li>Access data from ARRAYS with index eg Products[1]</li>
-  
-      <li>you can also access data with index&apos;s for OBJECTS eg Products.Name[1]</li>
-  
-      <li>Objects are suitable for organizing data with named attributes, making them great for representing entities
-        like people or products.</li>
-    
-    <br />
-    <br />
-    <p>
-    <details>
-      <summary style={{color:"blueviolet", display: "list-item", margin: 0, cursor: "pointer"}}>
-        Question
-      </summary>
-      <h3>Explain what functions are and why they are helpful.</h3>
-    </details>
-    </p>
-    <br />
-  
-      <b>Reusability:</b> Once you define a function, you can call it multiple times from different parts of your code.
-      This reusability reduces code duplication and makes maintenance more efficient. If you need to perform the same
-      task in various places, you can simply call the function instead of rewriting the same code.
-      <br />
-      <br />
-      <b>Abstraction</b>: Functions abstract away the details of their implementation. When you call a function, you
-      don&apos;t need to know how it works internally; you only need to understand what it does and how to use it. This
-      simplifies the overall codebase and allows for better collaboration among developers.
-    
-      <li>A set of statements that performs a task or calculates a value</li>
-    
-      <li>Reduces duplication of code. Decomposes complex problems into simpler pieces</li>
+        {/* Question 2 */}
+        <div className={`question-container ${visibleQuestions.includes(2) ? 'animate-slide-in-right' : 'opacity-0'}`}>
+          <div className="animated-question">
+            <h3 className="question-text">Explain control flow and loops using an example process from everyday life, for example, &apos;waking up&apos; or &apos;brushing your teeth&apos; (but not those).</h3>
+          </div>
+        </div>
+        <div className={`answer-container ${visibleQuestions.includes(2) ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
+          <div className="my-response-header">
+            <span className="response-label">My response:</span>
+          </div>
+          <p>
+            <h4>Control Flow:</h4> I chose baking cookies as my example because it&apos;s something I actually do! Control flow is like
+            following a recipe - you make decisions at each step. Do I have enough flour? If yes, continue. If no, go to the store first.
+            Should I add chocolate chips? That&apos;s an if/else decision right there.
+            <br />
+            <h4 className="inline mr-4">Loop:</h4>
+            Loops are everywhere in baking! You repeat the same action - scoop dough, place on tray, repeat until all dough is used.
+            Or mixing the batter - you keep stirring until it looks right. In programming, this would be like a while loop that continues
+            until a condition is met. I find these real-world examples help me understand the concepts better than abstract explanations.
+          </p>
+        </div>
+        <br />
+
+        {/* Question 3 */}
+        <div className={`question-container ${visibleQuestions.includes(3) ? 'animate-slide-in-left' : 'opacity-0'}`}>
+          <div className="animated-question">
+            <h3 className="question-text">Describe what the DOM is and an example of how you might interact with it.</h3>
+          </div>
+        </div>
+        <div className={`answer-container ${visibleQuestions.includes(3) ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
+          <div className="my-response-header">
+            <span className="response-label">My response:</span>
+          </div>
+          <p>The DOM (Document Object Model) is a programming interface that represents the structure of a web document, like
+            HTML, in a tree-like format. It allows you to interact with and manipulate the content and structure of a web page
+            using languages like JavaScript. Think of it like a family tree, but for web elements - each element has parents,
+            children, and siblings.
+            <br />
+            <br />
+            A practical example I love: imagine you have a button on your website that says &apos;Click me!&apos; When someone clicks it,
+            you can use JavaScript to change the text to &apos;Thanks for clicking!&apos; or make a hidden message appear. I&apos;ve actually
+            built little interactive features like this - it&apos;s quite satisfying when you see the page respond to user actions in real-time!
+          </p>
+        </div>
+        <br />
+        
+        {/* Question 4 */}
+        <div className={`question-container ${visibleQuestions.includes(4) ? 'animate-slide-in-right' : 'opacity-0'}`}>
+          <div className="animated-question">
+            <h3 className="question-text">Explain the difference between accessing data from arrays and objects.</h3>
+          </div>
+        </div>
+        <div className={`answer-container ${visibleQuestions.includes(4) ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
+          <div className="my-response-header">
+            <span className="response-label">My response:</span>
+          </div>
+          <p>This one took me a while to really grasp! Arrays are like numbered storage boxes - you know exactly which box
+            something is in by its position. So myArray[0] gets the first item, myArray[1] gets the second, and so on.
+            I use arrays when I have a list of similar things, like storing all the scores from a game or a shopping list.
+            <br />
+            <br />
+            Objects are more like a filing cabinet with labeled folders. Instead of remembering &apos;it&apos;s in position 3&apos;,
+            you can say &apos;get me the name&apos; or &apos;get me the age&apos;. Much more intuitive! When I&apos;m building something like
+            a user profile, I&apos;ll use an object because it makes sense to have user.name and user.email rather than trying
+            to remember that the name is at position 0 and email is at position 1.
+          </p>
+          
+          <ul>
+            <li>Arrays: great for lists where order matters (like steps in a recipe)</li>
+            <li>Objects: perfect when you need named properties (like describing a person or product)</li>
+            <li>I often use arrays OF objects - like a list of users where each user is an object with name, email, etc.</li>
+            <li>Pro tip: if you find yourself thinking &apos;what was at index 2 again?&apos; - you probably want an object!</li>
+          </ul>
+        </div>
+        <br />
+
+        {/* Question 5 */}
+        <div className={`question-container ${visibleQuestions.includes(5) ? 'animate-slide-in-left' : 'opacity-0'}`}>
+          <div className="animated-question">
+            <h3 className="question-text">Explain what functions are and why they are helpful.</h3>
+          </div>
+        </div>
+        <div className={`answer-container ${visibleQuestions.includes(5) ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
+          <div className="my-response-header">
+            <span className="response-label">My response:</span>
+          </div>
+          <p>Functions are honestly one of my favorite concepts in programming! Think of them like recipes - you write the
+            instructions once, then you can &apos;cook&apos; that recipe whenever you need it.
+            <br />
+            <br />
+            <b>Reusability:</b> I learned this the hard way when I first started coding. I was copying and pasting the same
+            validation code everywhere. Then I discovered functions and it was like a lightbulb moment! Now I write a
+            validateEmail() function once and use it everywhere I need email validation.
+            <br />
+            <br />
+            <b>Abstraction:</b> This is like using a microwave - you don&apos;t need to understand how microwaves work to heat
+            your food. You just press buttons and get results. Same with functions - I can use someone else&apos;s sorting
+            function without knowing the algorithm behind it.
+          </p>
+          
+          <ul>
+            <li>Functions are like having a helpful assistant - give them some data, they do the work and give you back results</li>
+            <li>They make debugging SO much easier - if something breaks, you know exactly which function to check</li>
+            <li>I like to think of them as building blocks - small, simple functions that combine to create complex applications</li>
+            <li>Best practice I&apos;ve learned: if you&apos;re writing the same code twice, it probably should be a function!</li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
