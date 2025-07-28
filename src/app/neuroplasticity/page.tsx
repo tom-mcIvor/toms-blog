@@ -67,6 +67,16 @@ function Page() {
   return (
     <div className="neuroplasticity-page">
       <div className="container-11">
+        {/* Animated Title */}
+        <div className="animated-title-container">
+          <h1 className="animated-title">
+            <span className="title-word">Neuroplasticity</span>
+            <span className="title-word">&</span>
+            <span className="title-word">Learning</span>
+          </h1>
+          <div className="title-underline"></div>
+        </div>
+        
         <p>
           Neuroplasticity can be viewed as a general umbrella term that refers to the brain&apos;s ability to modify, change, and
           adapt both structure and function throughout life and in response to experience
