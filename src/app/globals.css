@@ -2304,7 +2304,7 @@ li[role="menuitem"]:active {
   top: 20%;
   left: 5%;
   position: absolute;
-  color: var(--color-white);
+  color: var(--color-text-dark);
 }
 
 .emotional-intelligence-page .move-me h3 {
