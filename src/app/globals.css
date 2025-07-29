@@ -969,11 +969,11 @@ li[role="menuitem"]:active {
   line-height: 1.7;
   margin-bottom: 15px;
   font-size: 1.05rem;
-  color: #000000;
+  color: var(--color-text-dark);
 }
 
 .learning-plan-page .reflection {
-  color: #000000;
+  color: var(--color-blue);
   font-style: italic;
 }
 
@@ -1239,7 +1239,7 @@ li[role="menuitem"]:active {
 }
 
 .learning-plan-page .bootcamp p {
-  color: #0066cc;
+  color: #ffffff;
   line-height: 1.7;
   margin-bottom: 15px;
   font-size: 1.1rem;
@@ -1248,21 +1248,21 @@ li[role="menuitem"]:active {
 }
 
 .learning-plan-page .bootcamp .reflection {
-  color: #0066cc;
+  color: #e2e8f0;
   font-style: italic;
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .learning-plan-page .bootcamp h2 {
-  color: #0066cc;
+  color: #ffffff;
   margin-bottom: 30px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .learning-plan-page .bootcamp h3 {
-  color: #0066cc;
+  color: #ffffff;
   margin: 25px 0 15px 0;
   font-size: 1.5rem;
   font-weight: 600;

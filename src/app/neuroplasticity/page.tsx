@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 function Page() {
   const [isRing, setIsRing] = useState(false)
@@ -11,10 +11,10 @@ function Page() {
     return regExp.test(element.className)
   }
 
-  const addClassName = (element: HTMLElement, className: string) => {
+  const addClassName = useCallback((element: HTMLElement, className: string) => {
     if (!hasClassName(element, className))
       element.className = [element.className, className].join(' ')
-  }
+  }, [])
 
   const removeClassName = (element: HTMLElement, className: string) => {
     if (hasClassName(element, className)) {
@@ -62,7 +62,7 @@ function Page() {
     if (shape) {
       addClassName(shape, 'cube')
     }
-  }, [])
+  }, [addClassName])
 
   return (
     <div className="neuroplasticity-page">

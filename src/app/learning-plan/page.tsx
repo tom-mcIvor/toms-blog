@@ -48,8 +48,8 @@ key:
             <h3 className="question-title">Non-Technical Skills Development</h3>
             <div className="question-prompt">What skills (non-technical core/human skills) would you like to see developed in yourself while at Dev Academy?</div>
             <div className="answer-content">
-              <p><strong>Initial Response:</strong> I think it's pretty much too late to 'develop' my non-technical skills - they will change based on what environment I'm in, I am who I am.</p>
-              <p className="reflection"><strong>Reflection:</strong> I think I have gone ahead with my technical skills and maybe feel I bit short of where I wanted to get to. There were lots of interesting modules and I kept up with the work load. In the human skills I have tried to take part in the team work and group projects. There have been things that I haven't done before like the remote learning and the presentations.</p>
+              <p><strong>Initial Response:</strong> I think it&apos;s pretty much too late to &apos;develop&apos; my non-technical skills - they will change based on what environment I&apos;m in, I am who I am.</p>
+              <p className="reflection"><strong>Reflection:</strong> I think I have gone ahead with my technical skills and maybe feel I bit short of where I wanted to get to. There were lots of interesting modules and I kept up with the work load. In the human skills I have tried to take part in the team work and group projects. There have been things that I haven&apos;t done before like the remote learning and the presentations.</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ key:
             <div className="question-prompt">A commitment to how you will manage your workload in this programme</div>
             <div className="answer-content">
               <p><strong>Initial Response:</strong> Just study and plod away at the given tasks.</p>
-              <p className="reflection"><strong>Reflection:</strong> I gave up full time work doing admin with the DHB Covid team that I'd had for over a year. I needed to have my full focus on the course and spend all my time on keeping up with the workload. I was able to stay at home which helped and I had no distractions like flatmates or planned social events. I have plodded away and tried to keep up even when I felt I hit the wall a few times. I have been able to work in the weekends to go over stuff I learned through the week.</p>
+              <p className="reflection"><strong>Reflection:</strong> I gave up full time work doing admin with the DHB Covid team that I&apos;d had for over a year. I needed to have my full focus on the course and spend all my time on keeping up with the workload. I was able to stay at home which helped and I had no distractions like flatmates or planned social events. I have plodded away and tried to keep up even when I felt I hit the wall a few times. I have been able to work in the weekends to go over stuff I learned through the week.</p>
             </div>
           </div>
 
@@ -66,7 +66,7 @@ key:
             <h3 className="question-title">Working with Others & Seeking Help</h3>
             <div className="question-prompt">How you will manage yourself to work productively and safely with other learners, facilitators and industry/community representatives. What you will do when things are building up and starting to get to you. A commitment as to how and where you will seek help in a timely way.</div>
             <div className="answer-content">
-              <p><strong>Initial Response:</strong> Well if I get stuck then I will use the facilitators to help me. If another student wants to help then that's a bonus. Likewise I will offer my help if needed.</p>
+              <p><strong>Initial Response:</strong> Well if I get stuck then I will use the facilitators to help me. If another student wants to help then that&apos;s a bonus. Likewise I will offer my help if needed.</p>
               <p className="reflection"><strong>Reflection:</strong> Well I did get stuck quite a few times. I accepted the help of a tutor and asked questions all the time. I am much better at asking for help now than I was at first. Lots of the others doing the course have helped me when I have reached out which was good.</p>
             </div>
           </div>
@@ -125,7 +125,7 @@ key:
               <h3>What do you think your biggest strengths and limitations will be in Bootcamp?</h3>
               <p>Limitations: I only have 24 hours in the day</p>
               <p className="reflection">Reflecting on my strength of keeping trying and never giving up.</p>
-              <p className="reflection">I have found the pace frantic and really hard to keep up with. The human skills component was a rocky road for me, but I have developed some coping skills. I still worry and get anxious but have learned to let go of things that I can't change.</p>
+              <p className="reflection">I have found the pace frantic and really hard to keep up with. The human skills component was a rocky road for me, but I have developed some coping skills. I still worry and get anxious but have learned to let go of things that I can&apos;t change.</p>
             </div>
 
             <div className="bootcamp-question">
@@ -136,13 +136,13 @@ key:
 
             <div className="bootcamp-question">
               <h3>What non-technical skills - human skills - would you like to see developed in yourself while at Dev Academy?</h3>
-              <p>Don't know</p>
-              <p className="reflection">I have learned in this course that focus is a big issue and when problems come up that I can't change I need to keep going and not let distractions get the better of me.</p>
+              <p>Don&apos;t know</p>
+              <p className="reflection">I have learned in this course that focus is a big issue and when problems come up that I can&apos;t change I need to keep going and not let distractions get the better of me.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What are your expectations from the Bootcamp team?</h3>
-              <p>They should be doing the work, I don't want someone that's been on holiday for foundations asking week 2 questions</p>
+              <p>They should be doing the work, I don&apos;t want someone that&apos;s been on holiday for foundations asking week 2 questions</p>
               <p className="reflection">That the team wants me to be successful and will help me reach my goal of graduating and getting a job.</p>
             </div>
 
