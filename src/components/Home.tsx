@@ -21,6 +21,7 @@ import nightmareDev from '../../public/nightmare-on-dev-select.png'
 import nightmare from '../../public/nightmare.png'
 import AboutMeAndSkills from './homePage/AboutMeAndSkills'
 import AnimatedProject from './AnimatedProject'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -365,6 +366,9 @@ function Home() {
 
         </div>
       </div>
+      
+      {/* Footer */}
+      <Footer />
     </>
   )
 }
