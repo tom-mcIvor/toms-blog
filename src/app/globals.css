@@ -153,7 +153,7 @@ body {
 /* ===================================
    BACKGROUND & LAYOUT COMPONENTS
    =================================== */
-.portfolio-bg { KHR
+.portfolio-bg {
   background: var(--gradient-primary);
   background-size: cover;
   background-repeat: no-repeat;
