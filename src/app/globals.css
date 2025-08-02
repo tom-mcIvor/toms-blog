@@ -168,13 +168,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: var(--z-background);
+  z-index: 0;
   pointer-events: none;
   background: repeating-radial-gradient(
-    circle at 50% 50%, 
-    rgba(255, 255, 255, 0.04) 0, 
-    rgba(255, 255, 255, 0.04) 2px, 
-    transparent 3px, 
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 2px,
+    transparent 3px,
     transparent 100px
   );
   animation: movePattern 10s linear infinite;
@@ -3838,5 +3838,150 @@ li[role="menuitem"]:active {
   .foundations-reflection-page .week-title,
   .foundations-reflection-page .reflection-title {
     font-size: 1.2rem;
+  }
+}
+
+/* ===================================
+   FOOTER ANIMATIONS
+   =================================== */
+
+/* Footer container animation */
+.footer-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-container.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Individual element animations with staggered delays */
+.footer-container.animate-in .footer-title {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.footer-container.animate-in .footer-email {
+  animation: fadeInLeft 0.8s ease-out 0.4s both;
+}
+
+.footer-container.animate-in .footer-social {
+  animation: fadeInRight 0.8s ease-out 0.6s both;
+}
+
+.footer-container.animate-in .footer-divider {
+  animation: expandWidth 1s ease-out 0.8s both;
+}
+
+.footer-container.animate-in .footer-copyright {
+  animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+/* Social links individual animations */
+.footer-container.animate-in .social-link:nth-child(1) {
+  animation: bounceIn 0.6s ease-out 1.2s both;
+}
+
+.footer-container.animate-in .social-link:nth-child(2) {
+  animation: bounceIn 0.6s ease-out 1.4s both;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Enhanced hover effects for footer elements */
+.footer-container .footer-title {
+  transition: all 0.3s ease;
+}
+
+.footer-container.animate-in .footer-title:hover {
+  transform: scale(1.05);
+  color: #667eea;
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.footer-container .footer-email:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.footer-container .footer-social:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for footer animations */
+@media screen and (max-width: 768px) {
+  .footer-container.animate-in .footer-email,
+  .footer-container.animate-in .footer-social {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .footer-container,
+  .footer-container * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
