@@ -4,6 +4,8 @@ import React, { useState, useEffect, useCallback } from 'react'
 function Page() {
   const [isRing, setIsRing] = useState(false)
   const [backfacesVisible, setBackfacesVisible] = useState(false)
+  const [controlsVisible, setControlsVisible] = useState(false)
+  const [visibleParagraphs, setVisibleParagraphs] = useState<Set<number>>(new Set())
 
   // Helper functions for className manipulation
   const hasClassName = (element: HTMLElement, className: string) => {
@@ -62,6 +64,37 @@ function Page() {
     if (shape) {
       addClassName(shape, 'cube')
     }
+
+    // Scroll animation for controls and paragraphs
+    const handleScroll = () => {
+      const controls = document.querySelector('.controls')
+      if (controls) {
+        const rect = controls.getBoundingClientRect()
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0
+        setControlsVisible(isVisible)
+      }
+
+      // Check paragraph visibility
+      const paragraphs = document.querySelectorAll('.neuroplasticity-page .container-11 p')
+      const newVisibleParagraphs = new Set<number>()
+      
+      paragraphs.forEach((paragraph, index) => {
+        const rect = paragraph.getBoundingClientRect()
+        const isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 0
+        if (isVisible) {
+          newVisibleParagraphs.add(index)
+        }
+      })
+      
+      setVisibleParagraphs(newVisibleParagraphs)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Check initial state
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [addClassName])
 
   return (
@@ -77,21 +110,21 @@ function Page() {
           <div className="title-underline"></div>
         </div>
         
-        <p>
+        <p className={`animated-paragraph ${visibleParagraphs.has(0) ? 'animate-in' : ''}`}>
           Neuroplasticity can be viewed as a general umbrella term that refers to the brain&apos;s ability to modify, change, and
           adapt both structure and function throughout life and in response to experience
         </p>
-        <p>
+        <p className={`animated-paragraph ${visibleParagraphs.has(1) ? 'animate-in' : ''}`}>
           Our brains are a lot like computers. We collect inputs, make calculations, then respond with outputs. Part of what
           makes our brains different, however, is their power to change biological composition. This process of adaptation
           is called neuroplasticity, and it&apos;s something we should all know a little more about.
         </p>
-        <p>
+        <p className={`animated-paragraph ${visibleParagraphs.has(2) ? 'animate-in' : ''}`}>
           Neuroplasticity occurs most heavily during infancy and adolescence, but even as adults our brains are constantly
           rewiring themselves based on challenges and habits. The reason you were able to learn multiplication tables, for
           instance, is because your brain physically created neural pathways over time to make this process easier.
         </p>
-        <p>
+        <p className={`animated-paragraph ${visibleParagraphs.has(3) ? 'animate-in' : ''}`}>
           <strong> So why bring this up alongside programming?</strong> Because many believe that it is a skill reserved for
           the computer savvy geek archetype and that&apos;s simply not true. There&apos;s a massive learning curve, and getting over
           that hump takes a tremendous amount of time, patience, and support.
@@ -118,28 +151,34 @@ function Page() {
         </div>
 
         {/* Controls */}
-        <div className="controls">
-          <div>
-            <button onClick={toggleShape}>
-              {isRing ? 'Show Cube' : 'Show Ring'}
+        <div className={`controls ${controlsVisible ? 'animate-in' : ''}`}>
+          <div className="control-group">
+            <button
+              className="mui-button primary"
+              onClick={toggleShape}
+            >
+              <span className="button-text">
+                {isRing ? 'Show Cube' : 'Show Ring'}
+              </span>
+              <div className="button-ripple"></div>
             </button>
           </div>
-          <div>
-            <label>
-              <input 
-                type="checkbox" 
-                id="backfaces"
-                checked={backfacesVisible}
-                onChange={toggleBackfaces}
-              />
-              Show Backfaces
-            </label>
+          <div className="control-group">
+            <button
+              className={`mui-button secondary ${backfacesVisible ? 'active' : ''}`}
+              onClick={toggleBackfaces}
+            >
+              <span className="button-text">
+                {backfacesVisible ? 'Hide Backfaces' : 'Show Backfaces'}
+              </span>
+              <div className="button-ripple"></div>
+            </button>
           </div>
         </div>
 
-        <p>
-          Just like this 3D cube can transform and adapt its structure, our brains constantly reshape their neural 
-          connections. Each time we learn something new in programming, we&apos;re literally rewiring our brains to 
+        <p className={`animated-paragraph ${visibleParagraphs.has(4) ? 'animate-in' : ''}`}>
+          Just like this 3D cube can transform and adapt its structure, our brains constantly reshape their neural
+          connections. Each time we learn something new in programming, we&apos;re literally rewiring our brains to
           create new pathways for problem-solving and logical thinking.
         </p>
       </div>

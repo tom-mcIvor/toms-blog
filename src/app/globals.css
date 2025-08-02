@@ -751,16 +751,77 @@ li[role="menuitem"]:active {
 }
 
 .neuroplasticity-page .container-11 p {
-  background-color: rgba(0, 0, 0, 0.199);
   padding: 10px;
+}
+
+/* Animated paragraphs */
+.neuroplasticity-page .animated-paragraph {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.neuroplasticity-page .animated-paragraph.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for sequential appearance */
+.neuroplasticity-page .animated-paragraph:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.neuroplasticity-page .animated-paragraph:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.neuroplasticity-page .animated-paragraph:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.neuroplasticity-page .animated-paragraph:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* Hover effect for paragraphs */
+.neuroplasticity-page .animated-paragraph:hover {
+  transform: translateY(-2px);
+  color: #2d3748;
+  transition: all 0.3s ease;
+}
+
+/* Special styling for the final paragraph */
+.neuroplasticity-page .animated-paragraph:last-child {
+  font-style: italic;
+  border-left: 4px solid #667eea;
+  padding-left: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+/* Strong text styling within paragraphs */
+.neuroplasticity-page .animated-paragraph strong {
+  color: #667eea;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(102, 126, 234, 0.2);
 }
 
 /* 3D Container and Stage */
 .neuroplasticity-page #container {
-  width: 100%;
-  height: 700px;
+  width: 80%;
+  max-width: 600px;
+  height: 500px;
+  margin: 30px auto;
   perspective: 800px;
-  perspective-origin: 50% 225px;
+  perspective-origin: 50% 200px;
+  background-color: #000000;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .neuroplasticity-page #stage {
@@ -908,28 +969,149 @@ li[role="menuitem"]:active {
 }
 
 .neuroplasticity-page .controls {
-  width: 80%;
-  margin: 0 auto;
-  padding: 5px 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 240, 240, 0.9) 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.neuroplasticity-page .controls.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.neuroplasticity-page .control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.neuroplasticity-page .mui-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border: none;
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.neuroplasticity-page .controls > div {
-  margin: 10px;
-}
-
-.neuroplasticity-page .controls button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 8px 16px;
+  font-family: var(--font-family-primary);
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-family: var(--font-family-cursive);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 180px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.neuroplasticity-page .controls button:hover {
-  background-color: rgba(255, 255, 255, 1);
+.neuroplasticity-page .mui-button.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.neuroplasticity-page .mui-button.secondary {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+.neuroplasticity-page .mui-button.secondary.active {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+}
+
+.neuroplasticity-page .mui-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.neuroplasticity-page .mui-button.primary:hover {
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.neuroplasticity-page .mui-button.secondary:hover {
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.neuroplasticity-page .mui-button.secondary.active:hover {
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.neuroplasticity-page .mui-button:active {
+  transform: translateY(-1px);
+  transition: all 0.1s ease;
+}
+
+.neuroplasticity-page .button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.neuroplasticity-page .button-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.neuroplasticity-page .mui-button:hover .button-ripple {
+  transform: translateX(100%);
+}
+
+/* Pulse animation for active state */
+.neuroplasticity-page .mui-button.secondary.active {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(255, 107, 107, 0.6);
+  }
+}
+
+/* Responsive design for controls */
+@media screen and (max-width: 768px) {
+  .neuroplasticity-page .controls {
+    width: 95%;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .neuroplasticity-page .mui-button {
+    min-width: 160px;
+    padding: 14px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .neuroplasticity-page .mui-button {
+    min-width: 140px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 1500px) {
