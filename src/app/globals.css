@@ -242,6 +242,81 @@ body {
   40%, 100% { transform: rotateZ(0); }
 }
 
+svg {
+  margin-top: -70px;
+  top: -10%;
+  fill: none;
+  stroke: var(--color-white);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: var(--transition-smooth);
+}
+
+/* ===================================
+   PROJECT LAYOUT COMPONENTS
+   =================================== */
+.project {
+  @apply pt-10 w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12;
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+.project-content {
+  @apply md:w-1/2 text-left pl-12;
+}
+
+.project-title {
+  @apply text-3xl font-bold mb-2;
+  color: var(--color-primary);
+}
+
+.project-title a {
+  @apply hover:text-blue-500 transition-colors;
+}
+
+.project-description {
+  @apply mb-5 text-white;
+}
+
+.project-carousel-container {
+  @apply lg:w-1/2 flex justify-center;
+}
+
+.project-carousel {
+  @apply rounded-xl w-[400px] h-[400px] overflow-hidden;
+}
+
+.project-image {
+  @apply w-[400px] h-[400px] object-cover;
+}
+
+/* ===================================
+   PORTFOLIO SECTION COMPONENTS
+   =================================== */
+.portfolio-section {
+  @apply w-screen relative py-10;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 400px;
+}
+
+.portfolio-content {
+  @apply text-center justify-center items-center flex flex-col mb-20;
+  background: rgba(255, 255, 255, 0.0);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-lg);
+  color: var(--color-white);
+}
+
+.portfolio-title {
+  @apply text-5xl font-black mb-10;
+}
+
 /* Animation Classes */
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out forwards;
