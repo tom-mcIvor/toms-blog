@@ -1399,6 +1399,40 @@ li[role="menuitem"]:active {
   transition: all 0.3s ease;
 }
 
+/* Reset animated title container to center */
+.learning-plan-page .animated-title-container {
+  text-align: center;
+  margin: 40px 0 60px 0;
+  padding: 20px 0;
+}
+
+.learning-plan-page .animated-title {
+  justify-content: center;
+}
+
+/* Goals image positioned at top right of page */
+.learning-plan-page .goals-beside-title {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  margin: 0;
+  height: 150px;
+  width: 200px;
+  z-index: 100;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .learning-plan-page .goals-beside-title {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    height: 120px;
+    width: 160px;
+    z-index: 50;
+  }
+}
+
 .learning-plan-page .goals:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
@@ -1466,6 +1500,19 @@ li[role="menuitem"]:active {
   border-radius: 12px;
 }
 
+/* Smooth animated gradient keyframes */
+@keyframes smoothGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Keep the colored bootcamp section */
 .learning-plan-page .bootcamp {
   border: 25px solid;
@@ -1475,7 +1522,16 @@ li[role="menuitem"]:active {
     hsl(200 100% 60%),
     hsl(100 100% 60%)
   );
-  background: var(--gradient-bootcamp);
+  background: linear-gradient(-45deg,
+    rgba(2,0,36,1),
+    rgba(76,121,9,1),
+    rgba(0,212,255,1),
+    rgba(0,150,255,1),
+    rgba(102,126,234,1),
+    rgba(2,0,36,1)
+  );
+  background-size: 400% 400%;
+  animation: smoothGradientShift 6s ease infinite;
   opacity: var(--opacity-heavy);
   text-align: center;
   margin: 60px 0;
@@ -1512,10 +1568,14 @@ li[role="menuitem"]:active {
 }
 
 .learning-plan-page .bootcamp h2 {
-  color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f8f9fa 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 30px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
 }
 
 .learning-plan-page .bootcamp h3 {
@@ -1896,7 +1956,8 @@ li[role="menuitem"]:active {
 .neuroplasticity-page .title-underline,
 .emotional-intelligence-page .title-underline,
 .identity-values-page .title-underline,
-.foundations-reflection-page .title-underline {
+.foundations-reflection-page .title-underline,
+.learning-plan-page .title-underline {
   width: 0;
   height: 4px;
   background: linear-gradient(90deg, #667eea, #764ba2);

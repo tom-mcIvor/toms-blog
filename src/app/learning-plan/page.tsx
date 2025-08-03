@@ -14,15 +14,6 @@ function LearningPlan() {
       </div>
 
       <div className="content-container">
-        {/* Key Legend */}
-        <div className="key-legend">
-          <pre className="white-space-pre-wrap">
-key:
-  before bootcamp: black
-  after bootcamp: blue
-          </pre>
-        </div>
-
         {/* Foundations Section */}
         <div className="foundations-section">
           
@@ -92,64 +83,46 @@ key:
 
         {/* Keep the images */}
         <div className="tada"></div>
-        
-        {/* Progress Bar */}
-        <div className="bar">
-          <label htmlFor="skills">Web dev skills</label>
-          <progress id="skills" value="80" max="100"/>
-        </div>
-
-        {/* Goals image above bootcamp section */}
-        <div className="goals"></div>
 
         {/* Keep the colored bootcamp section */}
         <div className="bootcamp">
-          <div>
-            <pre className="white-space-pre-wrap">
-        key:
-        before bootcamp: pink
-        after bootcamp: white
-            </pre>
-          </div>
-          
           <div className="bootcamp-content">
             <h2 className="section-title">Bootcamp Learning Plan</h2>
             
             <div className="bootcamp-question">
               <h3>Long-term Career Goals</h3>
-              <p>My long-term goal is to establish a rewarding career in my chosen field. While finding employment is my immediate objective, I aim to continually enhance my skills and expertise. In the short term, I seek a position that aligns with my interests and allows me to contribute to meaningful projects. Over time, I hope to take on more responsibilities, potentially in leadership roles.</p>
-              <p className="reflection">Already discussed</p>
+              <p><strong>Initial Response:</strong> My long-term goal is to establish a rewarding career in my chosen field. While finding employment is my immediate objective, I aim to continually enhance my skills and expertise. In the short term, I seek a position that aligns with my interests and allows me to contribute to meaningful projects. Over time, I hope to take on more responsibilities, potentially in leadership roles.</p>
+              <p className="reflection"><strong>Reflection:</strong> My career goals have remained consistent throughout this journey. I want to build a sustainable career in web development where I can continue learning and growing. The bootcamp experience has reinforced my commitment to this path and given me confidence that I can achieve these goals through dedication and continuous improvement.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What do you think your biggest strengths and limitations will be in Bootcamp?</h3>
-              <p>Limitations: I only have 24 hours in the day</p>
-              <p className="reflection">Reflecting on my strength of keeping trying and never giving up.</p>
-              <p className="reflection">I have found the pace frantic and really hard to keep up with. The human skills component was a rocky road for me, but I have developed some coping skills. I still worry and get anxious but have learned to let go of things that I can&apos;t change.</p>
+              <p><strong>Initial Response:</strong> Limitations: I only have 24 hours in the day</p>
+              <p className="reflection"><strong>Reflection:</strong> Reflecting on my strength of keeping trying and never giving up. I have found the pace frantic and really hard to keep up with. The human skills component was a rocky road for me, but I have developed some coping skills. I still worry and get anxious but have learned to let go of things that I can&apos;t change.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What do you think your biggest non-technical challenge at Bootcamp will be?</h3>
-              <p>Sleeping</p>
-              <p className="reflection">Yes, because I work late I have found it hard to wind down and getting to sleep was a problem. Towards the end of boot camp, I woke up tired and it took me a while to get started.</p>
+              <p><strong>Initial Response:</strong> Sleeping</p>
+              <p className="reflection"><strong>Reflection:</strong> Yes, because I work late I have found it hard to wind down and getting to sleep was a problem. Towards the end of boot camp, I woke up tired and it took me a while to get started.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What non-technical skills - human skills - would you like to see developed in yourself while at Dev Academy?</h3>
-              <p>Don&apos;t know</p>
-              <p className="reflection">I have learned in this course that focus is a big issue and when problems come up that I can&apos;t change I need to keep going and not let distractions get the better of me.</p>
+              <p><strong>Initial Response:</strong> Don&apos;t know</p>
+              <p className="reflection"><strong>Reflection:</strong> I have learned in this course that focus is a big issue and when problems come up that I can&apos;t change I need to keep going and not let distractions get the better of me.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What are your expectations from the Bootcamp team?</h3>
-              <p>They should be doing the work, I don&apos;t want someone that&apos;s been on holiday for foundations asking week 2 questions</p>
-              <p className="reflection">That the team wants me to be successful and will help me reach my goal of graduating and getting a job.</p>
+              <p><strong>Initial Response:</strong> They should be doing the work, I don&apos;t want someone that&apos;s been on holiday for foundations asking week 2 questions</p>
+              <p className="reflection"><strong>Reflection:</strong> That the team wants me to be successful and will help me reach my goal of graduating and getting a job.</p>
             </div>
 
             <div className="bootcamp-question">
               <h3>What are your expectations of yourself on Bootcamp?</h3>
-              <p>Just to do the work</p>
-              <p className="reflection">I will work hard and be successful.</p>
+              <p><strong>Initial Response:</strong> Just to do the work</p>
+              <p className="reflection"><strong>Reflection:</strong> I will work hard and be successful.</p>
             </div>
           </div>
         </div>
